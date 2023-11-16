@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/11/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>手把手教你使用Hexo搭建github个人博客</title>
+    <url>/2019/09/11/test01/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>工具</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test02</title>
+    <url>/2023/11/16/test02/</url>
+    <content><![CDATA[<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h1><p>Thank you for choosing <strong>Typora</strong>. This document will help you to start Typora. Please note that Typora for Windows is still in beta phase, so this document may be updated in future version-ups.</p>
+<p>[TOC]</p>
+<h2 id="Live-Preview"><a href="#Live-Preview" class="headerlink" title="Live Preview"></a>Live Preview</h2><p><strong>Typora</strong> use the feature: <em>Live Preview</em>, meaning that you could see these inline styles after you finish typing, and see block styles when you type or after you press <code>Enter</code> key or focus to another paragraph. Just try to type some markdown in typora, and you would see how it works.</p>
+<p><strong>Note</strong>: Markdown tags for inline styles, such as <code>**</code> will be hidden or displayed smartly. Markdown tags for block level styles, such as <code>###</code> or <code>- [x]</code> will be hidden once the block is rendered.</p>
+<p>You could switch to source code mode temporary from menu bar, footer bar or short cut key (<code>ctrl+/</code>). But we only provide very basic support for source code mode and won’t recommend users to do so.</p>
+<h2 id="Markdown-For-Typora"><a href="#Markdown-For-Typora" class="headerlink" title="Markdown For Typora"></a>Markdown For Typora</h2><p><strong>Typora</strong> is using <a href="https://help.github.com/articles/github-flavored-markdown/">GitHub Flavored Markdown</a> . </p>
+<p>To see full markdown Syntax references and extra usage, please check <code>Help</code>-&gt;<code>Markdown Reference</code> in menu bar or <code>About</code> panel. </p>
+<h2 id="Shortcut-Keys"><a href="#Shortcut-Keys" class="headerlink" title="Shortcut Keys"></a>Shortcut Keys</h2><p>You could find shortcut keys in the right side of menu items from menu bar.For more shortcut key details and custom key bindings, you can refer <a href="http://support.typora.io/Shortcut-Keys/">here</a>.</p>
+<h2 id="Copy"><a href="#Copy" class="headerlink" title="Copy"></a>Copy</h2><p>We create typora and want to make it your default markdown editor, thus copy and paste means copy from another app or paste to another app, instead of <em>copy&#x2F;paste from&#x2F;to another markdown editor</em>. Therefore, by default, <code>Copy</code> means <code>Copy As HTML</code> ( and <code>Paste</code> means <code>Paste from HTML</code>). </p>
+<p>However, after click “<strong>Copy Markdown source by default</strong>“, typora will copy selected text in HTML&#x2F;markdown format (When pasting, rich editors will accept the HTML format, while plain text &#x2F; code editor will accept the markdown source code format).</p>
+<p>To <strong>copy Markdown source code</strong> explicitly, please use shortcut key <code>shift+cmd+c</code> or <code>Copy as Markdown</code> from menu. To <strong>Copy as HTML Code</strong>, please select <code>Copy as HTML Code</code> from menu.</p>
+<h2 id="Smart-Paste"><a href="#Smart-Paste" class="headerlink" title="Smart Paste"></a>Smart Paste</h2><p><strong>Typora</strong> is able to analyze styles of the text content in your clipboard when pasting. For example, after pasting a <code>&lt;h1&gt;HEADING&lt;/h1&gt;</code> from some website, typora will keep the ‘first level heading’ format instead of paste ‘heading’ as plain text. </p>
+<p>To <strong>paste as markdown source</strong> or plain text, you should use <code>paste as plain text</code> or press the shortcut key: <code>shift+cmd+v</code>.</p>
+<h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><p>Please refer to <code>Help</code> → <code>Custom Themes</code> from menu bar.</p>
+<h2 id="Publish"><a href="#Publish" class="headerlink" title="Publish"></a>Publish</h2><p>Currently Typora only support to export as <strong>PDF</strong> or <strong>HTML</strong>. More data format support as import&#x2F;export will be integrated in future.</p>
+<h2 id="Auto-Save-and-File-Recovery"><a href="#Auto-Save-and-File-Recovery" class="headerlink" title="Auto Save and File Recovery"></a>Auto Save and File Recovery</h2><p>Typora support  auto save feature, user could enable it from preference panel. </p>
+<p>Typora does not provide professional version control and file backup feature, but typora would backup the last file content from time to time automatically, so even when typora crashes or users forget to save the file before close, it is possible to recovery most of the work by clicking <code>Recovery Unsaved Drafts</code> from preference folder, and copy out backed-up files. The File name in this folder is consists of last saved date, originally file name and last saved timestamp.</p>
+<h2 id="More-Useful-Tips-Documents"><a href="#More-Useful-Tips-Documents" class="headerlink" title="More Useful Tips &amp; Documents"></a>More Useful Tips &amp; Documents</h2><p><a href="https://support.typora.io/">https://support.typora.io/</a></p>
+<h2 id="CodeStyle"><a href="#CodeStyle" class="headerlink" title="CodeStyle"></a>CodeStyle</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="string">int</span> <span class="string">main()</span> &#123;</span><br><span class="line">	<span class="string">printf(&quot;hello</span> <span class="string">world&quot;);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这只是一个简单的c语言代码</p>
+</blockquote>
+<p><code>printf(&quot;hello world&quot;)</code>的<strong>作用</strong>是<em>输出</em><del>一行</del></p>
+<h2 id="And-More"><a href="#And-More" class="headerlink" title="And More ?"></a>And More ?</h2><p>For more questions or feedbacks, please contact us by:</p>
+<ul>
+<li>Home Page: <a href="http://typora.io/">http://typora.io</a></li>
+<li>Email: <a href="mailto:&#104;&#x69;&#x40;&#x74;&#121;&#x70;&#x6f;&#114;&#97;&#46;&#105;&#x6f;">&#104;&#x69;&#x40;&#x74;&#121;&#x70;&#x6f;&#114;&#97;&#46;&#105;&#x6f;</a></li>
+<li>Twitter <a href="https://twitter.com/typora">@typora</a></li>
+</ul>
+<p>We opened a Github issue page in case you want to start a discussion or as an alternative way to report bugs&#x2F;suggestions: <a href="https://github.com/typora/typora-issues/issues">https://github.com/typora/typora-issues/issues</a></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>基础数据结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>test-img</title>
+    <url>/2023/11/16/test-img/</url>
+    <content><![CDATA[<p><img src="/test-img/image-20231116223250020.png" alt="image-20231116223250020"></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>基础数据结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>test-img2</title>
+    <url>/2023/11/16/test-img2/</url>
+    <content><![CDATA[<p><img src="/image-20231116223348916.png" alt="image-20231116223348916"></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>基础操作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>test-img2</title>
+    <url>/2023/11/16/test-img3/</url>
+    <content><![CDATA[<p><img src="/test-img3/image-20231116223558790.png" alt="image-20231116223558790"></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+        <category>集群环境</category>
+      </categories>
+  </entry>
+</search>
