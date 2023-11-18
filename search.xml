@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MyGril</title>
+    <url>/2023/11/17/MyGril/</url>
+    <content><![CDATA[<p><img src="gril.jpg" alt="gril"></p>
+]]></content>
+      <categories>
+        <category>Beautiful Photos</category>
+        <category>Gril</category>
+      </categories>
+      <tags>
+        <tag>2D</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>01背包</title>
     <url>/2023/11/18/01%E8%83%8C%E5%8C%85/</url>
     <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><ol>
@@ -59,7 +72,10 @@
 <hr>
 <p><strong>文章推荐</strong></p>
 <ul>
-<li><a href="https://comzyh.com/upload/PDF/Pack-PDF-Comzyh.pdf">背包九讲</a></li>
+<li><p><a href="https://comzyh.com/upload/PDF/Pack-PDF-Comzyh.pdf">背包九讲</a></p>
+</li>
+<li><p><a href="http://localhost:4000/2023/11/18/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/">完全背包 | Gopher</a></p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -74,22 +90,9 @@
       </tags>
   </entry>
   <entry>
-    <title>MyGril</title>
-    <url>/2023/11/17/MyGril/</url>
-    <content><![CDATA[<p><img src="gril.jpg" alt="gril"></p>
-]]></content>
-      <categories>
-        <category>Beautiful Photos</category>
-        <category>Gril</category>
-      </categories>
-      <tags>
-        <tag>2D</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>完全背包</title>
     <url>/2023/11/18/%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85/</url>
-    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p><a href>书接上文</a></p>
+    <content><![CDATA[<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p><a href="http://marxistzgwl.github.io./2023/11/18/01%E8%83%8C%E5%8C%85/">书接上文</a></p>
 <ol>
 <li><p>本文面向的人群：</p>
 <ul>
@@ -107,18 +110,18 @@
 </ul>
 </li>
 </ol>
-<h1 id="1-完全背包问题"><a href="#1-完全背包问题" class="headerlink" title="1. 完全背包问题"></a>1. 完全背包问题</h1><p>n个物品和容量为v的背包，每种物品可以无限地进行选择，物品的重量为w[i],价值为v[i]，求解哪些物品装入背包可以是的背包中的物品价值总和最大？</p>
+<h1 id="1-完全背包问题"><a href="#1-完全背包问题" class="headerlink" title="1. 完全背包问题"></a>1. 完全背包问题</h1><p>n个物品和容量为c的背包，每种物品可以无限地进行选择，物品的重量为w[i],价值为v[i]，求解哪些物品装入背包可以是的背包中的物品价值总和最大？</p>
 <blockquote>
-<p>w[i] 是 weight[i]的缩写， v[i] 是value[i]的缩写</p>
+<p>w[i] 是 weight[i]的缩写， v[i] 是value[i]的缩写, c是capacity的缩写</p>
 </blockquote>
 <h1 id="2-思路"><a href="#2-思路" class="headerlink" title="2. 思路"></a>2. 思路</h1><p>基于01背包，我们很容易将<code>dp[i][j]</code>定义为前i件物品装容量为j的背包的答案。<br>我们尝试写出状态转移方程：<br>$$<br>d[i][j] &#x3D; max\begin{cases}<br>dp[i - 1][j] &amp; j &lt; w[i] \ \<br>dp[i][j - w[i]] + v[i] &amp; j &gt;&#x3D; w[i]<br>\end{cases}<br>$$<br>基于以上思路，我们写出代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt;= v; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= w[i]) &#123;</span><br><span class="line">            dp[i][j] = max(dp[i - <span class="number">1</span>][j], dp[i][j - w[i]] + v[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt;= c; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= w[i]) &#123;</span><br><span class="line">            dp[i][j] = max(dp[i - <span class="number">1</span>][j], dp[i][j - w[i]] + v[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我们可以观察到，这样的代码和01背包的代码几乎是一模一样，我们再次给出01背包的代码用于对比。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> w[i]; j &lt;= v; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= w[i]) &#123;</span><br><span class="line">            dp[i][j] = max(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> w[i]; j &lt;= c; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (j &gt;= w[i]) &#123;</span><br><span class="line">            dp[i][j] = max(dp[i - <span class="number">1</span>][j], dp[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            dp[i][j] = dp[i - <span class="number">1</span>][j];</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以观察到俩者唯一的区别就在于状态转移方程的不同。</p>
 <h1 id="3-优化"><a href="#3-优化" class="headerlink" title="3. 优化"></a>3. 优化</h1><p>很显然我们的代码可以进行空间优化。<br>如果你已经阅读过01背包的优化方式，那么这里的优化方式和01背包的是一模一样的。不在进行过多的赘述。直接给出代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> w[i]; j &lt;= v; j++) &#123;</span><br><span class="line">		dp[j] = max(dp[j], dp[j - w[i]] + v[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>也请你对比一下和01背包空间优化之后的代码的不同。主要的不同点在于01背包的第二层循环是<code>v ~ w[i]</code>, 而完全背包的第二层循环是<code>w[i] ~ v</code>。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> w[i]; j &lt;= c; j++) &#123;</span><br><span class="line">		dp[j] = max(dp[j], dp[j - w[i]] + v[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也请你对比一下和01背包空间优化之后的代码的不同。主要的不同点在于01背包的第二层循环是<code>c ~ w[i]</code>, 而完全背包的第二层循环是<code>w[i] ~ c</code>。</p>
 <h1 id="4-问题变形"><a href="#4-问题变形" class="headerlink" title="4. 问题变形"></a>4. 问题变形</h1><p>问题可以变形为求装满背包所使用物品的最小个数，这个时候的状态转移方程变为：</p>
 <p><code>dp[j] = min(dp[j], dp[j - w[i]] + 1)</code></p>
 <h1 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h1><p>完全背包模型是在01背包模型基础上进行得到的，所以代码也比较相似。请注意完全背包模型和01背包模型俩种在转台转移上的异同。</p>
@@ -127,7 +130,9 @@
 
 <hr>
 <p><strong>文章推荐</strong></p>
-<p>- </p>
+<ul>
+<li><a href="http://marxistzgwl.github.io./2023/11/18/01%E8%83%8C%E5%8C%85/">01背包</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>Algorithm</category>
