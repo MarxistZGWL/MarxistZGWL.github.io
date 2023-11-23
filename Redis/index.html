@@ -17,18 +17,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Redis前言 笔者在求职的准备过程中希望好好的学一下Redis，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的Redis知识讲解。 但是，我想起了软件工程的那一句话：Don&#39;t Repeat yourself!, 于是我准备把我觉得写的不错的Redis讲解的博文放在我这个小小的文章里面。所以，本篇文章的内容主要以各种大佬">
+  <meta name="description" content="Redis持续更新中~~ 前言 笔者在求职的准备过程中希望好好的学一下Redis，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的Redis知识讲解。 但是，我想起了软件工程的那一句话：Don&#39;t Repeat yourself!, 于是我准备把我觉得写的不错的Redis讲解的博文放在我这个小小的文章里面。所以，本篇文章的内">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Redis">
 <meta property="og:url" content="http://example.com/Redis/index.html">
 <meta property="og:site_name" content="Gopher">
-<meta property="og:description" content="Redis前言 笔者在求职的准备过程中希望好好的学一下Redis，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的Redis知识讲解。 但是，我想起了软件工程的那一句话：Don&#39;t Repeat yourself!, 于是我准备把我觉得写的不错的Redis讲解的博文放在我这个小小的文章里面。所以，本篇文章的内容主要以各种大佬">
+<meta property="og:description" content="Redis持续更新中~~ 前言 笔者在求职的准备过程中希望好好的学一下Redis，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的Redis知识讲解。 但是，我想起了软件工程的那一句话：Don&#39;t Repeat yourself!, 于是我准备把我觉得写的不错的Redis讲解的博文放在我这个小小的文章里面。所以，本篇文章的内">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/Redis/sds.png">
 <meta property="og:image" content="http://example.com/Redis/quicklist.png">
 <meta property="og:image" content="http://example.com/Redis/listpack%E8%8A%82%E7%82%B9.png">
 <meta property="article:published_time" content="2023-11-17T06:14:50.000Z">
-<meta property="article:modified_time" content="2023-11-21T14:06:00.255Z">
+<meta property="article:modified_time" content="2023-11-23T07:51:34.416Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/Redis/sds.png">
@@ -226,11 +226,15 @@
       
       
       <div class="post-body">
-          <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p><strong>前言</strong></p>
-<p>笔者在求职的准备过程中希望好好的学一下Redis，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的Redis知识讲解。</p>
-<p>但是，我想起了软件工程的那一句话：<code>Don&#39;t Repeat yourself!</code>, 于是我准备把我觉得写的不错的Redis讲解的博文放在我这个小小的文章里面。所以，本篇文章的内容主要以各种大佬的链接为主。</p>
-<p><strong>黄健宏写的《Redis设计与实现》真的是一本非常适合帮助你理解Redis的书籍，虽然里面有些数据结构已经过时，但是有些思想是不变的。</strong></p>
+          <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>持续更新中~~</p>
+<p><strong>前言</strong></p>
+<p>笔者在求职的准备过程中希望好好的学一下<code>Redis</code>，从底层到集群的那种。但是苦于各种培训班的讲解已经铺天盖地席卷而来，讲解质量也是参差不齐，所以有志于写一篇一统天下的<code>Redis</code>知识讲解。</p>
+<p>但是，我想起了软件工程的那一句话：<code>Don&#39;t Repeat yourself!</code>, 于是我准备把我觉得写的不错的<code>Redis</code>讲解的博文放在我这个小小的文章里面。所以，本篇文章的内容主要以各种大佬的链接为主。</p>
+<p><strong>黄健宏写的《Redis设计与实现》真的是一本非常适合帮助你理解<code>Redis</code>的书籍，虽然里面有些数据结构已经过时，但是有些思想是不变的。</strong></p>
+<p><strong><code>小林coding</code>博主写的文章很通俗易懂，就是有些知识在很多博文中重复了，也是非常值得推荐的</strong></p>
+<p><strong>最后推荐极客时间里面的《Redis核心技术与实战》，这一本书也写得很好</strong></p>
 <p>提前在这里感谢各位大佬写出如此优秀的文章和博文。 ORZ</p>
+<p><strong>本篇文章只有寥寥数千字，但是包含了很多优秀的文章和博文，你可以把本篇文章看作是一个<code>Redis</code>从入门到破门而出的一个目录</strong></p>
 <h1 id="1-提要"><a href="#1-提要" class="headerlink" title="1. 提要"></a>1. 提要</h1><p>提要用最简洁的语言总结了正文中所提到的各种问题的答案，方便用于快速记忆。</p>
 <h2 id="1-1-Redis数据结构"><a href="#1-1-Redis数据结构" class="headerlink" title="1.1 Redis数据结构"></a>1.1 Redis数据结构</h2><h3 id="1-1-1-SDS"><a href="#1-1-1-SDS" class="headerlink" title="1.1.1 SDS"></a>1.1.1 SDS</h3><ol>
 <li>C语言中字符数组的缺陷<ul>
@@ -239,7 +243,7 @@
 <li>C语言提供的各种操作字符串的函数也是不安全的，容易出错</li>
 </ul>
 </li>
-<li>SDS的实现方式</li>
+<li><code>SDS</code>的实现方式</li>
 </ol>
 <p><img src="sds.png" alt="img"></p>
 <ol start="3">
@@ -251,7 +255,7 @@
 <li>自动内存扩展，不会发生缓冲区溢出</li>
 <li>使用空间预分配的办法有效的减少了内存分配的次数 <del>后面使用压缩链表来节省的空间都被你小子造完了是吧😅</del></li>
 </ul>
-<h3 id="1-1-2-链表"><a href="#1-1-2-链表" class="headerlink" title="1.1.2 链表"></a>1.1.2 链表</h3><p>一句话，Redis的链表由双向链表实现，具有双向链表所有的优点和缺点。另外，Redis记录了当前链表的长度，不用遍历获得这个值。</p>
+<h3 id="1-1-2-链表"><a href="#1-1-2-链表" class="headerlink" title="1.1.2 链表"></a>1.1.2 链表</h3><p>一句话，<code>Redis</code>的链表由双向链表实现，具有双向链表所有的优点和缺点。另外，<code>Redis</code>记录了当前链表的长度，不用遍历获得这个值。</p>
 <h3 id="1-1-3-压缩列表"><a href="#1-1-3-压缩列表" class="headerlink" title="1.1.3 压缩列表"></a>1.1.3 压缩列表</h3><ul>
 <li><p>一个存储了列表头尾，每一个节点里面包含前置节点大小的类链表数组</p>
 </li>
@@ -262,7 +266,7 @@
 </ul>
 <h3 id="1-1-4-哈希表的实现"><a href="#1-1-4-哈希表的实现" class="headerlink" title="1.1.4 哈希表的实现"></a>1.1.4 哈希表的实现</h3><ul>
 <li>哈希桶中存储的是哈希实体，哈希实体里面存储了指向<code>key</code>和指向<code>value</code>的指针</li>
-<li>Redis对象有三部分组成，<code>type</code>表示类型，<code>encoding</code>表示底层数据结构，<code>ptr</code>表示所指向底层书指针</li>
+<li><code>Redis</code>对象有三部分组成，<code>type</code>表示类型，<code>encoding</code>表示底层数据结构，<code>ptr</code>表示所指向底层书指针</li>
 <li>每一个哈希表都有一个副表，便于在再哈希的时候，将再哈希的时间复杂度进行均摊</li>
 </ul>
 <h3 id="1-1-5-整数集合"><a href="#1-1-5-整数集合" class="headerlink" title="1.1.5 整数集合"></a>1.1.5 整数集合</h3><p>整数集合的思想：集合尽可能的使用一个最小的空间存储所有的数据，但是每一个数据所占用的空间是一样的。</p>
@@ -276,7 +280,7 @@
 <h3 id="1-1-6-跳表"><a href="#1-1-6-跳表" class="headerlink" title="1.1.6 跳表"></a>1.1.6 跳表</h3><ul>
 <li>随机生成每一个节点的层数</li>
 <li>最大层高是64</li>
-<li>查询效率是O(logn)</li>
+<li>查询效率是<code>O(logn)</code></li>
 </ul>
 <h3 id="1-1-7-quicklist"><a href="#1-1-7-quicklist" class="headerlink" title="1.1.7 quicklist"></a>1.1.7 quicklist</h3><p>思想：通过为每一小部分的压缩链表设计一个节点的方式，减少连续更新带来的性能影响</p>
 <p><img src="quicklist.png" alt="img"></p>
@@ -286,24 +290,88 @@
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaolincoding/p/15628854.html">为了拿捏 Redis 数据结构，我画了 40 张图（完整版） - 小林coding</a></li>
 <li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/r9_0xpRsp2ubgyvpiyMfuw">2 万字 + 20张图｜ 细说 Redis 九种数据类型和应用场景</a></li>
 </ul>
-<p>Redis的数据结构主要包括</p>
+<p><code>Redis</code>的数据结构主要包括</p>
 <ul>
-<li>SDS</li>
-<li>链表、压缩链表、跳表、quicklist、listpack</li>
+<li><code>SDS</code></li>
+<li>链表、压缩链表、跳表、<code>quicklist</code>、<code>listpack</code></li>
 <li>哈希表</li>
 <li>整数集合</li>
 </ul>
-<h2 id="2-2-单机数据库的实现"><a href="#2-2-单机数据库的实现" class="headerlink" title="2.2 单机数据库的实现"></a>2.2 单机数据库的实现</h2><p>单机数据库的内容主要包括：</p>
-<ul>
-<li>数据库的设计和实现、过期键的删除策略等</li>
-<li>RDB和AOF的工作方式</li>
-<li>事件</li>
+<h2 id="2-2-单机数据库的实现"><a href="#2-2-单机数据库的实现" class="headerlink" title="2.2 单机数据库的实现"></a>2.2 单机数据库的实现</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247493808&idx=1&sn=588d318ec6e72844841d566f16acaf30&chksm=f98dac1acefa250ce40060899a4030bb7678c45befea408162360db4ef4fa2785feb1544e719&scene=178&cur_album_id=1790401816640225283#rd">AOF机制</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247494677&idx=1&sn=53f60870b66c731aa6ec5b6e70697eff&chksm=f98da8bfcefa21a9ad7b4d564238931f8457bafb08698301e9672dbc366a034890429fdc1ff1&scene=178&cur_album_id=1790401816640225283#rd">RDB机制</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ldw201510803006/article/details/119767467?spm=1001.2014.3001.5501">一文搞懂，4种主要的 I&#x2F;O 模型</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/ldw201510803006/article/details/124223086?spm=1001.2014.3001.5501">I&#x2F;O多路复用模型之 select、poll、epoll</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7092436770519777311">高性能网络编程之 Reactor 网络模型</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12U4y167sf/?spm_id_from=333.337.search-card.all.click&vd_source=b6aaaf50da35f1f2f11197f769e8cca8">(select、poll、epoll、Reactor模型、Proactor模型)_视频讲解</a></li>
 </ul>
-<h2 id="2-3-多机数据库的实现"><a href="#2-3-多机数据库的实现" class="headerlink" title="2.3 多机数据库的实现"></a>2.3 多机数据库的实现</h2><p>多机数据库的实现主要包括：</p>
+<p>单机数据库的内容主要包括：</p>
 <ul>
-<li>多个节点之间的同步流程</li>
-<li>哨兵集群和重新选举的办法</li>
-<li>集群分片的要点和故障转移等</li>
+<li><p>数据库的设计和实现、过期键的删除策略等  </p>
+<ul>
+<li><code>Redis</code>服务器的所有数据库都保存在<code>redisServer.db</code>数组中, 而数据库的数量由<code>redisServer.dbnum</code>属性保存</li>
+<li>客户端通过修改目标数据库的指针来进行数据库的切换</li>
+<li>数据库主要由<code>dict</code>和<code>expires</code>这俩个字典构成，<code>dict</code>保存了键值空间，<code>expires</code>负责过期信息存储</li>
+<li>数据库: <code>key: &lt;String&gt; , value: &lt;Redis Object&gt;</code></li>
+<li><code>expires</code>字典的键指向<code>dict</code>的某一个<code>key</code>, 值则是一个存储过期时间的整数，表示什么时候过期</li>
+<li><code>Redis</code>使用定期删除和惰性删除俩种方式，<strong>俩种方式都不能保证到了过期时间<code>key</code>一定会被删除</strong></li>
+<li>执行<code>save</code>和<code>bgsave</code>都不会将过期的键生成到<code>RDB</code>文件当中</li>
+<li>执行<code>BGREWRITEAOF</code>命令产生的<code>AOF</code>文件不会由过期的键</li>
+<li>当一个过期的键被删除之后，会有一个显式的<code>DEL</code>命令被添加到<code>AOF</code>文件的末尾</li>
+<li>从数据库不负责过期键的删除，所以有可能会导致键已经过期，但是还可以从从数据库中获取</li>
+<li>当<code>Redis</code>命令对数据库进行修改之后，服务器会根据配置向客户端发送请求</li>
+</ul>
+</li>
+<li><p><code>RDB</code>和<code>AOF</code>的工作方式</p>
+<ul>
+<li><code>RDB</code>文件用于保存和还原<code>Redis</code>服务器所有数据库的键值对数据。</li>
+<li>SAVE命令会阻塞当前服务器</li>
+<li><code>BGSAVE</code>由子进程进行保存操作，不会阻塞服务器</li>
+<li>当任意一个SAVE条件被满足的时候，服务器就会自动执行<code>BGSAVE</code></li>
+<li><code>RDB</code>是一个经过压缩的二进制文件，由多个部分组成</li>
+</ul>
+</li>
+<li><p>事件</p>
+<ul>
+<li><p>文件事件处理器基于<code>Reactor</code>模式实现的网络通信程序。</p>
+</li>
+<li><p>文件事件分为读事件和写事件、时间事件分为定时事件和周期事件。</p>
+</li>
+<li><p>四种主要的IO模型分别是，同步阻塞IO、同步非阻塞IO、多路复用IO、异步IO</p>
+</li>
+<li><p><code>select</code>、<code>poll</code>、<code>epoll</code>，多线程IO</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-多机数据库的实现"><a href="#2-3-多机数据库的实现" class="headerlink" title="2.3 多机数据库的实现"></a>2.3 多机数据库的实现</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247495237&idx=1&sn=8302585810958567a57bda3df6c5d036&chksm=f98daaefcefa23f95e9f4ef083bbf6b8ce80794bb00c68d9070f158e6de9a0265ea39b12e560&scene=178&cur_album_id=1790401816640225283#rd">主从复制流程</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247515688&idx=2&sn=9680569edd01c327253c7eb87a75ab94&chksm=f98dfa82cefa73943fa320a1debda7c7d461c675a41cbf4c9808009f6c082588ab194344f4f0&scene=178&cur_album_id=1790401816640225283#rd">哨兵及其选举新的主节点的流程</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/352279894">哈希与一致性哈希</a></li>
+</ul>
+<p>多机数据库的实现主要包括：</p>
+<ul>
+<li>多个节点之间的同步流程<ul>
+<li>主从数据库在第一次进行数据同步的时候，用的是全量复制</li>
+<li>第一次同步完成之后，会保持一个长连接，主服务器将接收到的写操作命令传播给从服务器，从而保证主从数据库的数据一致性</li>
+<li>在网络断开进行重新同步的过程，需要判断slave节点的位移量是否还在<code>repl_backlog_buffer</code>这个环形缓冲区当中，如果在，则进行增量同步，否则进行全量同步</li>
+</ul>
+</li>
+<li>哨兵集群和重新选举的办法<ul>
+<li><code>Sentinel</code>会读入用户指定的配置文件，创建连接主服务器的命令连接和订阅连接，其中命令连接用于向主服务器发送命令请求，而订阅连接则用于接收指定的频道的消息</li>
+<li>对于监视同一个主服务器的Sentinel节点来说，他们会通过一个特定的频道发送消息来告知其他<code>Sentinel</code>节点自己的存在，同时订阅这个频道来发现其他的<code>Sentinel</code>节点</li>
+<li><code>Sentinel</code>通过向主节点发送<code>INFO</code>命令来获取从节点的信息</li>
+<li><code>Sentinel</code>在认定一个主节点为主观下线之后，会向其他的<code>Sentinel</code>节点进行确认，当超过指定数量的哨兵节点认定为主观下线之后，就会重新选举新的主节点。</li>
+</ul>
+</li>
+<li>集群分片的要点和故障转移等<ul>
+<li>节点的加入类似于一个师父领进门的过程，你先和集群中的一个节点确认加入此集群，然后通过Gossip协议最终认识所有人。</li>
+<li>每个节点都会记录所有槽位的指派情况。</li>
+<li>当16384个槽位都有节点在处理的时候，集群就处于上线模式，否则节点处于下线模式。</li>
+<li>主节点下线之后，从节点成为主节点也是使用Raft算法进行的</li>
+<li>在槽位迁移的过程中发送请求，可能会产生ASK错误，让被迁移节点检查自己是否有这个键</li>
+</ul>
+</li>
 </ul>
 <h2 id="2-4-独立功能和实现"><a href="#2-4-独立功能和实现" class="headerlink" title="2.4 独立功能和实现"></a>2.4 独立功能和实现</h2><p>独立功能和实现主要包括：</p>
 <ul>
@@ -314,8 +382,37 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxODAzNDg4NQ==&action=getalbum&album_id=1790401816640225283&uin=&key=&devicetype=Windows+10+x64&version=6309080f&lang=zh_CN&ascene=1&session_us=gh_fc46cf2353fc">图解Redis</a></li>
 <li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247527565&idx=2&sn=f052a879d5c6c6c6cb69f4de668e71bd&chksm=f98d2827cefaa13182a5d8075187674e805368fab508bea2b7d5429aec1af2092df3e59571db&scene=178&cur_album_id=1790401816640225283#rd"> Redis 常见面试题（2023 版本）</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247516196&idx=1&sn=bf62f4349a10d2516b9b1e1ba9a4bde7&chksm=f98dc48ecefa4d98ea178347a93ff4b1a7bf02ff07fbe72975691cf4480f43e772346976cfbb&scene=178&cur_album_id=1790401816640225283#rd">告别 Redis！</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247508038&idx=2&sn=50a5d4a4b88f9572976753562aeb1b52&chksm=f98de4eccefa6dfaf9c48451685b51a7be62f237cb5ab13efb75a83b814437a370b2f8abfa88&scene=178&cur_album_id=1790401816640225283#rd">数据库和缓存如何保证一致性？</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247516371&idx=2&sn=1976ef550b5b0a1d52f7ca09ec9d5d80&chksm=f98dc479cefa4d6fd74412c99f12b21ed3cee4b8e74c005710ce5bc575d0832e96e6184126c5&scene=178&cur_album_id=1790401816640225283#rd">3 种缓存更新策略是怎样的？</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247522188&idx=2&sn=e1f908a94fcf84683100768a8ed63320&chksm=f98dd326cefa5a300b90b718b00c9457274370b8f9f40c4e286c327f345bd6e22915f172db9c&scene=178&cur_album_id=1790401816640225283#rd">跟着这 12 张图，重新复习 Redis</a></li>
 </ul>
-<h2 id="3-1-Redis的数据类型有哪些"><a href="#3-1-Redis的数据类型有哪些" class="headerlink" title="3.1 Redis的数据类型有哪些"></a>3.1 Redis的数据类型有哪些</h2><h2 id="3-2-Redis为什么自定义字符数组的实现（SDS-Simple-Dynamic-String）"><a href="#3-2-Redis为什么自定义字符数组的实现（SDS-Simple-Dynamic-String）" class="headerlink" title="3.2 Redis为什么自定义字符数组的实现（SDS - Simple Dynamic String）"></a>3.2 Redis为什么自定义字符数组的实现（SDS - Simple Dynamic String）</h2><h2 id="3-3-Zset的实现"><a href="#3-3-Zset的实现" class="headerlink" title="3.3 Zset的实现"></a>3.3 Zset的实现</h2><h2 id="3-4-setnx命令为什么可以用来实现分布式锁"><a href="#3-4-setnx命令为什么可以用来实现分布式锁" class="headerlink" title="3.4 setnx命令为什么可以用来实现分布式锁"></a>3.4 setnx命令为什么可以用来实现分布式锁</h2><h2 id="3-5-什么是GEO、Stream、bitmap和HyperLogLog"><a href="#3-5-什么是GEO、Stream、bitmap和HyperLogLog" class="headerlink" title="3.5 什么是GEO、Stream、bitmap和HyperLogLog"></a>3.5 什么是GEO、Stream、bitmap和HyperLogLog</h2><h2 id="3-6-哈希表再哈希的过程"><a href="#3-6-哈希表再哈希的过程" class="headerlink" title="3.6 哈希表再哈希的过程"></a>3.6 哈希表再哈希的过程</h2><h2 id="3-7-Redis为什么这么快"><a href="#3-7-Redis为什么这么快" class="headerlink" title="3.7 Redis为什么这么快"></a>3.7 Redis为什么这么快</h2><h2 id="3-8-Redis集群的三种模式"><a href="#3-8-Redis集群的三种模式" class="headerlink" title="3.8 Redis集群的三种模式"></a>3.8 Redis集群的三种模式</h2><h2 id="3-9-Redis的持久化机制"><a href="#3-9-Redis的持久化机制" class="headerlink" title="3.9 Redis的持久化机制"></a>3.9 Redis的持久化机制</h2><h2 id="3-10-Redis集群的脑裂问题"><a href="#3-10-Redis集群的脑裂问题" class="headerlink" title="3.10 Redis集群的脑裂问题"></a>3.10 Redis集群的脑裂问题</h2><h2 id="3-11-数据分片"><a href="#3-11-数据分片" class="headerlink" title="3.11 数据分片"></a>3.11 数据分片</h2><h2 id="3-12-Redis是单线程的吗"><a href="#3-12-Redis是单线程的吗" class="headerlink" title="3.12 Redis是单线程的吗"></a>3.12 Redis是单线程的吗</h2><h2 id="3-13-Redis的IO多路复用和网络模块多线程的引入"><a href="#3-13-Redis的IO多路复用和网络模块多线程的引入" class="headerlink" title="3.13 Redis的IO多路复用和网络模块多线程的引入"></a>3.13 Redis的IO多路复用和网络模块多线程的引入</h2><h2 id="3-14-缓存雪崩、穿透、击穿"><a href="#3-14-缓存雪崩、穿透、击穿" class="headerlink" title="3.14 缓存雪崩、穿透、击穿"></a>3.14 缓存雪崩、穿透、击穿</h2><h2 id="3-15-大key问题"><a href="#3-15-大key问题" class="headerlink" title="3.15 大key问题"></a>3.15 大key问题</h2><h2 id="3-16-热key问题"><a href="#3-16-热key问题" class="headerlink" title="3.16 热key问题"></a>3.16 热key问题</h2><h2 id="3-17-内存淘汰策略"><a href="#3-17-内存淘汰策略" class="headerlink" title="3.17 内存淘汰策略"></a>3.17 内存淘汰策略</h2><h2 id="3-18-过期策略"><a href="#3-18-过期策略" class="headerlink" title="3.18 过期策略"></a>3.18 过期策略</h2><h2 id="3-19-虚拟内存"><a href="#3-19-虚拟内存" class="headerlink" title="3.19 虚拟内存"></a>3.19 虚拟内存</h2><h2 id="3-20-事务机制"><a href="#3-20-事务机制" class="headerlink" title="3.20 事务机制"></a>3.20 事务机制</h2><h2 id="3-21-为什么Lua脚本可以保证原子性"><a href="#3-21-为什么Lua脚本可以保证原子性" class="headerlink" title="3.21 为什么Lua脚本可以保证原子性"></a>3.21 为什么Lua脚本可以保证原子性</h2><h2 id="3-22-缓存不一致"><a href="#3-22-缓存不一致" class="headerlink" title="3.22 缓存不一致"></a>3.22 缓存不一致</h2><h2 id="3-23-红锁"><a href="#3-23-红锁" class="headerlink" title="3.23 红锁"></a>3.23 红锁</h2><h2 id="3-24-如何使用Redssion实现分布式锁"><a href="#3-24-如何使用Redssion实现分布式锁" class="headerlink" title="3.24 如何使用Redssion实现分布式锁"></a>3.24 如何使用Redssion实现分布式锁</h2><h2 id="3-25-Redssion的延迟队列"><a href="#3-25-Redssion的延迟队列" class="headerlink" title="3.25 Redssion的延迟队列"></a>3.25 Redssion的延迟队列</h2>
+<h2 id="3-1-Redis的数据类型有哪些"><a href="#3-1-Redis的数据类型有哪些" class="headerlink" title="3.1 Redis的数据类型有哪些"></a>3.1 Redis的数据类型有哪些</h2><p>基本数据类型：字符串、列表、哈希、set、zset</p>
+<p>其他：bitmap、hyperloglog、geo、stream</p>
+<h2 id="3-2-Redis为什么自定义字符数组的实现（SDS-Simple-Dynamic-String）"><a href="#3-2-Redis为什么自定义字符数组的实现（SDS-Simple-Dynamic-String）" class="headerlink" title="3.2 Redis为什么自定义字符数组的实现（SDS - Simple Dynamic String）"></a>3.2 Redis为什么自定义字符数组的实现（SDS - Simple Dynamic String）</h2><ul>
+<li>二进制安全</li>
+<li>防止内存溢出</li>
+<li>预分配机制减少内存分配次数</li>
+<li>获取字符串长度的时间复杂度优化</li>
+</ul>
+<h2 id="3-3-Zset的实现"><a href="#3-3-Zset的实现" class="headerlink" title="3.3 Zset的实现"></a>3.3 Zset的实现</h2><ul>
+<li>使用哈希和listpack&#x2F;skipList的方法进行实现</li>
+</ul>
+<h2 id="3-4-setnx命令为什么可以用来实现分布式锁"><a href="#3-4-setnx命令为什么可以用来实现分布式锁" class="headerlink" title="3.4 setnx命令为什么可以用来实现分布式锁"></a>3.4 setnx命令为什么可以用来实现分布式锁</h2><p><code>Redis</code>的读写模块是单线程的，在执行<code>setnx</code>命令的时候，会阻塞其他客户端的命令。因此可以用于分布式锁。</p>
+<h2 id="3-5-什么是GEO、Stream、bitmap和HyperLogLog"><a href="#3-5-什么是GEO、Stream、bitmap和HyperLogLog" class="headerlink" title="3.5 什么是GEO、Stream、bitmap和HyperLogLog"></a>3.5 什么是GEO、Stream、bitmap和HyperLogLog</h2><p>GEO用于地理操作，Stream是一个简单的可追溯的消息流、bitmap是位图、HyperLogLog是一个估计基数的数据结构</p>
+<h2 id="3-6-哈希表再哈希的过程"><a href="#3-6-哈希表再哈希的过程" class="headerlink" title="3.6 哈希表再哈希的过程"></a>3.6 哈希表再哈希的过程</h2><p>每一个哈希表都有俩个指针进行轮换，当本哈希表需要进行扩容的时候，为了均摊扩容的时间，所以使用渐进式哈希的方法。在对链表修改的时候才进行再哈希操作，最终实现扩容的操作。</p>
+<h2 id="3-7-Redis为什么这么快"><a href="#3-7-Redis为什么这么快" class="headerlink" title="3.7 Redis为什么这么快"></a>3.7 Redis为什么这么快</h2><p>单线程、IO多路复用(多线程异步IO)，高效的数据结构、基于内存</p>
+<h2 id="3-8-Redis集群的三种模式"><a href="#3-8-Redis集群的三种模式" class="headerlink" title="3.8 Redis集群的三种模式"></a>3.8 Redis集群的三种模式</h2><p>主从复制、哨兵机制、集群模式</p>
+<h2 id="3-9-Redis的持久化机制"><a href="#3-9-Redis的持久化机制" class="headerlink" title="3.9 Redis的持久化机制"></a>3.9 Redis的持久化机制</h2><p>RDB和AOF</p>
+<h2 id="3-10-Redis集群的脑裂问题"><a href="#3-10-Redis集群的脑裂问题" class="headerlink" title="3.10 Redis集群的脑裂问题"></a>3.10 Redis集群的脑裂问题</h2><p>主节点网络故障，集群重新选举出来了另一个主节点。由于客户端不知道这个事情，数据还是在旧的主节点上进行的同步，所以当网络恢复的时候，旧的主节点被降级为从节点，旧的主节点上的数据发生了丢失。解决方法：设置主节点的最小从节点，设置主从同步的最小时间</p>
+<h2 id="3-11-数据分片"><a href="#3-11-数据分片" class="headerlink" title="3.11 数据分片"></a>3.11 数据分片</h2><p>一个切片集群中有16384个槽位，每一个key通过一个hash和取余的办法确定一个分配的槽位，每一个槽位都会交给一个节点进行管理。这样就是实现了数据分片的功能。不同节点节点之间所管理的槽位可以进行转移，方便集群中节点的伸缩。</p>
+<h2 id="3-12-Redis是单线程的吗"><a href="#3-12-Redis是单线程的吗" class="headerlink" title="3.12 Redis是单线程的吗"></a>3.12 Redis是单线程的吗</h2><p>Redis的读写模块是单线程的。网络模块在6.0以后就是多线程的了，备份等模块是多线程的。</p>
+<h2 id="3-13-Redis的IO多路复用和网络模块多线程的引入"><a href="#3-13-Redis的IO多路复用和网络模块多线程的引入" class="headerlink" title="3.13 Redis的IO多路复用和网络模块多线程的引入"></a>3.13 Redis的IO多路复用和网络模块多线程的引入</h2><p>IO多路复用本质上还是一个同步阻塞IO模型，多线程是异步IO。</p>
+<h2 id="3-14-缓存雪崩、穿透、击穿"><a href="#3-14-缓存雪崩、穿透、击穿" class="headerlink" title="3.14 缓存雪崩、穿透、击穿"></a>3.14 缓存雪崩、穿透、击穿</h2><p>雪崩：大量的key同一时间过期。穿透：缓存数据库和数据库都没有的key。击穿：在key过期的时候，有大量请求过来，导致MySQL服务器压力增大。</p>
+<h2 id="3-15-大key问题"><a href="#3-15-大key问题" class="headerlink" title="3.15 大key问题"></a>3.15 大key问题</h2><h2 id="3-16-热key问题"><a href="#3-16-热key问题" class="headerlink" title="3.16 热key问题"></a>3.16 热key问题</h2><h2 id="3-17-内存淘汰策略"><a href="#3-17-内存淘汰策略" class="headerlink" title="3.17 内存淘汰策略"></a>3.17 内存淘汰策略</h2><p>random，LRU，LFU * 全局&#x2F;设置了过期时间</p>
+<h2 id="3-18-过期策略"><a href="#3-18-过期策略" class="headerlink" title="3.18 过期策略"></a>3.18 过期策略</h2><p>定时删除、惰性删除、定期删除，采用惰性删除和定期删除的策略</p>
+<h2 id="3-19-虚拟内存"><a href="#3-19-虚拟内存" class="headerlink" title="3.19 虚拟内存"></a>3.19 虚拟内存</h2><p>将不常用的<code>key-value</code>放入磁盘当中</p>
+<h2 id="3-20-事务机制"><a href="#3-20-事务机制" class="headerlink" title="3.20 事务机制"></a>3.20 事务机制</h2><h2 id="3-21-为什么Lua脚本可以保证原子性"><a href="#3-21-为什么Lua脚本可以保证原子性" class="headerlink" title="3.21 为什么Lua脚本可以保证原子性"></a>3.21 为什么Lua脚本可以保证原子性</h2><h2 id="3-22-缓存不一致"><a href="#3-22-缓存不一致" class="headerlink" title="3.22 缓存不一致"></a>3.22 缓存不一致</h2><h2 id="3-23-红锁"><a href="#3-23-红锁" class="headerlink" title="3.23 红锁"></a>3.23 红锁</h2><h2 id="3-24-如何使用Redssion实现分布式锁"><a href="#3-24-如何使用Redssion实现分布式锁" class="headerlink" title="3.24 如何使用Redssion实现分布式锁"></a>3.24 如何使用Redssion实现分布式锁</h2><h2 id="3-25-Redssion的延迟队列"><a href="#3-25-Redssion的延迟队列" class="headerlink" title="3.25 Redssion的延迟队列"></a>3.25 Redssion的延迟队列</h2>
       </div>
       
       
