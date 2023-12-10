@@ -138,6 +138,53 @@
       </categories>
   </entry>
   <entry>
+    <title>提问的智慧</title>
+    <url>/2023/11/29/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文摘抄自公众号<strong>我们都是小青蛙</strong>, 这个作者是我很喜欢的一本书的作者 - <strong>MySQL是怎么运行的 - 小孩子4919</strong></p>
+<p>原文地址:</p>
+<ul>
+<li><p><a href="https://mp.weixin.qq.com/s/ZbazlP6EVfvDDmBGCrqNJQ">提问的智慧</a></p>
+</li>
+<li><p><a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></p>
+</li>
+</ul>
+<p>看原文作者的吐槽, 让人有一种莫名其妙的喜感, 彷佛看到了作者愤怒的样子, 贴出原文的一句话:</p>
+<blockquote>
+<p>If you’re reading this document because you need help, and you walk away with the impression you can get it directly from the authors of this document, <em>you</em> are one of the idiots we are talking about. </p>
+</blockquote>
+<h1 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧"></a>提问的智慧</h1><blockquote>
+<p>People like that are time sinks — they take without giving back, and they waste time we could have spent on another question more interesting and another person more worthy of an answer. We call people like this “losers” (and for historical reasons we sometimes spell it “lusers”).</p>
+</blockquote>
+<p>不要成为一个像<code>lusers</code>的提问者.</p>
+<p><code>lusers</code>的典型特征:</p>
+<ul>
+<li>没有搞清楚问题就发言</li>
+<li>固执己见, 听不到别人的意见</li>
+<li>有问题就发言, 没有自己做过调研</li>
+<li>愚昧的经验主义者, 从其他方面说服你, 不能直面问题的本质, 还说你钻牛角尖</li>
+</ul>
+<blockquote>
+<p>一个英国年轻人对着一个苹果钻牛角尖, 这个苹果为什么会掉在地上呢? 这家伙叫做牛顿, 也就是牛*他哥</p>
+</blockquote>
+<ul>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>搜索</title>
+    <url>/2023/11/29/%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一篇从入门到破门而出的搜索算法笔记, 主要以各种习题来提升对搜索的理解</p>
+<p>由于网上已经由很多优秀的博客, 所以本文中大量引用了一些博主写的优秀博文, 再次对这些大佬表示感谢</p>
+<h1 id="1-入门搜索"><a href="#1-入门搜索" class="headerlink" title="1. 入门搜索"></a>1. 入门搜索</h1><p>入门级的搜索分为BFS和DFS, 最经典的问题就是8皇后的问题</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/n-queens/description/">51. N 皇后 - 力扣（LeetCode）</a></li>
+</ul>
+<h1 id="2-双向搜索"><a href="#2-双向搜索" class="headerlink" title="2. 双向搜索"></a>2. 双向搜索</h1><h1 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h1>]]></content>
+  </entry>
+  <entry>
     <title>内存调度策略</title>
     <url>/2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/</url>
     <content><![CDATA[<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>内存调度策略已经有大佬总结得很详细了，这里仅仅给出链接：</p>
