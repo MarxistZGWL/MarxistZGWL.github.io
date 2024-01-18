@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar3.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="0. 前言CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，于是我拿起来桌腿下用来垫桌腿的操作系统, 准备写一篇属于自己的CPU调度策略。 同时给出部分我认为写的比较好的博文：  大厂面试爱问的CPU调度算法  1. 单机系统的调度策略1.1 单机调度策略的目标 提高资源利用率  公平性  策略强">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CPU调度策略">
+<meta property="og:url" content="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/index.html">
+<meta property="og:site_name" content="Gopher">
+<meta property="og:description" content="0. 前言CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，于是我拿起来桌腿下用来垫桌腿的操作系统, 准备写一篇属于自己的CPU调度策略。 同时给出部分我认为写的比较好的博文：  大厂面试爱问的CPU调度算法  1. 单机系统的调度策略1.1 单机调度策略的目标 提高资源利用率  公平性  策略强">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/image-20231126174334465.png">
+<meta property="article:published_time" content="2023-11-26T08:29:11.000Z">
+<meta property="article:modified_time" content="2023-11-27T03:07:46.654Z">
+<meta property="article:author" content="诸葛王朗">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/image-20231126174334465.png">
+
+<link rel="canonical" href="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>CPU调度策略 | Gopher</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Gopher</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Go Big Or Go Home...</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section">首页</a>
+
+  </li>
+        <li class="menu-item menu-item-algorithm">
+
+    <a href="/Algorithm/" rel="section">Algorithm</a>
+
+  </li>
+        <li class="menu-item menu-item-redis">
+
+    <a href="/Redis/" rel="section">Redis</a>
+
+  </li>
+        <li class="menu-item menu-item-mysql">
+
+    <a href="/MySQL/" rel="section">MySQL</a>
+
+  </li>
+        <li class="menu-item menu-item-csbasic">
+
+    <a href="/CSBasic/" rel="section">CSBasic</a>
+
+  </li>
+        <li class="menu-item menu-item-spring">
+
+    <a href="/Spring/" rel="section">Spring</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/MarxistZGWL" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CPU调度策略
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-26 16:29:11" itemprop="dateCreated datePublished" datetime="2023-11-26T16:29:11+08:00">2023-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-27 11:07:46" itemprop="dateModified" datetime="2023-11-27T11:07:46+08:00">2023-11-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，<del>于是我拿起来桌腿下用来垫桌腿的操作系统</del>, 准备写一篇属于自己的CPU调度策略。</p>
+<p>同时给出部分我认为写的比较好的博文：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的CPU调度算法</a></li>
+</ul>
+<h1 id="1-单机系统的调度策略"><a href="#1-单机系统的调度策略" class="headerlink" title="1. 单机系统的调度策略"></a>1. 单机系统的调度策略</h1><h2 id="1-1-单机调度策略的目标"><a href="#1-1-单机调度策略的目标" class="headerlink" title="1.1 单机调度策略的目标"></a>1.1 单机调度策略的目标</h2><ul>
+<li><p>提高资源利用率</p>
+</li>
+<li><p>公平性</p>
+</li>
+<li><p>策略强制执行</p>
+</li>
+</ul>
+<h2 id="1-2-我们的策略"><a href="#1-2-我们的策略" class="headerlink" title="1.2 我们的策略"></a>1.2 我们的策略</h2><h3 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h3><p>既然基于公平性, 大家排序, 谁先来先给谁用</p>
+<blockquote>
+<p>先来先服务是一种考虑了等待时间的调度策略, 先来排队的人等的时间已经比后来的长了, 后来的也要等着</p>
+</blockquote>
+<h3 id="基于优先级的抢占式调度策略"><a href="#基于优先级的抢占式调度策略" class="headerlink" title="基于优先级的抢占式调度策略"></a>基于优先级的抢占式调度策略</h3><p>既然有些任务很紧急, 那么他来了, 其他人必须让开, 所以每个任务都可以设置一个优先级, 优先级高的会抢占优先级低的任务的CPU</p>
+<blockquote>
+<p>当然, 优先级高的任务可以绅士的不抢占等待别人用完CPU之后他再用, 这就是基于优先级的非抢占式调度策略</p>
+</blockquote>
+<h1 id="2-批处理系统"><a href="#2-批处理系统" class="headerlink" title="2. 批处理系统"></a>2. 批处理系统</h1><h2 id="2-1-批处理系统的目标"><a href="#2-1-批处理系统的目标" class="headerlink" title="2.1 批处理系统的目标"></a>2.1 批处理系统的目标</h2><ul>
+<li>平均周转时间短</li>
+</ul>
+<blockquote>
+<p>周转时间 &#x3D; 作业完成时间 - 作业提交时间</p>
+</blockquote>
+<ul>
+<li>系统吞吐量高</li>
+<li>处理机利用率高</li>
+</ul>
+<h2 id="2-2-调度策略"><a href="#2-2-调度策略" class="headerlink" title="2.2 调度策略"></a>2.2 调度策略</h2><h3 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h3><p>为了最大可能减少周转时间, 我们可以让短作业优先调度. </p>
+<blockquote>
+<p>短作业优先是一种考虑了运行时间的策略, 谁能最快用完谁用CPU</p>
+</blockquote>
+<p><strong>缺点:</strong></p>
+<ul>
+<li>作业的运行时间是不确定的. 只能通过以往经验来确定当前作业的运行时间</li>
+<li>对于长作业不利</li>
+</ul>
+<h3 id="HRRN-高相应比优先的调度策略"><a href="#HRRN-高相应比优先的调度策略" class="headerlink" title="HRRN 高相应比优先的调度策略"></a>HRRN 高相应比优先的调度策略</h3><blockquote>
+<p>先来先服务和短作业优先分别考虑了等待时间和运行时间, HRRN综合考虑了等待时间和运行时间</p>
+<p><img src="image-20231126174334465.png" alt="image-20231126174334465"></p>
+</blockquote>
+<p>我们为每一个作业引入一个优先级的概念, 这个优先级都是动态进行变化的. 这个调度策略很好的平衡了短作业优先和先进先出的策略.</p>
+<h1 id="3-分时处理系统"><a href="#3-分时处理系统" class="headerlink" title="3. 分时处理系统"></a>3. 分时处理系统</h1><h2 id="3-1-分时处理系统的目标"><a href="#3-1-分时处理系统的目标" class="headerlink" title="3.1 分时处理系统的目标"></a>3.1 分时处理系统的目标</h2><ul>
+<li>响应时间快</li>
+</ul>
+<h2 id="3-2-调度策略"><a href="#3-2-调度策略" class="headerlink" title="3.2 调度策略"></a>3.2 调度策略</h2><h3 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h3><p>每个任务分配到一定的时间片, 但是一旦时间片用完, 就必须放弃CPU的执行权.</p>
+<p><strong>缺点:</strong> CPU需要频繁的进行上下文的切换, 会有一定的额外开销</p>
+<h1 id="4-氪金时代"><a href="#4-氪金时代" class="headerlink" title="4. 氪金时代"></a>4. 氪金时代</h1><h2 id="4-1-氪金时代的目标"><a href="#4-1-氪金时代的目标" class="headerlink" title="4.1 氪金时代的目标"></a>4.1 氪金时代的目标</h2><ul>
+<li>让氪金的人有更高的优先级</li>
+</ul>
+<h2 id="4-2-调度策略"><a href="#4-2-调度策略" class="headerlink" title="4.2 调度策略"></a>4.2 调度策略</h2><h3 id="非抢占式调度"><a href="#非抢占式调度" class="headerlink" title="非抢占式调度"></a>非抢占式调度</h3><p>非抢占式规定一旦将CPU分配给某一个进程, 那么在此期间他的CPU执行权不会被剥夺, 直到时间片用完.</p>
+<h3 id="抢占式调度"><a href="#抢占式调度" class="headerlink" title="抢占式调度"></a>抢占式调度</h3><p>不言而喻的调度策略, 直接剥夺时间片</p>
+<h3 id="优先级的类型"><a href="#优先级的类型" class="headerlink" title="优先级的类型"></a>优先级的类型</h3><p>静态优先级, 是一种优先级一旦确定就不会改变的策略</p>
+<p>动态优先级, 是一种优先级会在运行过程中动态改变的策略</p>
+<h2 id="4-3-终极调度策略-多级队列反馈"><a href="#4-3-终极调度策略-多级队列反馈" class="headerlink" title="4.3 终极调度策略 - 多级队列反馈"></a>4.3 终极调度策略 - 多级队列反馈</h2><ol>
+<li>设置多个就绪队列, 每个队列的优先级依次递减, 第一个最高, 第二个次之</li>
+<li>VIP的席位不是那么容易获得的, 优先级越高, 时间片越小, 第二个时间片是第一个的一倍, 以此类推</li>
+<li>每个就绪队列按照先进先出的方式进行调度, 如果当前队列分配的时间片不能完成任务, 那么在执行完时间片之后, 将此队列放入下一个队列的末尾</li>
+<li>按队列优先级进行调度, 只有高优先级的队列任务执行完毕, 才会轮到低优先级队列. 如果在本任务运行期间, 优先级较高的任务来了, 那么必须要放弃CPU, 回到本队列末尾重新排队</li>
+</ol>
+<h1 id="5-其他七七八八的策略"><a href="#5-其他七七八八的策略" class="headerlink" title="5. 其他七七八八的策略"></a>5. 其他七七八八的策略</h1><h2 id="5-1-最早时间截止的策略"><a href="#5-1-最早时间截止的策略" class="headerlink" title="5.1 最早时间截止的策略"></a>5.1 最早时间截止的策略</h2><p>很好理解, 谁迅速谁优先</p>
+<h2 id="5-2-最低松弛度优先"><a href="#5-2-最低松弛度优先" class="headerlink" title="5.2 最低松弛度优先"></a>5.2 最低松弛度优先</h2><p>谁时间紧迫, 谁优先</p>
+<blockquote>
+<p>举例: 一个需要100ms运行时间的任务最晚截止时间是200ms, 那么他必须要最晚在100ms时刻开始运行.</p>
+<p>那么他的松弛度就是 currentTime - 100ms</p>
+</blockquote>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h1><p>本篇文章从系统发展的时间线介绍了不同的调度策略在不同时代是如何被考虑和发展起来的.</p>
+<p>在此进行一个总结:</p>
+<ol>
+<li><p>原始的调度策略:</p>
+<ul>
+<li><p>先来先服务</p>
+</li>
+<li><p>优先级抢占调度</p>
+</li>
+</ul>
+</li>
+<li><p>批处理系统:</p>
+<ul>
+<li>短作业优先</li>
+<li>HRRN</li>
+</ul>
+</li>
+<li><p>分时系统:</p>
+<ul>
+<li>时间片轮转</li>
+</ul>
+</li>
+<li><p>氪金时代</p>
+<ul>
+<li>多级优先队列反馈</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>最早截止时间优先</li>
+<li>最低松弛度优先</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://marxistzgwl.github.io./2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">内存调度策略</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="诸葛王朗 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="诸葛王朗 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/26/LC-Double-Week-118/" rel="prev" title="LC-Double-Week-118">
+      <i class="fa fa-chevron-left"></i> LC-Double-Week-118
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/" rel="next" title="内存调度策略">
+      内存调度策略 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">0. 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%8D%95%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">2.</span> <span class="nav-text">1. 单机系统的调度策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%8D%95%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 单机调度策略的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%88%91%E4%BB%AC%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 我们的策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E6%9D%A5%E5%85%88%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.2.1.</span> <span class="nav-text">先来先服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E4%BC%98%E5%85%88%E7%BA%A7%E7%9A%84%E6%8A%A2%E5%8D%A0%E5%BC%8F%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">2.2.2.</span> <span class="nav-text">基于优先级的抢占式调度策略</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">2. 批处理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 批处理系统的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 调度策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E4%BD%9C%E4%B8%9A%E4%BC%98%E5%85%88"><span class="nav-number">3.2.1.</span> <span class="nav-text">短作业优先</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HRRN-%E9%AB%98%E7%9B%B8%E5%BA%94%E6%AF%94%E4%BC%98%E5%85%88%E7%9A%84%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">3.2.2.</span> <span class="nav-text">HRRN 高相应比优先的调度策略</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%88%86%E6%97%B6%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">3. 分时处理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%88%86%E6%97%B6%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 分时处理系统的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 调度策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E7%89%87%E8%BD%AE%E8%BD%AC%E7%AE%97%E6%B3%95"><span class="nav-number">4.2.1.</span> <span class="nav-text">时间片轮转算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E6%B0%AA%E9%87%91%E6%97%B6%E4%BB%A3"><span class="nav-number">5.</span> <span class="nav-text">4. 氪金时代</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E6%B0%AA%E9%87%91%E6%97%B6%E4%BB%A3%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-number">5.1.</span> <span class="nav-text">4.1 氪金时代的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5"><span class="nav-number">5.2.</span> <span class="nav-text">4.2 调度策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E6%8A%A2%E5%8D%A0%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="nav-number">5.2.1.</span> <span class="nav-text">非抢占式调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%A2%E5%8D%A0%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="nav-number">5.2.2.</span> <span class="nav-text">抢占式调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.2.3.</span> <span class="nav-text">优先级的类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E7%BB%88%E6%9E%81%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5-%E5%A4%9A%E7%BA%A7%E9%98%9F%E5%88%97%E5%8F%8D%E9%A6%88"><span class="nav-number">5.3.</span> <span class="nav-text">4.3 终极调度策略 - 多级队列反馈</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%85%B6%E4%BB%96%E4%B8%83%E4%B8%83%E5%85%AB%E5%85%AB%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-number">6.</span> <span class="nav-text">5. 其他七七八八的策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%9C%80%E6%97%A9%E6%97%B6%E9%97%B4%E6%88%AA%E6%AD%A2%E7%9A%84%E7%AD%96%E7%95%A5"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 最早时间截止的策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E6%9C%80%E4%BD%8E%E6%9D%BE%E5%BC%9B%E5%BA%A6%E4%BC%98%E5%85%88"><span class="nav-number">6.2.</span> <span class="nav-text">5.2 最低松弛度优先</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">6. 总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="诸葛王朗"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">诸葛王朗</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarxistZGWL" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarxistZGWL" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:marxistzgwl@163.com" title="E-Mail → mailto:marxistzgwl@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">诸葛王朗</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

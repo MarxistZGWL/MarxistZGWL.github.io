@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar3.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Gopher">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Gopher">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="诸葛王朗">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Gopher</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Gopher</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Go Big Or Go Home...</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section">首页</a>
+
+  </li>
+        <li class="menu-item menu-item-algorithm">
+
+    <a href="/Algorithm/" rel="section">Algorithm</a>
+
+  </li>
+        <li class="menu-item menu-item-redis">
+
+    <a href="/Redis/" rel="section">Redis</a>
+
+  </li>
+        <li class="menu-item menu-item-mysql">
+
+    <a href="/MySQL/" rel="section">MySQL</a>
+
+  </li>
+        <li class="menu-item menu-item-csbasic">
+
+    <a href="/CSBasic/" rel="section">CSBasic</a>
+
+  </li>
+        <li class="menu-item menu-item-spring">
+
+    <a href="/Spring/" rel="section">Spring</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/MarxistZGWL" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/17/MyGril/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/17/MyGril/" class="post-title-link" itemprop="url">MyGril</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-17 19:05:38" itemprop="dateCreated datePublished" datetime="2023-11-17T19:05:38+08:00">2023-11-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-21 22:13:28" itemprop="dateModified" datetime="2023-11-21T22:13:28+08:00">2023-11-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Beautiful-Photos/" itemprop="url" rel="index"><span itemprop="name">Beautiful Photos</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Beautiful-Photos/Gril/" itemprop="url" rel="index"><span itemprop="name">Gril</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="gril.jpg" alt="gril"></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/19/%E5%85%88%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/19/%E5%85%88%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB/" class="post-title-link" itemprop="url">先学会生活</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-19 15:05:25" itemprop="dateCreated datePublished" datetime="2023-11-19T15:05:25+08:00">2023-11-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-16 20:46:56" itemprop="dateModified" datetime="2024-01-16T20:46:56+08:00">2024-01-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="学会生活"><a href="#学会生活" class="headerlink" title="学会生活"></a>学会生活</h1><p>“学习是首要的任务”可能是我这一代大多数学生从小到大被灌输的思想。</p>
+<p>从小学到高中，我们已经习惯了由别人安排我们的时间。</p>
+<p>早读、数学、英语…</p>
+<p>学校可能教会了我很多东西，但也许忘记了告诉我怎么生活。</p>
+<p>我已经习惯了学习、生活、娱乐融为一体的日子。</p>
+<p>直到最近，因为找实习的需要做的事情有点多（<del>算法、项目和八股三座大山有木有，大学啊，你都教了我什么啊</del>），舌头上又张了一个泡。这是我人生中第二次舌头上长泡，也是今年第二次舌头上长泡（<del>我宣布舌头上长泡是最让人难受的病，因为现在我没有感冒^ _ ^</del>）</p>
+<p>我才意识到，我要认真规划一下我的时间安排了</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12:00 - 7:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>7:30 - 8:00</td>
+<td>吃早饭</td>
+</tr>
+<tr>
+<td>8:00 - 10:00</td>
+<td>第一节（做做算法）</td>
+</tr>
+<tr>
+<td>10:00 - 10:30</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>10:30 - 12:00</td>
+<td>第二节（看项目）</td>
+</tr>
+<tr>
+<td>12:00 - 13:00</td>
+<td>吃午饭</td>
+</tr>
+<tr>
+<td>13:00 - 13:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>13:30 - 14:00</td>
+<td>阅读一下（看看八股文）</td>
+</tr>
+<tr>
+<td>14:00 - 15:30</td>
+<td>第三节（看看课程）</td>
+</tr>
+<tr>
+<td>15:30 - 16:00</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>16:00 - 17:30</td>
+<td>第四节（做项目）</td>
+</tr>
+<tr>
+<td>17:30 - 18:00</td>
+<td>吃饭</td>
+</tr>
+<tr>
+<td>18:00 - 19:00</td>
+<td>休息 + 洗澡</td>
+</tr>
+<tr>
+<td>19:00 - 21:00</td>
+<td>第五节（做项目）</td>
+</tr>
+<tr>
+<td>21:00 - 23:00</td>
+<td>第六节（做项目&#x2F;写一下笔记）</td>
+</tr>
+<tr>
+<td>23:30 - 0:00</td>
+<td>总结一下一天，计划下一天（打游戏）</td>
+</tr>
+</tbody></table>
+<p>暂时就这样子安排，坚持一周看看效果，然后根据效果进行修正好了…</p>
+<p>这样的话，每天有11个小时在学习，8个小时在睡觉，还是挺不错的哈…</p>
+<h1 id="道阻且长"><a href="#道阻且长" class="headerlink" title="道阻且长"></a>道阻且长</h1><blockquote>
+<p>经常这样心血来潮的去做一件事情，一般坚持不久就失去了最初的激情……</p>
+</blockquote>
+<p>竺可桢校长的话时长在我耳边萦绕</p>
+<ul>
+<li>来浙大做什么</li>
+<li>将来要成为什么样的人</li>
+</ul>
+<p>那么，既然你诚心诚意的发问了，我就义正言辞的回答了（<del>开开玩笑而已，我是哪块小饼干，敢这么放肆</del>）😜</p>
+<ul>
+<li>来浙大交朋友（<del>话说，什么时候分配一个女朋友给我啊</del>）😭</li>
+<li>目标是结业的时候能拿到宇宙厂、鹅厂、福报厂等一众大厂的SSR Offer，最终拿到Google、Amazon的Offer，^ _ ^</li>
+</ul>
+<p>好吧，既然牛皮都吹到Github上了，那么先制定一个小目标吧。</p>
+<ul>
+<li><p>每天刷LeetCode5个，到本年底结束，刷够200题目。</p>
+</li>
+<li><p>到毕业结束之前，刷题量在4000题左右，LeetCode竞赛分数拿到3000分。</p>
+</li>
+<li><p>在2024年3月份之前找到一份实习</p>
+</li>
+<li><p>在毕业结束之前，拿到俩段以上的大厂实习经历</p>
+</li>
+<li><p>一个月读一本技术类书籍，在毕业结束之前，读20本技术类书籍</p>
+</li>
+<li><p>记诵英语单词，练习口语，听力，写作等，在学业结束之前，达到托福100分的水平</p>
+</li>
+<li><p>争取能在学业结束之前，找到一个志同道合的女朋友 😭</p>
+</li>
+</ul>
+<p>我的前途啊，它光明又曲折，我只能学阿Q那样告诉自己：做时间的朋友😊…</p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/17/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/17/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">二分查找</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-01-17 16:39:43 / 修改时间：21:12:51" itemprop="dateCreated datePublished" datetime="2024-01-17T16:39:43+08:00">2024-01-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0. 简介"></a>0. 简介</h1><p>二分查找算法，也叫做折半查找算法。二分查找的思想非常简单，针对一个有序的数组集合，每次都通过和区间中间的元素进行对比，将带查找的区间缩小为之前的一半，直到找到要查找的元素，或者区间被缩小为 0。</p>
+<p>二分查找算法的前提是有序，这个有序不一定指的是大小顺序，也可能是乱序，但是可以根据某种规则将元素分割为俩个子区间，通过元素中间的值可以快速的确定某一个区间是不符合要求的，进而很快的对答案区间进行范围的缩小。</p>
+<p>二分查找的时间复杂度是 O(logn), 但是很多时候，二分查找可以使用双指针进行优化。</p>
+<h1 id="1-算法思想和实现"><a href="#1-算法思想和实现" class="headerlink" title="1. 算法思想和实现"></a>1. 算法思想和实现</h1><p>二分查找的要点在于，确定当前的搜索区间和判断之后的下一个子区间。</p>
+<p>二分查找的模板有很多个，但是很多模块容易将初学者绕进去，就是出现某种情况循环不能正常退出的问题，这种情况往往是因为没有确定好搜索区间而出现的问题。</p>
+<p>下面给出模板：</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> <span class="keyword">target</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">		<span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (arr[mid] &gt; <span class="keyword">target</span>) &#123;</span><br><span class="line">			ans = mid;</span><br><span class="line">			r = mid - <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在上面的模板中，我们搜索区间一直是 [l, r], 注意是左闭右闭的区间。如果当前搜索区间没有元素，就需要退出循环。</p>
+<p>上述模板的功能是找到最后一个大于 target 的元素下标。</p>
+<p>如果找不到这样的元素，那么返回 -1</p>
+<blockquote>
+<p>搜索区间的确定主要需要看 mid 的取值范围，mid &#x3D; (l + r) &#x2F; 2; 这样由于向下取整的性质，如果l和r不能相等的话，相当于r这个点是不能够取到的。</p>
+</blockquote>
+<h1 id="2-经典例题"><a href="#2-经典例题" class="headerlink" title="2. 经典例题"></a>2. 经典例题</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/">704. 二分查找</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">34. 在排序数组中查找元素的第一个和最后一个位置</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-in-rotated-sorted-array">33. 搜索旋转排序数组</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sqrtx">69. x 的平方根</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
+</ul>
+<p>第一个数组以i为分割线，分割线左侧的元素是被选中的，</p>
+<p>第二个数组以j为分割线，分割线左侧的元素是被选中的，</p>
+<p>那么需要有 i + j &#x3D; (m + n + 1) &#x2F; 2, 因为我们要求分割线在右侧，所以需要进行 +1 操作</p>
+<p>如果有 nums[i - 1] &lt; nums[j] , 那么说明成功，否则说明需要向左侧进行移动</p>
+<p>核心代码：</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">	int i = (l + r + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">	int j = <span class="built_in">mid</span> - i;</span><br><span class="line">	<span class="keyword">if</span> (nums1[i - <span class="number">1</span>] &gt; nums[j]) &#123;</span><br><span class="line">		r = <span class="built_in">mid</span> - <span class="number">1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		l = <span class="built_in">mid</span>; <span class="comment">// 因为 l + r + 1 自动让 i 右移动</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-size-subarray-sum">209. 长度最小的子数组</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/kth-smallest-element-in-a-bst"> 230. 二叉搜索树中第K小的元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-a-2d-matrix-ii/">240. 搜索二维矩阵 II</a></li>
+</ul>
+<h1 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h1><p>二分查找总是在尽力的缩小搜索的区间。</p>
+<p>以下几个题目真的是常做常新</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/16/2024%E5%B9%B4%E6%98%A5%E5%AD%A3%E7%89%B9%E8%AE%AD%E8%AE%A1%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/16/2024%E5%B9%B4%E6%98%A5%E5%AD%A3%E7%89%B9%E8%AE%AD%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">2024年春季特训计划</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-01-16 20:47:56" itemprop="dateCreated datePublished" datetime="2024-01-16T20:47:56+08:00">2024-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-17 16:38:25" itemprop="dateModified" datetime="2024-01-17T16:38:25+08:00">2024-01-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
+<li>字节跳动算法前300道</li>
+</ol>
+<ul>
+<li>数组专题</li>
+<li>链表专题</li>
+<li>贪心专题</li>
+<li>滑动窗口</li>
+<li>数据结构</li>
+<li>DP专题</li>
+<li>DFS专题</li>
+<li>BFS专题</li>
+<li>字符串专题</li>
+<li>单调队列专题</li>
+</ul>
+<ol start="2">
+<li>Java八股文</li>
+</ol>
+<ul>
+<li>Java基础 </li>
+<li>Java并发</li>
+<li>Java虚拟机- MySQL相关原理</li>
+<li>Spring、SpringBoot、Spring Cloud相关原理</li>
+<li>MyBatis，MyBatis-plus相关</li>
+<li>Redis- RocketMQ</li>
+<li>ElasticSearch</li>
+<li>RPC相关原理</li>
+<li>分布式数据库</li>
+<li>Go语言基础、并发</li>
+<li>Go语言网络编程</li>
+<li>GMP模型</li>
+</ul>
+<ol start="3">
+<li>项目</li>
+</ol>
+<ul>
+<li>12306系统</li>
+<li>短链接系统</li>
+</ul>
+<ol start="4">
+<li>场景题目</li>
+</ol>
+<ul>
+<li>哲学家就餐</li>
+<li>生产者消费者</li>
+<li>延迟消费队列</li>
+<li>电梯算法</li>
+</ul>
+<ol start="5">
+<li>智力题</li>
+</ol>
+<ul>
+<li>看看Hollis</li>
+</ul>
+<h1 id="日程表"><a href="#日程表" class="headerlink" title="日程表"></a>日程表</h1><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12:00 - 7:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>7:30 - 8:00</td>
+<td>吃早饭</td>
+</tr>
+<tr>
+<td>8:00 - 10:00</td>
+<td>第一节（做做算法）</td>
+</tr>
+<tr>
+<td>10:00 - 10:30</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>10:30 - 12:00</td>
+<td>第二节（看项目）</td>
+</tr>
+<tr>
+<td>12:00 - 13:00</td>
+<td>吃午饭</td>
+</tr>
+<tr>
+<td>13:00 - 13:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>13:30 - 14:00</td>
+<td>阅读一下（看看八股文）</td>
+</tr>
+<tr>
+<td>14:00 - 15:30</td>
+<td>第三节（看看课程）</td>
+</tr>
+<tr>
+<td>15:30 - 16:00</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>16:00 - 17:30</td>
+<td>第四节（做项目）</td>
+</tr>
+<tr>
+<td>17:30 - 18:00</td>
+<td>吃饭</td>
+</tr>
+<tr>
+<td>18:00 - 19:00</td>
+<td>休息 + 洗澡</td>
+</tr>
+<tr>
+<td>19:00 - 21:00</td>
+<td>第五节（做项目）</td>
+</tr>
+<tr>
+<td>21:00 - 23:00</td>
+<td>第六节（做项目&#x2F;写一下笔记）</td>
+</tr>
+<tr>
+<td>23:30 - 0:00</td>
+<td>总结一下一天，计划下一天（打游戏）</td>
+</tr>
+</tbody></table>
+<h1 id="每日任务"><a href="#每日任务" class="headerlink" title="每日任务"></a>每日任务</h1><h2 id="1-17"><a href="#1-17" class="headerlink" title="1-17"></a>1-17</h2><ul>
+<li><input disabled type="checkbox"> 数组专题5道</li>
+<li><input disabled type="checkbox"> 八股文-ArrayList、LinkedList</li>
+<li><input disabled type="checkbox"> 项目 - 12306 - 登录模块</li>
+<li><input disabled type="checkbox"> mysql书籍 - 20页</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/13/Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/13/Docker/" class="post-title-link" itemprop="url">Docker</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-01-13 15:38:31" itemprop="dateCreated datePublished" datetime="2024-01-13T15:38:31+08:00">2024-01-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-18 11:36:58" itemprop="dateModified" datetime="2024-01-18T11:36:58+08:00">2024-01-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0. 简介"></a>0. 简介</h1><p>本文主要讲述的Docker的基本原理、安装和常用基础命令。</p>
+<h1 id="1-Docker介绍"><a href="#1-Docker介绍" class="headerlink" title="1. Docker介绍"></a>1. Docker介绍</h1><h1 id="2-安装Docker-CentOS"><a href="#2-安装Docker-CentOS" class="headerlink" title="2. 安装Docker - CentOS"></a>2. 安装Docker - CentOS</h1><h2 id="2-1-卸载Docker"><a href="#2-1-卸载Docker" class="headerlink" title="2.1 卸载Docker"></a>2.1 卸载Docker</h2><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum remove docker <span class="string">\</span></span><br><span class="line">                  docker-client <span class="string">\</span></span><br><span class="line">                  docker-client-latest <span class="string">\</span></span><br><span class="line">                  docker-common <span class="string">\</span></span><br><span class="line">                  docker-latest <span class="string">\</span></span><br><span class="line">                  docker-latest-logrotate <span class="string">\</span></span><br><span class="line">                  docker-logrotate <span class="string">\</span></span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-安装Docker"><a href="#2-2-安装Docker" class="headerlink" title="2.2 安装Docker"></a>2.2 安装Docker</h2><ol>
+<li>安装yum-utils</li>
+</ol>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-<span class="class"><span class="keyword">data</span> \</span></span><br><span class="line">  lvm2</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>更新镜像源</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum-config-manager \</span><br><span class="line">    --<span class="built_in">add</span>-repo \</span><br><span class="line">    https://mirrors.aliyun.<span class="keyword">com</span>/docker-<span class="keyword">ce</span>/linux/centos/docker-<span class="keyword">ce</span>.repo</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装Docker</li>
+</ol>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="keyword">install</span> -y docker-ce</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>查看docker是否安装成功</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker -v</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-启动Docker"><a href="#2-3-启动Docker" class="headerlink" title="2.3 启动Docker"></a>2.3 启动Docker</h2><blockquote>
+<p>在使用docker的时候需要开放各种端口的防火墙，但是为了学习方便，所以这里我们直接关闭防火墙</p>
+<ol>
+<li>查看防火墙状态：<code>systemctl status firewalld</code></li>
+<li>关闭防火墙：<code>systemctl stop firewalld</code></li>
+<li>关闭防火墙开机自启动：<code>systemctl disable firewalld</code></li>
+</ol>
+</blockquote>
+<ol>
+<li>启动docker</li>
+</ol>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="literal">start</span> docker</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>查看docker状态</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl status docker</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-镜像加速"><a href="#2-4-镜像加速" class="headerlink" title="2.4 镜像加速"></a>2.4 镜像加速</h2><p><a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">阿里云镜像加速网站</a></p>
+<h1 id="3-基本操作"><a href="#3-基本操作" class="headerlink" title="3. 基本操作"></a>3. 基本操作</h1><p>Docker的基本操作分为</p>
+<ul>
+<li>镜像操作</li>
+<li>容器操作</li>
+<li>数据卷</li>
+</ul>
+<h2 id="3-1-镜像相关命令"><a href="#3-1-镜像相关命令" class="headerlink" title="3.1 镜像相关命令"></a>3.1 镜像相关命令</h2><p>镜像名称的组成：<repository>:<tag></tag></repository></p>
+<blockquote>
+<p>如果没有指定tag，那么tag默认是latest，代表最新版本的镜像</p>
+</blockquote>
+<img src="image-20240113155416153.png" alt="image-20240113155416153" style="zoom:200%;">
+
+<h2 id="3-2-容器相关命令"><a href="#3-2-容器相关命令" class="headerlink" title="3.2 容器相关命令"></a>3.2 容器相关命令</h2><img src="image-20240113162007652.png" alt="image-20240113162007652" style="zoom:200%;">
+
+<ul>
+<li>查看所有容器的命令：<code>docker ps</code></li>
+<li>进入容器执行命令：<code>docker exec</code></li>
+<li>查看容器的日志：<code>docker logs</code></li>
+</ul>
+<ol>
+<li>创建一个容器</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name <span class="tag">&lt;<span class="name">containerName</span>&gt;</span> -p <span class="tag">&lt;<span class="name">originPort</span>&gt;</span>:<span class="tag">&lt;<span class="name">containerPort</span>&gt;</span> -d <span class="tag">&lt;<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-d：表示需要后台运行</li>
+</ul>
+<ol start="2">
+<li>持续跟踪容器日志</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f <span class="tag">&lt;<span class="name">containerName</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>进入容器</li>
+</ol>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -<span class="keyword">it</span> &lt;containerName&gt; bash</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-i：表示交互</li>
+<li>-t：表示终端</li>
+<li>bash：交互式shell</li>
+</ul>
+<ol start="4">
+<li>关闭所有容器</li>
+</ol>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">stop</span> $(docker ps -<span class="keyword">a</span> -q)</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>开启所有容器</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">start</span> <span class="variable">$</span>(docker <span class="built_in">ps</span> <span class="literal">-a</span> <span class="literal">-q</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-数据卷操作"><a href="#3-3-数据卷操作" class="headerlink" title="3.3 数据卷操作"></a>3.3 数据卷操作</h2><img src="image-20240113195832580.png" alt="image-20240113195832580" style="zoom:200%;">
+
+<p>数据卷是一个虚拟目录，指向宿主机文件系统种的某个目录。</p>
+<ol>
+<li>基本操作</li>
+</ol>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">volume</span><span class="language-bash"> &lt;<span class="built_in">command</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>create：创建一个数据卷</li>
+<li>inspect：显示一个或者多个volume的信息</li>
+<li>ls：列出所有的volume信息</li>
+<li>prune：删除没有使用的volume</li>
+<li>rm：删除一个或者多个指定的volume</li>
+</ul>
+<ol start="2">
+<li>数据卷的挂载</li>
+</ol>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name &lt;containerName&gt; -v &lt;volumeName&gt;<span class="symbol">:&lt;containerFileName&gt;</span> -p &lt;originPort&gt;<span class="symbol">:&lt;containerPort&gt;</span> nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-4-自定义镜像"><a href="#3-4-自定义镜像" class="headerlink" title="3.4 自定义镜像"></a>3.4 自定义镜像</h2><ul>
+<li>镜像是将应用程序及其需要的系统函数库、环境、配置、依赖打包而成。</li>
+</ul>
+<p>使用<code>dockerfile</code>来进行自定义镜像</p>
+<h2 id="3-5-DockerCompose"><a href="#3-5-DockerCompose" class="headerlink" title="3.5 DockerCompose"></a>3.5 DockerCompose</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/docker-compose.html">Docker Compose | 菜鸟教程 (runoob.com)</a></p>
+<p>Docker Compose 可以基于 Compose 文件帮助我们进行快速部署分布式应用，而无需进行一个个的创建和运行容器。</p>
+<p>Compose 是一个文本文件，通过指令定义集群中的容器如何运行</p>
+<p>Docker Compose 将命令</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">	-- name mysql \</span><br><span class="line">	-e MYSQL ROOT PASSWORD=<span class="number">123</span> \</span><br><span class="line">	-p <span class="number">3306</span>:<span class="number">3306</span></span><br><span class="line">	-v <span class="regexp">/tmp/</span>mysql<span class="regexp">/conf/</span>hmy.<span class="attr">cnf:</span><span class="regexp">/etc/</span>mysql<span class="regexp">/conf.d/</span>hmy.cnf \</span><br><span class="line">	-v <span class="regexp">/tmp/</span>mysql<span class="regexp">/data:/</span><span class="keyword">var</span><span class="regexp">/lib/</span>mysql \</span><br><span class="line">	-d \</span><br><span class="line">	<span class="symbol">mysql:</span><span class="number">5.7</span><span class="number">.25</span></span><br><span class="line">	</span><br><span class="line">docker build -t <span class="attr">web:</span><span class="number">1.0</span></span><br><span class="line">docker run --name web -p <span class="number">8080</span>:<span class="number">8080</span> -d <span class="attr">web:</span><span class="number">1.0</span></span><br></pre></td></tr></table></figure>
+
+<p>转化为文件</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">version:</span> <span class="string">&quot;3.8&quot;</span></span><br><span class="line"><span class="symbol">services:</span> </span><br><span class="line"><span class="symbol">	mysql:</span></span><br><span class="line"><span class="symbol">		image:</span> mysql:<span class="number">5.7</span><span class="number">.25</span></span><br><span class="line"><span class="symbol">		environment:</span></span><br><span class="line"><span class="symbol">			MYSQL_ROOT_PASSWORD:</span> <span class="number">123</span></span><br><span class="line"><span class="symbol">		volumes:</span></span><br><span class="line">		- <span class="keyword">/tmp/</span>mysql/data:<span class="keyword">/var/</span>lib/mysql</span><br><span class="line">		- <span class="keyword">/tmp/</span>mysql<span class="keyword">/conf/</span>hmy.cnf:<span class="keyword">/etc/</span>mysql/conf.d/hmy.cnf</span><br><span class="line"><span class="symbol">		web:</span></span><br><span class="line"><span class="symbol">			build:</span> .</span><br><span class="line"><span class="symbol">			ports:</span></span><br><span class="line">			- <span class="number">8080</span>:<span class="number">8080</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>安装 Docker Compose</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.daocloud.io/docker</span><span class="regexp">/compose/releases</span><span class="regexp">/download/v</span>2.<span class="number">4.1</span>/docker-compose-<span class="string">`uname -s`</span>-<span class="string">`uname -m`</span> &gt; <span class="regexp">/usr/local</span><span class="regexp">/bin/docker</span>-compose</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>给 Docker Compose</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>docker-compose</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>测试是否安装成功</li>
+</ol>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-6-搭建私有镜像仓库"><a href="#3-6-搭建私有镜像仓库" class="headerlink" title="3.6 搭建私有镜像仓库"></a>3.6 搭建私有镜像仓库</h2><h1 id="4-实战"><a href="#4-实战" class="headerlink" title="4. 实战"></a>4. 实战</h1><p>将一个微服务项目使用docker进行部署</p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/29/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/29/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="post-title-link" itemprop="url">提问的智慧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-29 22:54:31" itemprop="dateCreated datePublished" datetime="2023-11-29T22:54:31+08:00">2023-11-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-12-01 20:56:38" itemprop="dateModified" datetime="2023-12-01T20:56:38+08:00">2023-12-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文摘抄自公众号<strong>我们都是小青蛙</strong>, 这个作者是我很喜欢的一本书的作者 - <strong>MySQL是怎么运行的 - 小孩子4919</strong></p>
+<p>原文地址:</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/ZbazlP6EVfvDDmBGCrqNJQ">提问的智慧</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></p>
+</li>
+</ul>
+<p>看原文作者的吐槽, 让人有一种莫名其妙的喜感, 彷佛看到了作者愤怒的样子, 贴出原文的一句话:</p>
+<blockquote>
+<p>If you’re reading this document because you need help, and you walk away with the impression you can get it directly from the authors of this document, <em>you</em> are one of the idiots we are talking about. </p>
+</blockquote>
+<h1 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧"></a>提问的智慧</h1><blockquote>
+<p>People like that are time sinks — they take without giving back, and they waste time we could have spent on another question more interesting and another person more worthy of an answer. We call people like this “losers” (and for historical reasons we sometimes spell it “lusers”).</p>
+</blockquote>
+<p>不要成为一个像<code>lusers</code>的提问者.</p>
+<p><code>lusers</code>的典型特征:</p>
+<ul>
+<li>没有搞清楚问题就发言</li>
+<li>固执己见, 听不到别人的意见</li>
+<li>有问题就发言, 没有自己做过调研</li>
+<li>愚昧的经验主义者, 从其他方面说服你, 不能直面问题的本质, 还说你钻牛角尖</li>
+</ul>
+<blockquote>
+<p>一个英国年轻人对着一个苹果钻牛角尖, 这个苹果为什么会掉在地上呢? 这家伙叫做牛顿, 也就是牛*他哥</p>
+</blockquote>
+<ul>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/29/%E6%90%9C%E7%B4%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/29/%E6%90%9C%E7%B4%A2/" class="post-title-link" itemprop="url">搜索</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-29 09:08:46 / 修改时间：13:47:15" itemprop="dateCreated datePublished" datetime="2023-11-29T09:08:46+08:00">2023-11-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是一篇从入门到破门而出的搜索算法笔记, 主要以各种习题来提升对搜索的理解</p>
+<p>由于网上已经由很多优秀的博客, 所以本文中大量引用了一些博主写的优秀博文, 再次对这些大佬表示感谢</p>
+<h1 id="1-入门搜索"><a href="#1-入门搜索" class="headerlink" title="1. 入门搜索"></a>1. 入门搜索</h1><p>入门级的搜索分为BFS和DFS, 最经典的问题就是8皇后的问题</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/n-queens/description/">51. N 皇后 - 力扣（LeetCode）</a></li>
+</ul>
+<h1 id="2-双向搜索"><a href="#2-双向搜索" class="headerlink" title="2. 双向搜索"></a>2. 双向搜索</h1><h1 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h1>
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/" class="post-title-link" itemprop="url">内存调度策略</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-26 23:36:43" itemprop="dateCreated datePublished" datetime="2023-11-26T23:36:43+08:00">2023-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-27 11:07:44" itemprop="dateModified" datetime="2023-11-27T11:07:44+08:00">2023-11-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>内存调度策略已经有大佬总结得很详细了，这里仅仅给出链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的「调度算法」</a></p>
+<h1 id="1-LRU算法"><a href="#1-LRU算法" class="headerlink" title="1. LRU算法"></a>1. LRU算法</h1><p>由于宇宙厂特别喜欢考这个面试题，所以我们将这个<code>LeetCode</code>题目写出来。</p>
+<p><strong>算法思路：</strong></p>
+<p>使用<code>HashMap</code>来进行快速的查找，使用双向链表来进行置换操作。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>新加入节点的时候需要判断是否需要进行节点的移除操作</li>
+<li>移除节点需要在链表和哈希表中同时进行删除</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LRUCache</span> &#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">DNode</span>&#123;</span><br><span class="line">        <span class="type">int</span> key;</span><br><span class="line">        <span class="type">int</span> value;</span><br><span class="line">        DNode prev;</span><br><span class="line">        DNode next;</span><br><span class="line">    &#125;</span><br><span class="line">    HashMap&lt;Integer, DNode&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    DNode head, tail;</span><br><span class="line">    <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> capacity;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">LRUCache</span><span class="params">(<span class="type">int</span> capacity)</span> &#123;</span><br><span class="line">        head = <span class="keyword">new</span> <span class="title class_">DNode</span>();</span><br><span class="line">        tail = <span class="keyword">new</span> <span class="title class_">DNode</span>();</span><br><span class="line">        head.next = tail;</span><br><span class="line">        tail.prev = head;</span><br><span class="line">        <span class="built_in">this</span>.capacity = capacity;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">moveToHead</span><span class="params">(DNode node)</span> &#123;</span><br><span class="line">        removeNode(node);</span><br><span class="line">        addToHead(node);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">removeNode</span><span class="params">(DNode node)</span> &#123;</span><br><span class="line">        node.prev.next = node.next;</span><br><span class="line">        node.next.prev = node.prev;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">addToHead</span><span class="params">(DNode node)</span> &#123;</span><br><span class="line">        node.next = head.next;</span><br><span class="line">        node.prev = head;</span><br><span class="line">        head.next.prev = node;</span><br><span class="line">        head.next = node;</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    DNode <span class="title function_">removeTail</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">DNode</span> <span class="variable">node</span> <span class="operator">=</span> tail.prev;</span><br><span class="line">        removeNode(node);</span><br><span class="line">        <span class="keyword">return</span> node;</span><br><span class="line">    &#125; </span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> key)</span> &#123;</span><br><span class="line">        <span class="type">DNode</span> <span class="variable">node</span> <span class="operator">=</span> map.get(key);</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        moveToHead(node);</span><br><span class="line">        <span class="keyword">return</span> node.value;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">put</span><span class="params">(<span class="type">int</span> key, <span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="type">DNode</span> <span class="variable">node</span> <span class="operator">=</span> map.get(key);</span><br><span class="line">        <span class="keyword">if</span> (node != <span class="literal">null</span>) &#123;</span><br><span class="line">            node.value = value;</span><br><span class="line">            moveToHead(node);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// new DNode</span></span><br><span class="line">            <span class="type">DNode</span> <span class="variable">newNode</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DNode</span>();</span><br><span class="line">            newNode.key = key;</span><br><span class="line">            newNode.value = value;</span><br><span class="line">            map.put(key, newNode);</span><br><span class="line">            <span class="comment">// add new node</span></span><br><span class="line">            addToHead(newNode);</span><br><span class="line">            size++;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// remove rear node if capacity is not enough</span></span><br><span class="line">            <span class="keyword">if</span> (size &gt; capacity) &#123;</span><br><span class="line">                <span class="type">DNode</span> <span class="variable">rearNode</span> <span class="operator">=</span> removeTail();</span><br><span class="line">                map.remove(rearNode.key);</span><br><span class="line">                size--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-总结"><a href="#2-总结" class="headerlink" title="2. 总结"></a>2. 总结</h1><p>页面置换算法：</p>
+<ul>
+<li>最佳置换算法</li>
+</ul>
+<p>无法实现，用于衡量其他算法好坏的标准</p>
+<ul>
+<li>LRU - 最近最久没有使用</li>
+</ul>
+<p>使用双链表进行实现，但是要维护一个双链表成本比较大</p>
+<ul>
+<li>Clock - 时钟置换算法</li>
+</ul>
+<p>将标记为1变为0， 将标记为0置换</p>
+<ul>
+<li>LFU - 最近最少使用</li>
+</ul>
+<p>维护一个计数访问器</p>
+<ul>
+<li>改进的时钟置换算法</li>
+</ul>
+<p>不仅考虑是否使用，还考虑页面是否进行了修改，优先淘汰那些没有进行过修改的页面</p>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://marxistzgwl.github.io./2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">CPU调度策略</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/" class="post-title-link" itemprop="url">CPU调度策略</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-26 16:29:11" itemprop="dateCreated datePublished" datetime="2023-11-26T16:29:11+08:00">2023-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-27 11:07:46" itemprop="dateModified" datetime="2023-11-27T11:07:46+08:00">2023-11-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，<del>于是我拿起来桌腿下用来垫桌腿的操作系统</del>, 准备写一篇属于自己的CPU调度策略。</p>
+<p>同时给出部分我认为写的比较好的博文：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的CPU调度算法</a></li>
+</ul>
+<h1 id="1-单机系统的调度策略"><a href="#1-单机系统的调度策略" class="headerlink" title="1. 单机系统的调度策略"></a>1. 单机系统的调度策略</h1><h2 id="1-1-单机调度策略的目标"><a href="#1-1-单机调度策略的目标" class="headerlink" title="1.1 单机调度策略的目标"></a>1.1 单机调度策略的目标</h2><ul>
+<li><p>提高资源利用率</p>
+</li>
+<li><p>公平性</p>
+</li>
+<li><p>策略强制执行</p>
+</li>
+</ul>
+<h2 id="1-2-我们的策略"><a href="#1-2-我们的策略" class="headerlink" title="1.2 我们的策略"></a>1.2 我们的策略</h2><h3 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h3><p>既然基于公平性, 大家排序, 谁先来先给谁用</p>
+<blockquote>
+<p>先来先服务是一种考虑了等待时间的调度策略, 先来排队的人等的时间已经比后来的长了, 后来的也要等着</p>
+</blockquote>
+<h3 id="基于优先级的抢占式调度策略"><a href="#基于优先级的抢占式调度策略" class="headerlink" title="基于优先级的抢占式调度策略"></a>基于优先级的抢占式调度策略</h3><p>既然有些任务很紧急, 那么他来了, 其他人必须让开, 所以每个任务都可以设置一个优先级, 优先级高的会抢占优先级低的任务的CPU</p>
+<blockquote>
+<p>当然, 优先级高的任务可以绅士的不抢占等待别人用完CPU之后他再用, 这就是基于优先级的非抢占式调度策略</p>
+</blockquote>
+<h1 id="2-批处理系统"><a href="#2-批处理系统" class="headerlink" title="2. 批处理系统"></a>2. 批处理系统</h1><h2 id="2-1-批处理系统的目标"><a href="#2-1-批处理系统的目标" class="headerlink" title="2.1 批处理系统的目标"></a>2.1 批处理系统的目标</h2><ul>
+<li>平均周转时间短</li>
+</ul>
+<blockquote>
+<p>周转时间 &#x3D; 作业完成时间 - 作业提交时间</p>
+</blockquote>
+<ul>
+<li>系统吞吐量高</li>
+<li>处理机利用率高</li>
+</ul>
+<h2 id="2-2-调度策略"><a href="#2-2-调度策略" class="headerlink" title="2.2 调度策略"></a>2.2 调度策略</h2><h3 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h3><p>为了最大可能减少周转时间, 我们可以让短作业优先调度. </p>
+<blockquote>
+<p>短作业优先是一种考虑了运行时间的策略, 谁能最快用完谁用CPU</p>
+</blockquote>
+<p><strong>缺点:</strong></p>
+<ul>
+<li>作业的运行时间是不确定的. 只能通过以往经验来确定当前作业的运行时间</li>
+<li>对于长作业不利</li>
+</ul>
+<h3 id="HRRN-高相应比优先的调度策略"><a href="#HRRN-高相应比优先的调度策略" class="headerlink" title="HRRN 高相应比优先的调度策略"></a>HRRN 高相应比优先的调度策略</h3><blockquote>
+<p>先来先服务和短作业优先分别考虑了等待时间和运行时间, HRRN综合考虑了等待时间和运行时间</p>
+<p><img src="image-20231126174334465.png" alt="image-20231126174334465"></p>
+</blockquote>
+<p>我们为每一个作业引入一个优先级的概念, 这个优先级都是动态进行变化的. 这个调度策略很好的平衡了短作业优先和先进先出的策略.</p>
+<h1 id="3-分时处理系统"><a href="#3-分时处理系统" class="headerlink" title="3. 分时处理系统"></a>3. 分时处理系统</h1><h2 id="3-1-分时处理系统的目标"><a href="#3-1-分时处理系统的目标" class="headerlink" title="3.1 分时处理系统的目标"></a>3.1 分时处理系统的目标</h2><ul>
+<li>响应时间快</li>
+</ul>
+<h2 id="3-2-调度策略"><a href="#3-2-调度策略" class="headerlink" title="3.2 调度策略"></a>3.2 调度策略</h2><h3 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h3><p>每个任务分配到一定的时间片, 但是一旦时间片用完, 就必须放弃CPU的执行权.</p>
+<p><strong>缺点:</strong> CPU需要频繁的进行上下文的切换, 会有一定的额外开销</p>
+<h1 id="4-氪金时代"><a href="#4-氪金时代" class="headerlink" title="4. 氪金时代"></a>4. 氪金时代</h1><h2 id="4-1-氪金时代的目标"><a href="#4-1-氪金时代的目标" class="headerlink" title="4.1 氪金时代的目标"></a>4.1 氪金时代的目标</h2><ul>
+<li>让氪金的人有更高的优先级</li>
+</ul>
+<h2 id="4-2-调度策略"><a href="#4-2-调度策略" class="headerlink" title="4.2 调度策略"></a>4.2 调度策略</h2><h3 id="非抢占式调度"><a href="#非抢占式调度" class="headerlink" title="非抢占式调度"></a>非抢占式调度</h3><p>非抢占式规定一旦将CPU分配给某一个进程, 那么在此期间他的CPU执行权不会被剥夺, 直到时间片用完.</p>
+<h3 id="抢占式调度"><a href="#抢占式调度" class="headerlink" title="抢占式调度"></a>抢占式调度</h3><p>不言而喻的调度策略, 直接剥夺时间片</p>
+<h3 id="优先级的类型"><a href="#优先级的类型" class="headerlink" title="优先级的类型"></a>优先级的类型</h3><p>静态优先级, 是一种优先级一旦确定就不会改变的策略</p>
+<p>动态优先级, 是一种优先级会在运行过程中动态改变的策略</p>
+<h2 id="4-3-终极调度策略-多级队列反馈"><a href="#4-3-终极调度策略-多级队列反馈" class="headerlink" title="4.3 终极调度策略 - 多级队列反馈"></a>4.3 终极调度策略 - 多级队列反馈</h2><ol>
+<li>设置多个就绪队列, 每个队列的优先级依次递减, 第一个最高, 第二个次之</li>
+<li>VIP的席位不是那么容易获得的, 优先级越高, 时间片越小, 第二个时间片是第一个的一倍, 以此类推</li>
+<li>每个就绪队列按照先进先出的方式进行调度, 如果当前队列分配的时间片不能完成任务, 那么在执行完时间片之后, 将此队列放入下一个队列的末尾</li>
+<li>按队列优先级进行调度, 只有高优先级的队列任务执行完毕, 才会轮到低优先级队列. 如果在本任务运行期间, 优先级较高的任务来了, 那么必须要放弃CPU, 回到本队列末尾重新排队</li>
+</ol>
+<h1 id="5-其他七七八八的策略"><a href="#5-其他七七八八的策略" class="headerlink" title="5. 其他七七八八的策略"></a>5. 其他七七八八的策略</h1><h2 id="5-1-最早时间截止的策略"><a href="#5-1-最早时间截止的策略" class="headerlink" title="5.1 最早时间截止的策略"></a>5.1 最早时间截止的策略</h2><p>很好理解, 谁迅速谁优先</p>
+<h2 id="5-2-最低松弛度优先"><a href="#5-2-最低松弛度优先" class="headerlink" title="5.2 最低松弛度优先"></a>5.2 最低松弛度优先</h2><p>谁时间紧迫, 谁优先</p>
+<blockquote>
+<p>举例: 一个需要100ms运行时间的任务最晚截止时间是200ms, 那么他必须要最晚在100ms时刻开始运行.</p>
+<p>那么他的松弛度就是 currentTime - 100ms</p>
+</blockquote>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h1><p>本篇文章从系统发展的时间线介绍了不同的调度策略在不同时代是如何被考虑和发展起来的.</p>
+<p>在此进行一个总结:</p>
+<ol>
+<li><p>原始的调度策略:</p>
+<ul>
+<li><p>先来先服务</p>
+</li>
+<li><p>优先级抢占调度</p>
+</li>
+</ul>
+</li>
+<li><p>批处理系统:</p>
+<ul>
+<li>短作业优先</li>
+<li>HRRN</li>
+</ul>
+</li>
+<li><p>分时系统:</p>
+<ul>
+<li>时间片轮转</li>
+</ul>
+</li>
+<li><p>氪金时代</p>
+<ul>
+<li>多级优先队列反馈</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>最早截止时间优先</li>
+<li>最低松弛度优先</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://marxistzgwl.github.io./2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">内存调度策略</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/LC-Double-Week-118/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/LC-Double-Week-118/" class="post-title-link" itemprop="url">LC-Double-Week-118</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-26 15:59:10 / 修改时间：16:17:34" itemprop="dateCreated datePublished" datetime="2023-11-26T15:59:10+08:00">2023-11-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第-118-场双周赛-力扣（LeetCode）"><a href="#第-118-场双周赛-力扣（LeetCode）" class="headerlink" title="第 118 场双周赛 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/contest/biweekly-contest-118/">第 118 场双周赛 - 力扣（LeetCode）</a></h1><h2 id="1-查找包含给定字符的单词"><a href="#1-查找包含给定字符的单词" class="headerlink" title="1. 查找包含给定字符的单词"></a>1. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-words-containing-character/">查找包含给定字符的单词</a></h2><p><strong>思路</strong></p>
+<p>简单的模拟题，依次对每一个字符串进行判断就可以了</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findWordsContaining</span><span class="params">(String[] words, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> words.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (has(words[i], x)) &#123;</span><br><span class="line">                ans.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">has</span><span class="params">(String s, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == s.charAt(i)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-最大化网格图中正方形空洞的面积"><a href="#2-最大化网格图中正方形空洞的面积" class="headerlink" title="2. 最大化网格图中正方形空洞的面积"></a>2. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximize-area-of-square-hole-in-grid/">最大化网格图中正方形空洞的面积</a></h2><p><strong>思路</strong></p>
+<p>刚开始小格子的面积都是1表示每一条线都是有左右为1的相邻线段的，抽走一部分线段，导致间隙慢慢变大了。那么我们只需要找到最大间隙就可以了。</p>
+<p><strong>这个题目和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-consecutive-sequence/">128. 最长连续序列</a>很像</strong></p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maximizeSquareHoleArea</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m, <span class="type">int</span>[] hBars, <span class="type">int</span>[] vBars)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(hBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(vBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> Math.min(rMax, cMax);</span><br><span class="line">        <span class="keyword">return</span> t * t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            map.put(num, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(arr[i] - <span class="number">1</span>)) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="keyword">while</span> (map.containsKey(cur)) &#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans = Math.max(ans, cnt);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-购买水果需要的最少金币数"><a href="#3-购买水果需要的最少金币数" class="headerlink" title="3. 购买水果需要的最少金币数"></a>3. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">购买水果需要的最少金币数</a></h2><p><strong>思路</strong></p>
+<p>经典的背包问题，由于我的dp没有dfs学的好，所以使用记忆化搜索实现</p>
+<p>对于每一个水果，你都可以选择直接买或者通过买其他水果进行白嫖。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] cache = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumCoins</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        Arrays.fill(cache, -<span class="number">1</span>);</span><br><span class="line">        cache[<span class="number">0</span>] = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(prices, prices.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] prices, <span class="type">int</span> cur)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cache[cur] != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cache[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 直接购买这个水果</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> prices[cur] + dfs(prices, cur - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 尝试通过买其他水果进行白嫖</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cur; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> i + i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (cur &lt;= r) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[<span class="number">0</span>]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[i] + dfs(prices, i - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cache[cur] = ans;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-找到最大非递减数组的长度"><a href="#4-找到最大非递减数组的长度" class="headerlink" title="4. 找到最大非递减数组的长度"></a>4. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">找到最大非递减数组的长度</a></h2><p><strong>思路</strong></p>
+<p>没有什么思路，想用后缀和但是时间复杂度不能到o(logn)</p>
+<p>这里复述灵神的思路，原文在这里：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/solutions/2542102/dan-diao-dui-lie-you-hua-dp-by-endlessch-j5qd/">100135. 找到最大非递减数组的长度 - 力扣（LeetCode）</a></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="诸葛王朗"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">诸葛王朗</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarxistZGWL" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarxistZGWL" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:marxistzgwl@163.com" title="E-Mail → mailto:marxistzgwl@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">诸葛王朗</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
