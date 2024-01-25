@@ -193,6 +193,262 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/" class="post-title-link" itemprop="url">CPU调度策略</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-26 16:29:11" itemprop="dateCreated datePublished" datetime="2023-11-26T16:29:11+08:00">2023-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-27 11:07:46" itemprop="dateModified" datetime="2023-11-27T11:07:46+08:00">2023-11-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，<del>于是我拿起来桌腿下用来垫桌腿的操作系统</del>, 准备写一篇属于自己的CPU调度策略。</p>
+<p>同时给出部分我认为写的比较好的博文：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的CPU调度算法</a></li>
+</ul>
+<h1 id="1-单机系统的调度策略"><a href="#1-单机系统的调度策略" class="headerlink" title="1. 单机系统的调度策略"></a>1. 单机系统的调度策略</h1><h2 id="1-1-单机调度策略的目标"><a href="#1-1-单机调度策略的目标" class="headerlink" title="1.1 单机调度策略的目标"></a>1.1 单机调度策略的目标</h2><ul>
+<li><p>提高资源利用率</p>
+</li>
+<li><p>公平性</p>
+</li>
+<li><p>策略强制执行</p>
+</li>
+</ul>
+<h2 id="1-2-我们的策略"><a href="#1-2-我们的策略" class="headerlink" title="1.2 我们的策略"></a>1.2 我们的策略</h2><h3 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h3><p>既然基于公平性, 大家排序, 谁先来先给谁用</p>
+<blockquote>
+<p>先来先服务是一种考虑了等待时间的调度策略, 先来排队的人等的时间已经比后来的长了, 后来的也要等着</p>
+</blockquote>
+<h3 id="基于优先级的抢占式调度策略"><a href="#基于优先级的抢占式调度策略" class="headerlink" title="基于优先级的抢占式调度策略"></a>基于优先级的抢占式调度策略</h3><p>既然有些任务很紧急, 那么他来了, 其他人必须让开, 所以每个任务都可以设置一个优先级, 优先级高的会抢占优先级低的任务的CPU</p>
+<blockquote>
+<p>当然, 优先级高的任务可以绅士的不抢占等待别人用完CPU之后他再用, 这就是基于优先级的非抢占式调度策略</p>
+</blockquote>
+<h1 id="2-批处理系统"><a href="#2-批处理系统" class="headerlink" title="2. 批处理系统"></a>2. 批处理系统</h1><h2 id="2-1-批处理系统的目标"><a href="#2-1-批处理系统的目标" class="headerlink" title="2.1 批处理系统的目标"></a>2.1 批处理系统的目标</h2><ul>
+<li>平均周转时间短</li>
+</ul>
+<blockquote>
+<p>周转时间 &#x3D; 作业完成时间 - 作业提交时间</p>
+</blockquote>
+<ul>
+<li>系统吞吐量高</li>
+<li>处理机利用率高</li>
+</ul>
+<h2 id="2-2-调度策略"><a href="#2-2-调度策略" class="headerlink" title="2.2 调度策略"></a>2.2 调度策略</h2><h3 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h3><p>为了最大可能减少周转时间, 我们可以让短作业优先调度. </p>
+<blockquote>
+<p>短作业优先是一种考虑了运行时间的策略, 谁能最快用完谁用CPU</p>
+</blockquote>
+<p><strong>缺点:</strong></p>
+<ul>
+<li>作业的运行时间是不确定的. 只能通过以往经验来确定当前作业的运行时间</li>
+<li>对于长作业不利</li>
+</ul>
+<h3 id="HRRN-高相应比优先的调度策略"><a href="#HRRN-高相应比优先的调度策略" class="headerlink" title="HRRN 高相应比优先的调度策略"></a>HRRN 高相应比优先的调度策略</h3><blockquote>
+<p>先来先服务和短作业优先分别考虑了等待时间和运行时间, HRRN综合考虑了等待时间和运行时间</p>
+<p><img src="image-20231126174334465.png" alt="image-20231126174334465"></p>
+</blockquote>
+<p>我们为每一个作业引入一个优先级的概念, 这个优先级都是动态进行变化的. 这个调度策略很好的平衡了短作业优先和先进先出的策略.</p>
+<h1 id="3-分时处理系统"><a href="#3-分时处理系统" class="headerlink" title="3. 分时处理系统"></a>3. 分时处理系统</h1><h2 id="3-1-分时处理系统的目标"><a href="#3-1-分时处理系统的目标" class="headerlink" title="3.1 分时处理系统的目标"></a>3.1 分时处理系统的目标</h2><ul>
+<li>响应时间快</li>
+</ul>
+<h2 id="3-2-调度策略"><a href="#3-2-调度策略" class="headerlink" title="3.2 调度策略"></a>3.2 调度策略</h2><h3 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h3><p>每个任务分配到一定的时间片, 但是一旦时间片用完, 就必须放弃CPU的执行权.</p>
+<p><strong>缺点:</strong> CPU需要频繁的进行上下文的切换, 会有一定的额外开销</p>
+<h1 id="4-氪金时代"><a href="#4-氪金时代" class="headerlink" title="4. 氪金时代"></a>4. 氪金时代</h1><h2 id="4-1-氪金时代的目标"><a href="#4-1-氪金时代的目标" class="headerlink" title="4.1 氪金时代的目标"></a>4.1 氪金时代的目标</h2><ul>
+<li>让氪金的人有更高的优先级</li>
+</ul>
+<h2 id="4-2-调度策略"><a href="#4-2-调度策略" class="headerlink" title="4.2 调度策略"></a>4.2 调度策略</h2><h3 id="非抢占式调度"><a href="#非抢占式调度" class="headerlink" title="非抢占式调度"></a>非抢占式调度</h3><p>非抢占式规定一旦将CPU分配给某一个进程, 那么在此期间他的CPU执行权不会被剥夺, 直到时间片用完.</p>
+<h3 id="抢占式调度"><a href="#抢占式调度" class="headerlink" title="抢占式调度"></a>抢占式调度</h3><p>不言而喻的调度策略, 直接剥夺时间片</p>
+<h3 id="优先级的类型"><a href="#优先级的类型" class="headerlink" title="优先级的类型"></a>优先级的类型</h3><p>静态优先级, 是一种优先级一旦确定就不会改变的策略</p>
+<p>动态优先级, 是一种优先级会在运行过程中动态改变的策略</p>
+<h2 id="4-3-终极调度策略-多级队列反馈"><a href="#4-3-终极调度策略-多级队列反馈" class="headerlink" title="4.3 终极调度策略 - 多级队列反馈"></a>4.3 终极调度策略 - 多级队列反馈</h2><ol>
+<li>设置多个就绪队列, 每个队列的优先级依次递减, 第一个最高, 第二个次之</li>
+<li>VIP的席位不是那么容易获得的, 优先级越高, 时间片越小, 第二个时间片是第一个的一倍, 以此类推</li>
+<li>每个就绪队列按照先进先出的方式进行调度, 如果当前队列分配的时间片不能完成任务, 那么在执行完时间片之后, 将此队列放入下一个队列的末尾</li>
+<li>按队列优先级进行调度, 只有高优先级的队列任务执行完毕, 才会轮到低优先级队列. 如果在本任务运行期间, 优先级较高的任务来了, 那么必须要放弃CPU, 回到本队列末尾重新排队</li>
+</ol>
+<h1 id="5-其他七七八八的策略"><a href="#5-其他七七八八的策略" class="headerlink" title="5. 其他七七八八的策略"></a>5. 其他七七八八的策略</h1><h2 id="5-1-最早时间截止的策略"><a href="#5-1-最早时间截止的策略" class="headerlink" title="5.1 最早时间截止的策略"></a>5.1 最早时间截止的策略</h2><p>很好理解, 谁迅速谁优先</p>
+<h2 id="5-2-最低松弛度优先"><a href="#5-2-最低松弛度优先" class="headerlink" title="5.2 最低松弛度优先"></a>5.2 最低松弛度优先</h2><p>谁时间紧迫, 谁优先</p>
+<blockquote>
+<p>举例: 一个需要100ms运行时间的任务最晚截止时间是200ms, 那么他必须要最晚在100ms时刻开始运行.</p>
+<p>那么他的松弛度就是 currentTime - 100ms</p>
+</blockquote>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h1><p>本篇文章从系统发展的时间线介绍了不同的调度策略在不同时代是如何被考虑和发展起来的.</p>
+<p>在此进行一个总结:</p>
+<ol>
+<li><p>原始的调度策略:</p>
+<ul>
+<li><p>先来先服务</p>
+</li>
+<li><p>优先级抢占调度</p>
+</li>
+</ul>
+</li>
+<li><p>批处理系统:</p>
+<ul>
+<li>短作业优先</li>
+<li>HRRN</li>
+</ul>
+</li>
+<li><p>分时系统:</p>
+<ul>
+<li>时间片轮转</li>
+</ul>
+</li>
+<li><p>氪金时代</p>
+<ul>
+<li>多级优先队列反馈</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>最早截止时间优先</li>
+<li>最低松弛度优先</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://marxistzgwl.github.io./2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">内存调度策略</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/26/LC-Double-Week-118/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="诸葛王朗">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gopher">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/LC-Double-Week-118/" class="post-title-link" itemprop="url">LC-Double-Week-118</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-26 15:59:10 / 修改时间：16:17:34" itemprop="dateCreated datePublished" datetime="2023-11-26T15:59:10+08:00">2023-11-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第-118-场双周赛-力扣（LeetCode）"><a href="#第-118-场双周赛-力扣（LeetCode）" class="headerlink" title="第 118 场双周赛 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/contest/biweekly-contest-118/">第 118 场双周赛 - 力扣（LeetCode）</a></h1><h2 id="1-查找包含给定字符的单词"><a href="#1-查找包含给定字符的单词" class="headerlink" title="1. 查找包含给定字符的单词"></a>1. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-words-containing-character/">查找包含给定字符的单词</a></h2><p><strong>思路</strong></p>
+<p>简单的模拟题，依次对每一个字符串进行判断就可以了</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findWordsContaining</span><span class="params">(String[] words, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> words.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (has(words[i], x)) &#123;</span><br><span class="line">                ans.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">has</span><span class="params">(String s, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == s.charAt(i)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-最大化网格图中正方形空洞的面积"><a href="#2-最大化网格图中正方形空洞的面积" class="headerlink" title="2. 最大化网格图中正方形空洞的面积"></a>2. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximize-area-of-square-hole-in-grid/">最大化网格图中正方形空洞的面积</a></h2><p><strong>思路</strong></p>
+<p>刚开始小格子的面积都是1表示每一条线都是有左右为1的相邻线段的，抽走一部分线段，导致间隙慢慢变大了。那么我们只需要找到最大间隙就可以了。</p>
+<p><strong>这个题目和<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-consecutive-sequence/">128. 最长连续序列</a>很像</strong></p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maximizeSquareHoleArea</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m, <span class="type">int</span>[] hBars, <span class="type">int</span>[] vBars)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(hBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(vBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> Math.min(rMax, cMax);</span><br><span class="line">        <span class="keyword">return</span> t * t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            map.put(num, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(arr[i] - <span class="number">1</span>)) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="keyword">while</span> (map.containsKey(cur)) &#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans = Math.max(ans, cnt);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-购买水果需要的最少金币数"><a href="#3-购买水果需要的最少金币数" class="headerlink" title="3. 购买水果需要的最少金币数"></a>3. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">购买水果需要的最少金币数</a></h2><p><strong>思路</strong></p>
+<p>经典的背包问题，由于我的dp没有dfs学的好，所以使用记忆化搜索实现</p>
+<p>对于每一个水果，你都可以选择直接买或者通过买其他水果进行白嫖。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] cache = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumCoins</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        Arrays.fill(cache, -<span class="number">1</span>);</span><br><span class="line">        cache[<span class="number">0</span>] = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(prices, prices.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] prices, <span class="type">int</span> cur)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cache[cur] != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cache[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 直接购买这个水果</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> prices[cur] + dfs(prices, cur - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 尝试通过买其他水果进行白嫖</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cur; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> i + i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (cur &lt;= r) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[<span class="number">0</span>]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[i] + dfs(prices, i - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cache[cur] = ans;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-找到最大非递减数组的长度"><a href="#4-找到最大非递减数组的长度" class="headerlink" title="4. 找到最大非递减数组的长度"></a>4. <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">找到最大非递减数组的长度</a></h2><p><strong>思路</strong></p>
+<p>没有什么思路，想用后缀和但是时间复杂度不能到o(logn)</p>
+<p>这里复述灵神的思路，原文在这里：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/solutions/2542102/dan-diao-dui-lie-you-hua-dp-by-endlessch-j5qd/">100135. 找到最大非递减数组的长度 - 力扣（LeetCode）</a></p>
+
+      
+    </div>
+
+    
+    
+    
+    <div>
+      
+    </div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/24/%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -851,7 +1107,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

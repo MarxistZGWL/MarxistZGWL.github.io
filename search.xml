@@ -405,7 +405,7 @@
 <ol>
 <li>安装 Docker Compose</li>
 </ol>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.daocloud.io/docker</span><span class="regexp">/compose/releases</span><span class="regexp">/download/v</span>2.<span class="number">4.1</span>/docker-compose-<span class="string">`uname -s`</span>-<span class="string">`uname -m`</span> &gt; <span class="regexp">/usr/local</span><span class="regexp">/bin/docker</span>-compose</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.daocloud.io/docker</span><span class="regexp">/compose/releases</span><span class="regexp">/download/v</span>2.<span class="number">23.1</span>/docker-compose-<span class="string">`uname -s`</span>-<span class="string">`uname -m`</span> &gt; <span class="regexp">/usr/local</span><span class="regexp">/bin/docker</span>-compose</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>给 Docker Compose</li>
@@ -416,6 +416,13 @@
 <li>测试是否安装成功</li>
 </ol>
 <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">docker-compose <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果这个下载错误，只能手动下载二进制文件，然后拖动至 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;目录下，添加执行权限之后就可以使用 docker-compose 命令了</p>
+</blockquote>
+<p><strong>使用 docker-compose 进行多个容器的创建</strong></p>
+<p>docker-compose.yml 文件</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">redis-server</span> <span class="string">--requirepass</span> <span class="string">&quot;123456&quot;</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;6379:6379&quot;</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">redis</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="3-6-搭建私有镜像仓库"><a href="#3-6-搭建私有镜像仓库" class="headerlink" title="3.6 搭建私有镜像仓库"></a>3.6 搭建私有镜像仓库</h2><h1 id="4-实战"><a href="#4-实战" class="headerlink" title="4. 实战"></a>4. 实战</h1><p>将一个微服务项目使用docker进行部署</p>
 ]]></content>
@@ -954,5 +961,56 @@
         <tag>DP</tag>
         <tag>背包问题</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>差分和前缀和</title>
+    <url>/2024/01/21/%E5%B7%AE%E5%88%86%E5%92%8C%E5%89%8D%E7%BC%80%E5%92%8C/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>前缀和和差分是互逆的运算</p>
+<p>前缀和用于求解快速求解区间和，也就是用 prefix[i] - prefix[j] 就可以得到 (j, i] 区间的和</p>
+<p>差分数组可以用于快速将某个区间内的所有值进行加减操作</p>
+<h1 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h1><ol>
+<li>一维差分和前缀和</li>
+</ol>
+<p>前缀和: </p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">int<span class="comment">[]</span> prefix = new int<span class="comment">[n]</span>;</span><br><span class="line">prefix<span class="comment">[0]</span> = nums<span class="comment">[0]</span>;</span><br><span class="line">for (int i = 1; i &lt; n; i++) &#123;</span><br><span class="line"> 	prefix<span class="comment">[i]</span> = prefix<span class="comment">[i - 1]</span> + nums<span class="comment">[i]</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 用于快速得到 nums<span class="comment">[j]</span> ~ nums<span class="comment">[i]</span> 的和</span><br><span class="line">int get(int i, int j) &#123;</span><br><span class="line">	return prefix<span class="comment">[i]</span> - prefix<span class="comment">[j]</span> + nums<span class="comment">[j]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>差分：</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">b[<span class="number">0</span>] = s[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">	b[i] = s[i] - s[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">	b[l] += v;</span><br><span class="line">	b[r + <span class="number">1</span>] -= v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>二分差分和前缀和</li>
+</ol>
+<p>二维前缀和，也就是矩阵区域和的问题</p>
+<p>二分差分也是同理</p>
+<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
+<li><a href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></li>
+<li><a href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></li>
+<li><a href="https://leetcode.cn/problems/split-array-largest-sum/">410. 分割数组的最大值</a></li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+  </entry>
+  <entry>
+    <title>滑动窗口</title>
+    <url>/2024/01/18/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>滑动窗口法，，可以用来解决一些查找满足一定条件的连续区间的性质（长度等）的问题。由于区间连续，因此当区间发生变化时，可以通过旧有的计算结果对搜索空间进行剪枝，这样便减少了重复计算，降低了时间复杂度。</p>
+<h1 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> r = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="comment">// 1. 左侧指针增加的同时，删除旧的元素</span></span><br><span class="line">	<span class="keyword">if</span> (i != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="comment">// 对 i - 1 进行删除状态的操作</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 2. 右侧指针扩大</span></span><br><span class="line">	<span class="keyword">while</span> (r &lt; n &amp;&amp; condi) &#123;</span><br><span class="line">		<span class="comment">// 将 r 进入当前区间</span></span><br><span class="line">		r++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 3. 进行当前区间的结果统计</span></span><br><span class="line">	<span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
+<li><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">3. 无重复字符的最长子串</a></li>
+<li><a href="https://leetcode.cn/problems/sliding-window-maximum">239. 滑动窗口最大值</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-window-substring">76. 最小覆盖子串</a></li>
+<li><a href="https://leetcode.cn/problems/max-consecutive-ones-iii">1004. 最大连续1的个数 III</a></li>
+<li><a href="https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters">395. 至少有K个重复字符</a></li>
+<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
+<li><a href="https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">LCR 167. 招式拆解 I</a></li>
+<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a></li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>滑动窗口题目分为动态窗口和静态窗口，多做题才能找到感觉。</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
+<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a> （使用diff进行优化的思路）</li>
+<li><a href="https://leetcode.cn/problems/shortest-supersequence-lcci/">面试题 17.18. 最短超串</a></li>
+</ul>
+]]></content>
   </entry>
 </search>

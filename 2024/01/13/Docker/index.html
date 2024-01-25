@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://example.com/2024/01/13/Docker/image-20240113162007652.png">
 <meta property="og:image" content="http://example.com/2024/01/13/Docker/image-20240113195832580.png">
 <meta property="article:published_time" content="2024-01-13T07:38:31.000Z">
-<meta property="article:modified_time" content="2024-01-18T03:36:58.597Z">
+<meta property="article:modified_time" content="2024-01-18T13:30:42.508Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/01/13/Docker/image-20240113155416153.png">
@@ -232,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-01-18 11:36:58" itemprop="dateModified" datetime="2024-01-18T11:36:58+08:00">2024-01-18</time>
+                <time title="修改时间：2024-01-18 21:30:42" itemprop="dateModified" datetime="2024-01-18T21:30:42+08:00">2024-01-18</time>
               </span>
 
           
@@ -376,7 +376,7 @@
 <ol>
 <li>安装 Docker Compose</li>
 </ol>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.daocloud.io/docker</span><span class="regexp">/compose/releases</span><span class="regexp">/download/v</span>2.<span class="number">4.1</span>/docker-compose-<span class="string">`uname -s`</span>-<span class="string">`uname -m`</span> &gt; <span class="regexp">/usr/local</span><span class="regexp">/bin/docker</span>-compose</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="symbol">https:</span>/<span class="regexp">/get.daocloud.io/docker</span><span class="regexp">/compose/releases</span><span class="regexp">/download/v</span>2.<span class="number">23.1</span>/docker-compose-<span class="string">`uname -s`</span>-<span class="string">`uname -m`</span> &gt; <span class="regexp">/usr/local</span><span class="regexp">/bin/docker</span>-compose</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>给 Docker Compose</li>
@@ -387,6 +387,13 @@
 <li>测试是否安装成功</li>
 </ol>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose <span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果这个下载错误，只能手动下载二进制文件，然后拖动至 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;目录下，添加执行权限之后就可以使用 docker-compose 命令了</p>
+</blockquote>
+<p><strong>使用 docker-compose 进行多个容器的创建</strong></p>
+<p>docker-compose.yml 文件</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">redis-server</span> <span class="string">--requirepass</span> <span class="string">&quot;123456&quot;</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;6379:6379&quot;</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">redis</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="3-6-搭建私有镜像仓库"><a href="#3-6-搭建私有镜像仓库" class="headerlink" title="3.6 搭建私有镜像仓库"></a>3.6 搭建私有镜像仓库</h2><h1 id="4-实战"><a href="#4-实战" class="headerlink" title="4. 实战"></a>4. 实战</h1><p>将一个微服务项目使用docker进行部署</p>
 
@@ -513,7 +520,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

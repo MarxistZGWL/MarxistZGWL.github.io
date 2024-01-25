@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar3.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="基础查询查询所有列1select * from stu;  查询多列1select id, name from stu;  查询结果去重1select dictinct id from stu;  查询结果限制行数跳过前面的 offset 条，并获取 count 条。 1select id from stu limit &lt;offset&gt;, &lt;count&gt;;  查询列重命名1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gopher">
+<meta property="og:url" content="http://example.com/MySQL/MySQL%E4%BD%BF%E7%94%A8.html">
+<meta property="og:site_name" content="Gopher">
+<meta property="og:description" content="基础查询查询所有列1select * from stu;  查询多列1select id, name from stu;  查询结果去重1select dictinct id from stu;  查询结果限制行数跳过前面的 offset 条，并获取 count 条。 1select id from stu limit &lt;offset&gt;, &lt;count&gt;;  查询列重命名1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-25T08:33:03.669Z">
+<meta property="article:modified_time" content="2024-01-25T08:33:03.669Z">
+<meta property="article:author" content="诸葛王朗">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/MySQL/MySQL%E4%BD%BF%E7%94%A8">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Gopher
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Gopher</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Go Big Or Go Home...</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section">首页</a>
+
+  </li>
+        <li class="menu-item menu-item-algorithm">
+
+    <a href="/Algorithm/" rel="section">Algorithm</a>
+
+  </li>
+        <li class="menu-item menu-item-redis">
+
+    <a href="/Redis/" rel="section">Redis</a>
+
+  </li>
+        <li class="menu-item menu-item-mysql">
+
+    <a href="/MySQL/" rel="section">MySQL</a>
+
+  </li>
+        <li class="menu-item menu-item-csbasic">
+
+    <a href="/CSBasic/" rel="section">CSBasic</a>
+
+  </li>
+        <li class="menu-item menu-item-spring">
+
+    <a href="/Spring/" rel="section">Spring</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/MarxistZGWL" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="基础查询"><a href="#基础查询" class="headerlink" title="基础查询"></a>基础查询</h1><h2 id="查询所有列"><a href="#查询所有列" class="headerlink" title="查询所有列"></a>查询所有列</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询多列"><a href="#查询多列" class="headerlink" title="查询多列"></a>查询多列</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id, <span class="type">name</span> <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询结果去重"><a href="#查询结果去重" class="headerlink" title="查询结果去重"></a>查询结果去重</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select dictinct <span class="built_in">id</span> <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询结果限制行数"><a href="#查询结果限制行数" class="headerlink" title="查询结果限制行数"></a>查询结果限制行数</h2><p>跳过前面的 <code>offset</code> 条，并获取 <code>count</code> 条。</p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> id <span class="keyword">from</span> stu <span class="keyword">limit</span> &lt;<span class="keyword">offset</span>&gt;, &lt;<span class="built_in">count</span>&gt;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询列重命名"><a href="#查询列重命名" class="headerlink" title="查询列重命名"></a>查询列重命名</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select <span class="built_in">id</span> 名称 <span class="keyword">from</span> stu;</span><br></pre></td></tr></table></figure>
+
+<h1 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h1><h2 id="查找学生是北大的信息"><a href="#查找学生是北大的信息" class="headerlink" title="查找学生是北大的信息"></a>查找学生是北大的信息</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    device_id,</span><br><span class="line">    university</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    university = <span class="string">&#x27;北京大学&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查找年龄大于24岁的用户信息"><a href="#查找年龄大于24岁的用户信息" class="headerlink" title="查找年龄大于24岁的用户信息"></a>查找年龄大于24岁的用户信息</h2><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line"><span class="built_in">    device_id,</span></span><br><span class="line"><span class="built_in">    gender,</span></span><br><span class="line"><span class="built_in">    age,</span></span><br><span class="line">    university</span><br><span class="line">from</span><br><span class="line">    user_profile</span><br><span class="line">WHERE</span><br><span class="line">    age &gt; <span class="number">24</span><span class="comment">;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="查找某个年龄段的用户信息"><a href="#查找某个年龄段的用户信息" class="headerlink" title="查找某个年龄段的用户信息"></a>查找某个年龄段的用户信息</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    age</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    age &gt;= <span class="number">20</span></span><br><span class="line">    <span class="keyword">AND</span> age &lt;= <span class="number">23</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查找除复旦大学的用户信息"><a href="#查找除复旦大学的用户信息" class="headerlink" title="查找除复旦大学的用户信息"></a>查找除复旦大学的用户信息</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    age,</span><br><span class="line">    university</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    university &lt;&gt; <span class="string">&#x27;复旦大学&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="过滤空值"><a href="#过滤空值" class="headerlink" title="过滤空值"></a>过滤空值</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    age,</span><br><span class="line">    university</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    age <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="高级操作符"><a href="#高级操作符" class="headerlink" title="高级操作符"></a>高级操作符</h1><h2 id="高级操作符练习1-AND"><a href="#高级操作符练习1-AND" class="headerlink" title="高级操作符练习1 - AND"></a>高级操作符练习1 - AND</h2><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select</span><br><span class="line"><span class="built_in">    device_id,</span></span><br><span class="line"><span class="built_in">    gender,</span></span><br><span class="line"><span class="built_in">    age,</span></span><br><span class="line"><span class="built_in">    university,</span></span><br><span class="line">    gpa</span><br><span class="line">from   </span><br><span class="line">    user_profile</span><br><span class="line">where</span><br><span class="line">    gender = &#x27;male&#x27; <span class="literal">and</span></span><br><span class="line">    gpa &gt; <span class="number">3.5</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="高级操作符练习2-OR"><a href="#高级操作符练习2-OR" class="headerlink" title="高级操作符练习2 - OR"></a>高级操作符练习2 - OR</h2><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line"><span class="built_in">    device_id,</span></span><br><span class="line"><span class="built_in">    gender,</span></span><br><span class="line"><span class="built_in">    age,</span></span><br><span class="line"><span class="built_in">    university,</span></span><br><span class="line">    gpa</span><br><span class="line">from</span><br><span class="line">    user_profile</span><br><span class="line">WHERE</span><br><span class="line">    gpa &gt; <span class="number">3.7</span></span><br><span class="line">    <span class="literal">OR</span> university = &#x27;北京大学&#x27;<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="in-和-not-in"><a href="#in-和-not-in" class="headerlink" title="in 和 not in"></a>in 和 not in</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    age,</span><br><span class="line">    university,</span><br><span class="line">    gpa</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    university <span class="keyword">in</span> (<span class="string">&#x27;北京大学&#x27;</span>, <span class="string">&#x27;复旦大学&#x27;</span>, <span class="string">&#x27;山东大学&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="操作符混合运用"><a href="#操作符混合运用" class="headerlink" title="操作符混合运用"></a>操作符混合运用</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    age,</span><br><span class="line">    university,</span><br><span class="line">    gpa</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    gpa &gt; <span class="number">3.5</span></span><br><span class="line">    <span class="keyword">AND</span> university = <span class="string">&#x27;山东大学&#x27;</span></span><br><span class="line">    <span class="keyword">OR</span> gpa &gt; <span class="number">3.8</span></span><br><span class="line">    <span class="keyword">AND</span> university = <span class="string">&#x27;复旦大学&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="查看学校名称中包含北京的用户"><a href="#查看学校名称中包含北京的用户" class="headerlink" title="查看学校名称中包含北京的用户"></a>查看学校名称中包含北京的用户</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    device_id,</span><br><span class="line">    age,</span><br><span class="line">    university</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    university <span class="keyword">LIKE</span> <span class="string">&#x27;%北京%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="高级查询"><a href="#高级查询" class="headerlink" title="高级查询"></a>高级查询</h1><h2 id="查找-GPA-最高值"><a href="#查找-GPA-最高值" class="headerlink" title="查找 GPA 最高值"></a>查找 GPA 最高值</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">select</span></span></span><br><span class="line"><span class="function">    <span class="title">max</span>(<span class="params">gpa</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">from</span></span></span><br><span class="line"><span class="function">    user_profile</span></span><br><span class="line"><span class="function"><span class="keyword">where</span></span></span><br><span class="line"><span class="function">    university</span> = <span class="string">&#x27;复旦大学&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="计算男生人数以及平均-GPA"><a href="#计算男生人数以及平均-GPA" class="headerlink" title="计算男生人数以及平均 GPA"></a>计算男生人数以及平均 GPA</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    <span class="built_in">count</span>(id),</span><br><span class="line">    <span class="built_in">avg</span>(gpa)</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    gender = <span class="string">&#x27;male&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分组计算练习题"><a href="#分组计算练习题" class="headerlink" title="分组计算练习题"></a>分组计算练习题</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    gender,</span><br><span class="line">    university,</span><br><span class="line">    <span class="keyword">count</span>(*) user_num,</span><br><span class="line">    <span class="keyword">avg</span>(active_days_within_30) avg_active_day,</span><br><span class="line">    <span class="keyword">avg</span>(question_cnt) avg_question_cnt</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span></span><br><span class="line">    university,</span><br><span class="line">    gender;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分组过滤练习题"><a href="#分组过滤练习题" class="headerlink" title="分组过滤练习题"></a>分组过滤练习题</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    university,</span><br><span class="line">    <span class="built_in">round</span>(<span class="built_in">avg</span>(question_cnt), <span class="number">3</span>) <span class="keyword">as</span> avg_question_cnt,</span><br><span class="line">    <span class="built_in">round</span>(<span class="built_in">avg</span>(answer_cnt), <span class="number">3</span>) <span class="keyword">as</span> avg_answer_cnt</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">    university</span><br><span class="line"><span class="keyword">HAVING</span></span><br><span class="line">    avg_question_cnt &lt; <span class="number">5</span></span><br><span class="line">    <span class="keyword">OR</span> avg_answer_cnt &lt; <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分组排序练习题"><a href="#分组排序练习题" class="headerlink" title="分组排序练习题"></a>分组排序练习题</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    university,</span><br><span class="line">    <span class="built_in">round</span>(<span class="built_in">avg</span>(question_cnt), <span class="number">4</span>) <span class="keyword">as</span> avg_question_cnt</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">    university</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span></span><br><span class="line">    avg_question_cnt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h1><h2 id="浙江大学用户题目回答情况"><a href="#浙江大学用户题目回答情况" class="headerlink" title="浙江大学用户题目回答情况"></a>浙江大学用户题目回答情况</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    q.device_id,</span><br><span class="line">    q.question_id,</span><br><span class="line">    q.result</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    question_practice_detail q</span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> user_profile u <span class="keyword">on</span> q.device_id = u.device_id</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    u.university = <span class="string">&#x27;浙江大学&#x27;</span></span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span></span><br><span class="line">    q.question_id;</span><br></pre></td></tr></table></figure>
+
+<h2 id="统计每个学校的答过题的用户的平均答题数"><a href="#统计每个学校的答过题的用户的平均答题数" class="headerlink" title="统计每个学校的答过题的用户的平均答题数"></a>统计每个学校的答过题的用户的平均答题数</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    u.university,</span><br><span class="line">    <span class="built_in">count</span>(*) / <span class="built_in">count</span>(<span class="keyword">distinct</span> u.device_id) avg_answer_cnt</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    question_practice_detail q</span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> user_profile u <span class="keyword">on</span> q.device_id = u.device_id</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span></span><br><span class="line">    u.university</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span></span><br><span class="line">    u.university;</span><br></pre></td></tr></table></figure>
+
+<h2 id="统计每个学校各难度的用户平均刷题数"><a href="#统计每个学校各难度的用户平均刷题数" class="headerlink" title="统计每个学校各难度的用户平均刷题数"></a>统计每个学校各难度的用户平均刷题数</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    u.university,</span><br><span class="line">    q.difficult_level,</span><br><span class="line">    <span class="built_in">count</span>(*) / <span class="built_in">count</span>( <span class="keyword">distinct</span> u.device_id) avg_answer_cnt</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    question_practice_detail qp</span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> user_profile u <span class="keyword">on</span> qp.device_id = u.device_id</span><br><span class="line">    <span class="keyword">left</span> <span class="keyword">join</span> question_detail q <span class="keyword">on</span> qp.question_id = q.question_id</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> </span><br><span class="line">    u.university, q.difficult_level;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="统计每个用户的平均刷题数"><a href="#统计每个用户的平均刷题数" class="headerlink" title="统计每个用户的平均刷题数"></a>统计每个用户的平均刷题数</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    u.university,</span><br><span class="line">    qd.difficult_level,</span><br><span class="line">    <span class="built_in">count</span>(qpd.id) / <span class="built_in">count</span>(<span class="keyword">DISTINCT</span> qpd.device_id) <span class="keyword">as</span> avg_answer_cnt</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile u</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> question_practice_detail qpd <span class="keyword">ON</span> u.device_id = qpd.device_id</span><br><span class="line">    <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> question_detail qd <span class="keyword">ON</span> qpd.question_id = qd.question_id</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    u.university = <span class="string">&#x27;山东大学&#x27;</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">    qd.difficult_level</span><br></pre></td></tr></table></figure>
+
+<h2 id="Union的使用"><a href="#Union的使用" class="headerlink" title="Union的使用"></a>Union的使用</h2><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    u.device_id,</span><br><span class="line">    u.gender,</span><br><span class="line">    u.age,</span><br><span class="line">    u.gpa</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile u</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    u.university = <span class="string">&#x27;山东大学&#x27;</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    u.device_id,</span><br><span class="line">    u.gender,</span><br><span class="line">    u.age,</span><br><span class="line">    u.gpa</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile u</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    u.gender = <span class="string">&#x27;male&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/sql/sql_dates.asp">SQL Date 函数 (w3school.com.cn)</a></p>
+<h2 id="IF-函数-计算-25-岁以上和以下的用户数量"><a href="#IF-函数-计算-25-岁以上和以下的用户数量" class="headerlink" title="IF 函数 - 计算 25 岁以上和以下的用户数量"></a>IF 函数 - 计算 25 岁以上和以下的用户数量</h2><ol>
+<li>IF 函数</li>
+</ol>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> </span><br><span class="line">    <span class="keyword">if</span>(u.age &lt; <span class="number">25</span> <span class="keyword">or</span> u.age <span class="keyword">is</span> <span class="literal">null</span>, <span class="string">&#x27;25岁以下&#x27;</span>, <span class="string">&#x27;25岁及以上&#x27;</span>) age_cut,</span><br><span class="line">    <span class="built_in">count</span>(*) <span class="keyword">number</span></span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">    user_profile u</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span></span><br><span class="line">    age_cut;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>union 的做法</li>
+</ol>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    <span class="string">&#x27;25岁以下&#x27;</span> age_cut,</span><br><span class="line">    <span class="built_in">count</span>(*) <span class="string">&#x27;number&#x27;</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile u</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    u.age &lt; <span class="number">25</span></span><br><span class="line">    <span class="keyword">OR</span> u.age <span class="keyword">is</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    <span class="string">&#x27;25岁及以上&#x27;</span> age_cut,</span><br><span class="line">    <span class="built_in">count</span>(*) <span class="string">&#x27;number&#x27;</span></span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    user_profile u</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    u.age &gt;= <span class="number">25</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="IF-嵌套-查看不同年龄段的用户明细"><a href="#IF-嵌套-查看不同年龄段的用户明细" class="headerlink" title="IF 嵌套 查看不同年龄段的用户明细"></a>IF 嵌套 查看不同年龄段的用户明细</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    device_id,</span><br><span class="line">    gender,</span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">        age &gt;= <span class="number">25</span>,</span><br><span class="line">        <span class="string">&#x27;25岁及以上&#x27;</span>,</span><br><span class="line">        <span class="keyword">if</span> (age &gt;= <span class="number">20</span>, <span class="string">&#x27;20-24岁&#x27;</span>, <span class="keyword">if</span> (age &gt;= <span class="number">0</span>, <span class="string">&#x27;20岁以下&#x27;</span>, <span class="string">&#x27;其他&#x27;</span>))</span><br><span class="line">    ) <span class="keyword">as</span> age_cut</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    user_profile</span><br></pre></td></tr></table></figure>
+
+<h2 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    day (qpd.date),</span><br><span class="line">    count(*)</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    question_practice_detail qpd</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    month (qpd.date) = <span class="number">8</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span></span><br><span class="line">    day (qpd.date);</span><br></pre></td></tr></table></figure>
+
+<h2 id="日期函数-lead"><a href="#日期函数-lead" class="headerlink" title="日期函数 lead"></a>日期函数 lead</h2>
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.</span> <span class="nav-text">基础查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E5%88%97"><span class="nav-number">1.1.</span> <span class="nav-text">查询所有列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%A4%9A%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">查询多列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E5%8E%BB%E9%87%8D"><span class="nav-number">1.3.</span> <span class="nav-text">查询结果去重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E9%99%90%E5%88%B6%E8%A1%8C%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">查询结果限制行数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%88%97%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">1.5.</span> <span class="nav-text">查询列重命名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="nav-number">2.</span> <span class="nav-text">条件查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%AD%A6%E7%94%9F%E6%98%AF%E5%8C%97%E5%A4%A7%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">2.1.</span> <span class="nav-text">查找学生是北大的信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%B9%B4%E9%BE%84%E5%A4%A7%E4%BA%8E24%E5%B2%81%E7%9A%84%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">2.2.</span> <span class="nav-text">查找年龄大于24岁的用户信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E6%9F%90%E4%B8%AA%E5%B9%B4%E9%BE%84%E6%AE%B5%E7%9A%84%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">2.3.</span> <span class="nav-text">查找某个年龄段的用户信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E9%99%A4%E5%A4%8D%E6%97%A6%E5%A4%A7%E5%AD%A6%E7%9A%84%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="nav-number">2.4.</span> <span class="nav-text">查找除复旦大学的用户信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E7%A9%BA%E5%80%BC"><span class="nav-number">2.5.</span> <span class="nav-text">过滤空值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">3.</span> <span class="nav-text">高级操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%BB%83%E4%B9%A01-AND"><span class="nav-number">3.1.</span> <span class="nav-text">高级操作符练习1 - AND</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C%E7%AC%A6%E7%BB%83%E4%B9%A02-OR"><span class="nav-number">3.2.</span> <span class="nav-text">高级操作符练习2 - OR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#in-%E5%92%8C-not-in"><span class="nav-number">3.3.</span> <span class="nav-text">in 和 not in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%B7%B7%E5%90%88%E8%BF%90%E7%94%A8"><span class="nav-number">3.4.</span> <span class="nav-text">操作符混合运用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AD%A6%E6%A0%A1%E5%90%8D%E7%A7%B0%E4%B8%AD%E5%8C%85%E5%90%AB%E5%8C%97%E4%BA%AC%E7%9A%84%E7%94%A8%E6%88%B7"><span class="nav-number">3.5.</span> <span class="nav-text">查看学校名称中包含北京的用户</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%9F%A5%E8%AF%A2"><span class="nav-number">4.</span> <span class="nav-text">高级查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE-GPA-%E6%9C%80%E9%AB%98%E5%80%BC"><span class="nav-number">4.1.</span> <span class="nav-text">查找 GPA 最高值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E7%94%B7%E7%94%9F%E4%BA%BA%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%B9%B3%E5%9D%87-GPA"><span class="nav-number">4.2.</span> <span class="nav-text">计算男生人数以及平均 GPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E8%AE%A1%E7%AE%97%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">4.3.</span> <span class="nav-text">分组计算练习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E8%BF%87%E6%BB%A4%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">分组过滤练习题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%8E%92%E5%BA%8F%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-number">4.5.</span> <span class="nav-text">分组排序练习题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">5.</span> <span class="nav-text">多表查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6%E7%94%A8%E6%88%B7%E9%A2%98%E7%9B%AE%E5%9B%9E%E7%AD%94%E6%83%85%E5%86%B5"><span class="nav-number">5.1.</span> <span class="nav-text">浙江大学用户题目回答情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%AD%A6%E6%A0%A1%E7%9A%84%E7%AD%94%E8%BF%87%E9%A2%98%E7%9A%84%E7%94%A8%E6%88%B7%E7%9A%84%E5%B9%B3%E5%9D%87%E7%AD%94%E9%A2%98%E6%95%B0"><span class="nav-number">5.2.</span> <span class="nav-text">统计每个学校的答过题的用户的平均答题数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E5%AD%A6%E6%A0%A1%E5%90%84%E9%9A%BE%E5%BA%A6%E7%9A%84%E7%94%A8%E6%88%B7%E5%B9%B3%E5%9D%87%E5%88%B7%E9%A2%98%E6%95%B0"><span class="nav-number">5.3.</span> <span class="nav-text">统计每个学校各难度的用户平均刷题数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%AF%8F%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9A%84%E5%B9%B3%E5%9D%87%E5%88%B7%E9%A2%98%E6%95%B0"><span class="nav-number">5.4.</span> <span class="nav-text">统计每个用户的平均刷题数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Union%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">5.5.</span> <span class="nav-text">Union的使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IF-%E5%87%BD%E6%95%B0-%E8%AE%A1%E7%AE%97-25-%E5%B2%81%E4%BB%A5%E4%B8%8A%E5%92%8C%E4%BB%A5%E4%B8%8B%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%B0%E9%87%8F"><span class="nav-number">6.1.</span> <span class="nav-text">IF 函数 - 计算 25 岁以上和以下的用户数量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IF-%E5%B5%8C%E5%A5%97-%E6%9F%A5%E7%9C%8B%E4%B8%8D%E5%90%8C%E5%B9%B4%E9%BE%84%E6%AE%B5%E7%9A%84%E7%94%A8%E6%88%B7%E6%98%8E%E7%BB%86"><span class="nav-number">6.2.</span> <span class="nav-text">IF 嵌套 查看不同年龄段的用户明细</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">日期函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0-lead"><span class="nav-number">6.4.</span> <span class="nav-text">日期函数 lead</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="诸葛王朗"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">诸葛王朗</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/MarxistZGWL" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;MarxistZGWL" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:marxistzgwl@163.com" title="E-Mail → mailto:marxistzgwl@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">诸葛王朗</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
