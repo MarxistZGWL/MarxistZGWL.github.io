@@ -1,6 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MyGril</title>
+    <url>/2023/11/17/MyGril/</url>
+    <content><![CDATA[<p><img src="gril.jpg" alt="gril"></p>
+]]></content>
+      <categories>
+        <category>Beautiful Photos</category>
+        <category>Gril</category>
+      </categories>
+      <tags>
+        <tag>2D</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>先学会生活</title>
+    <url>/2023/11/19/%E5%85%88%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB/</url>
+    <content><![CDATA[<h1 id="学会生活"><a href="#学会生活" class="headerlink" title="学会生活"></a>学会生活</h1><p>“学习是首要的任务”可能是我这一代大多数学生从小到大被灌输的思想。</p>
+<p>从小学到高中，我们已经习惯了由别人安排我们的时间。</p>
+<p>早读、数学、英语…</p>
+<p>学校可能教会了我很多东西，但也许忘记了告诉我怎么生活。</p>
+<p>我已经习惯了学习、生活、娱乐融为一体的日子。</p>
+<p>直到最近，因为找实习的需要做的事情有点多（<del>算法、项目和八股三座大山有木有，大学啊，你都教了我什么啊</del>），舌头上又张了一个泡。这是我人生中第二次舌头上长泡，也是今年第二次舌头上长泡（<del>我宣布舌头上长泡是最让人难受的病，因为现在我没有感冒^ _ ^</del>）</p>
+<p>我才意识到，我要认真规划一下我的时间安排了</p>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12:00 - 7:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>7:30 - 8:00</td>
+<td>吃早饭</td>
+</tr>
+<tr>
+<td>8:00 - 10:00</td>
+<td>第一节（做做算法）</td>
+</tr>
+<tr>
+<td>10:00 - 10:30</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>10:30 - 12:00</td>
+<td>第二节（看项目）</td>
+</tr>
+<tr>
+<td>12:00 - 13:00</td>
+<td>吃午饭</td>
+</tr>
+<tr>
+<td>13:00 - 13:30</td>
+<td>睡觉</td>
+</tr>
+<tr>
+<td>13:30 - 14:00</td>
+<td>阅读一下（看看八股文）</td>
+</tr>
+<tr>
+<td>14:00 - 15:30</td>
+<td>第三节（看看课程）</td>
+</tr>
+<tr>
+<td>15:30 - 16:00</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>16:00 - 17:30</td>
+<td>第四节（做项目）</td>
+</tr>
+<tr>
+<td>17:30 - 18:00</td>
+<td>吃饭</td>
+</tr>
+<tr>
+<td>18:00 - 19:00</td>
+<td>休息 + 洗澡</td>
+</tr>
+<tr>
+<td>19:00 - 21:00</td>
+<td>第五节（做项目）</td>
+</tr>
+<tr>
+<td>21:00 - 23:00</td>
+<td>第六节（做项目&#x2F;写一下笔记）</td>
+</tr>
+<tr>
+<td>23:30 - 0:00</td>
+<td>总结一下一天，计划下一天（打游戏）</td>
+</tr>
+</tbody></table>
+<p>暂时就这样子安排，坚持一周看看效果，然后根据效果进行修正好了…</p>
+<p>这样的话，每天有11个小时在学习，8个小时在睡觉，还是挺不错的哈…</p>
+<h1 id="道阻且长"><a href="#道阻且长" class="headerlink" title="道阻且长"></a>道阻且长</h1><blockquote>
+<p>经常这样心血来潮的去做一件事情，一般坚持不久就失去了最初的激情……</p>
+</blockquote>
+<p>竺可桢校长的话时长在我耳边萦绕</p>
+<ul>
+<li>来浙大做什么</li>
+<li>将来要成为什么样的人</li>
+</ul>
+<p>那么，既然你诚心诚意的发问了，我就义正言辞的回答了（<del>开开玩笑而已，我是哪块小饼干，敢这么放肆</del>）😜</p>
+<ul>
+<li>来浙大交朋友（<del>话说，什么时候分配一个女朋友给我啊</del>）😭</li>
+<li>目标是结业的时候能拿到宇宙厂、鹅厂、福报厂等一众大厂的SSR Offer，最终拿到Google、Amazon的Offer，^ _ ^</li>
+</ul>
+<p>好吧，既然牛皮都吹到Github上了，那么先制定一个小目标吧。</p>
+<ul>
+<li><p>每天刷LeetCode5个，到本年底结束，刷够200题目。</p>
+</li>
+<li><p>到毕业结束之前，刷题量在4000题左右，LeetCode竞赛分数拿到3000分。</p>
+</li>
+<li><p>在2024年3月份之前找到一份实习</p>
+</li>
+<li><p>在毕业结束之前，拿到俩段以上的大厂实习经历</p>
+</li>
+<li><p>一个月读一本技术类书籍，在毕业结束之前，读20本技术类书籍</p>
+</li>
+<li><p>记诵英语单词，练习口语，听力，写作等，在学业结束之前，达到托福100分的水平</p>
+</li>
+<li><p>争取能在学业结束之前，找到一个志同道合的女朋友 😭</p>
+</li>
+</ul>
+<p>我的前途啊，它光明又曲折，我只能学阿Q那样告诉自己：做时间的朋友😊…</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>差分和前缀和</title>
+    <url>/2024/01/21/%E5%B7%AE%E5%88%86%E5%92%8C%E5%89%8D%E7%BC%80%E5%92%8C/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>前缀和和差分是互逆的运算</p>
+<p>前缀和用于求解快速求解区间和，也就是用 prefix[i] - prefix[j] 就可以得到 (j, i] 区间的和</p>
+<p>差分数组可以用于快速将某个区间内的所有值进行加减操作</p>
+<h1 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h1><ol>
+<li>一维差分和前缀和</li>
+</ol>
+<p>前缀和: </p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">int<span class="comment">[]</span> prefix = new int<span class="comment">[n]</span>;</span><br><span class="line">prefix<span class="comment">[0]</span> = nums<span class="comment">[0]</span>;</span><br><span class="line">for (int i = 1; i &lt; n; i++) &#123;</span><br><span class="line"> 	prefix<span class="comment">[i]</span> = prefix<span class="comment">[i - 1]</span> + nums<span class="comment">[i]</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 用于快速得到 nums<span class="comment">[j]</span> ~ nums<span class="comment">[i]</span> 的和</span><br><span class="line">int get(int i, int j) &#123;</span><br><span class="line">	return prefix<span class="comment">[i]</span> - prefix<span class="comment">[j]</span> + nums<span class="comment">[j]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>差分：</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">b[<span class="number">0</span>] = s[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">	b[i] = s[i] - s[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">	b[l] += v;</span><br><span class="line">	b[r + <span class="number">1</span>] -= v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>二分差分和前缀和</li>
+</ol>
+<p>二维前缀和，也就是矩阵区域和的问题</p>
+<p>二分差分也是同理</p>
+<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
+<li><a href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></li>
+<li><a href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></li>
+<li><a href="https://leetcode.cn/problems/split-array-largest-sum/">410. 分割数组的最大值</a></li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+  </entry>
+  <entry>
+    <title>滑动窗口</title>
+    <url>/2024/01/18/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>滑动窗口法，，可以用来解决一些查找满足一定条件的连续区间的性质（长度等）的问题。由于区间连续，因此当区间发生变化时，可以通过旧有的计算结果对搜索空间进行剪枝，这样便减少了重复计算，降低了时间复杂度。</p>
+<h1 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> r = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="comment">// 1. 左侧指针增加的同时，删除旧的元素</span></span><br><span class="line">	<span class="keyword">if</span> (i != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="comment">// 对 i - 1 进行删除状态的操作</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 2. 右侧指针扩大</span></span><br><span class="line">	<span class="keyword">while</span> (r &lt; n &amp;&amp; condi) &#123;</span><br><span class="line">		<span class="comment">// 将 r 进入当前区间</span></span><br><span class="line">		r++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 3. 进行当前区间的结果统计</span></span><br><span class="line">	<span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
+<li><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">3. 无重复字符的最长子串</a></li>
+<li><a href="https://leetcode.cn/problems/sliding-window-maximum">239. 滑动窗口最大值</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-window-substring">76. 最小覆盖子串</a></li>
+<li><a href="https://leetcode.cn/problems/max-consecutive-ones-iii">1004. 最大连续1的个数 III</a></li>
+<li><a href="https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters">395. 至少有K个重复字符</a></li>
+<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
+<li><a href="https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">LCR 167. 招式拆解 I</a></li>
+<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a></li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>滑动窗口题目分为动态窗口和静态窗口，多做题才能找到感觉。</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
+<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a> （使用diff进行优化的思路）</li>
+<li><a href="https://leetcode.cn/problems/shortest-supersequence-lcci/">面试题 17.18. 最短超串</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>二分查找</title>
+    <url>/2024/01/17/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
+    <content><![CDATA[<h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0. 简介"></a>0. 简介</h1><p>二分查找算法，也叫做折半查找算法。二分查找的思想非常简单，针对一个有序的数组集合，每次都通过和区间中间的元素进行对比，将带查找的区间缩小为之前的一半，直到找到要查找的元素，或者区间被缩小为 0。</p>
+<p>二分查找算法的前提是有序，这个有序不一定指的是大小顺序，也可能是乱序，但是可以根据某种规则将元素分割为俩个子区间，通过元素中间的值可以快速的确定某一个区间是不符合要求的，进而很快的对答案区间进行范围的缩小。</p>
+<p>二分查找的时间复杂度是 O(logn), 但是很多时候，二分查找可以使用双指针进行优化。</p>
+<h1 id="1-算法思想和实现"><a href="#1-算法思想和实现" class="headerlink" title="1. 算法思想和实现"></a>1. 算法思想和实现</h1><p>二分查找的要点在于，确定当前的搜索区间和判断之后的下一个子区间。</p>
+<p>二分查找的模板有很多个，但是很多模块容易将初学者绕进去，就是出现某种情况循环不能正常退出的问题，这种情况往往是因为没有确定好搜索区间而出现的问题。</p>
+<p>下面给出模板：</p>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> <span class="keyword">target</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">		<span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (arr[mid] &gt; <span class="keyword">target</span>) &#123;</span><br><span class="line">			ans = mid;</span><br><span class="line">			r = mid - <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在上面的模板中，我们搜索区间一直是 [l, r], 注意是左闭右闭的区间。如果当前搜索区间没有元素，就需要退出循环。</p>
+<p>上述模板的功能是找到最后一个大于 target 的元素下标。</p>
+<p>如果找不到这样的元素，那么返回 -1</p>
+<blockquote>
+<p>搜索区间的确定主要需要看 mid 的取值范围，mid &#x3D; (l + r) &#x2F; 2; 这样由于向下取整的性质，如果l和r不能相等的话，相当于r这个点是不能够取到的。</p>
+</blockquote>
+<h1 id="2-经典例题"><a href="#2-经典例题" class="headerlink" title="2. 经典例题"></a>2. 经典例题</h1><ul>
+<li><a href="https://leetcode.cn/problems/binary-search/">704. 二分查找</a></li>
+<li><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">34. 在排序数组中查找元素的第一个和最后一个位置</a></li>
+<li><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array">33. 搜索旋转排序数组</a></li>
+<li><a href="https://leetcode.cn/problems/sqrtx">69. x 的平方根</a></li>
+<li><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
+</ul>
+<p>第一个数组以i为分割线，分割线左侧的元素是被选中的，</p>
+<p>第二个数组以j为分割线，分割线左侧的元素是被选中的，</p>
+<p>那么需要有 i + j &#x3D; (m + n + 1) &#x2F; 2, 因为我们要求分割线在右侧，所以需要进行 +1 操作</p>
+<p>如果有 nums[i - 1] &lt; nums[j] , 那么说明成功，否则说明需要向左侧进行移动</p>
+<p>核心代码：</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">	int i = (l + r + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">	int j = <span class="built_in">mid</span> - i;</span><br><span class="line">	<span class="keyword">if</span> (nums1[i - <span class="number">1</span>] &gt; nums[j]) &#123;</span><br><span class="line">		r = <span class="built_in">mid</span> - <span class="number">1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		l = <span class="built_in">mid</span>; <span class="comment">// 因为 l + r + 1 自动让 i 右移动</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-size-subarray-sum">209. 长度最小的子数组</a></li>
+<li><a href="https://leetcode.cn/problems/kth-smallest-element-in-a-bst"> 230. 二叉搜索树中第K小的元素</a></li>
+<li><a href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
+<li><a href="https://leetcode.cn/problems/search-a-2d-matrix-ii/">240. 搜索二维矩阵 II</a></li>
+</ul>
+<h1 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h1><p>二分查找总是在尽力的缩小搜索的区间。</p>
+<p>以下几个题目真的是常做常新</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
+<li><a href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
+<li><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>2024年春季特训计划</title>
     <url>/2024/01/16/2024%E5%B9%B4%E6%98%A5%E5%AD%A3%E7%89%B9%E8%AE%AD%E8%AE%A1%E5%88%92/</url>
     <content><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
@@ -136,141 +367,6 @@
 <li><input disabled type="checkbox"> mysql书籍 - 20页</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>CPU调度策略</title>
-    <url>/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/</url>
-    <content><![CDATA[<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，<del>于是我拿起来桌腿下用来垫桌腿的操作系统</del>, 准备写一篇属于自己的CPU调度策略。</p>
-<p>同时给出部分我认为写的比较好的博文：</p>
-<ul>
-<li><a href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的CPU调度算法</a></li>
-</ul>
-<h1 id="1-单机系统的调度策略"><a href="#1-单机系统的调度策略" class="headerlink" title="1. 单机系统的调度策略"></a>1. 单机系统的调度策略</h1><h2 id="1-1-单机调度策略的目标"><a href="#1-1-单机调度策略的目标" class="headerlink" title="1.1 单机调度策略的目标"></a>1.1 单机调度策略的目标</h2><ul>
-<li><p>提高资源利用率</p>
-</li>
-<li><p>公平性</p>
-</li>
-<li><p>策略强制执行</p>
-</li>
-</ul>
-<h2 id="1-2-我们的策略"><a href="#1-2-我们的策略" class="headerlink" title="1.2 我们的策略"></a>1.2 我们的策略</h2><h3 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h3><p>既然基于公平性, 大家排序, 谁先来先给谁用</p>
-<blockquote>
-<p>先来先服务是一种考虑了等待时间的调度策略, 先来排队的人等的时间已经比后来的长了, 后来的也要等着</p>
-</blockquote>
-<h3 id="基于优先级的抢占式调度策略"><a href="#基于优先级的抢占式调度策略" class="headerlink" title="基于优先级的抢占式调度策略"></a>基于优先级的抢占式调度策略</h3><p>既然有些任务很紧急, 那么他来了, 其他人必须让开, 所以每个任务都可以设置一个优先级, 优先级高的会抢占优先级低的任务的CPU</p>
-<blockquote>
-<p>当然, 优先级高的任务可以绅士的不抢占等待别人用完CPU之后他再用, 这就是基于优先级的非抢占式调度策略</p>
-</blockquote>
-<h1 id="2-批处理系统"><a href="#2-批处理系统" class="headerlink" title="2. 批处理系统"></a>2. 批处理系统</h1><h2 id="2-1-批处理系统的目标"><a href="#2-1-批处理系统的目标" class="headerlink" title="2.1 批处理系统的目标"></a>2.1 批处理系统的目标</h2><ul>
-<li>平均周转时间短</li>
-</ul>
-<blockquote>
-<p>周转时间 &#x3D; 作业完成时间 - 作业提交时间</p>
-</blockquote>
-<ul>
-<li>系统吞吐量高</li>
-<li>处理机利用率高</li>
-</ul>
-<h2 id="2-2-调度策略"><a href="#2-2-调度策略" class="headerlink" title="2.2 调度策略"></a>2.2 调度策略</h2><h3 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h3><p>为了最大可能减少周转时间, 我们可以让短作业优先调度. </p>
-<blockquote>
-<p>短作业优先是一种考虑了运行时间的策略, 谁能最快用完谁用CPU</p>
-</blockquote>
-<p><strong>缺点:</strong></p>
-<ul>
-<li>作业的运行时间是不确定的. 只能通过以往经验来确定当前作业的运行时间</li>
-<li>对于长作业不利</li>
-</ul>
-<h3 id="HRRN-高相应比优先的调度策略"><a href="#HRRN-高相应比优先的调度策略" class="headerlink" title="HRRN 高相应比优先的调度策略"></a>HRRN 高相应比优先的调度策略</h3><blockquote>
-<p>先来先服务和短作业优先分别考虑了等待时间和运行时间, HRRN综合考虑了等待时间和运行时间</p>
-<p><img src="image-20231126174334465.png" alt="image-20231126174334465"></p>
-</blockquote>
-<p>我们为每一个作业引入一个优先级的概念, 这个优先级都是动态进行变化的. 这个调度策略很好的平衡了短作业优先和先进先出的策略.</p>
-<h1 id="3-分时处理系统"><a href="#3-分时处理系统" class="headerlink" title="3. 分时处理系统"></a>3. 分时处理系统</h1><h2 id="3-1-分时处理系统的目标"><a href="#3-1-分时处理系统的目标" class="headerlink" title="3.1 分时处理系统的目标"></a>3.1 分时处理系统的目标</h2><ul>
-<li>响应时间快</li>
-</ul>
-<h2 id="3-2-调度策略"><a href="#3-2-调度策略" class="headerlink" title="3.2 调度策略"></a>3.2 调度策略</h2><h3 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h3><p>每个任务分配到一定的时间片, 但是一旦时间片用完, 就必须放弃CPU的执行权.</p>
-<p><strong>缺点:</strong> CPU需要频繁的进行上下文的切换, 会有一定的额外开销</p>
-<h1 id="4-氪金时代"><a href="#4-氪金时代" class="headerlink" title="4. 氪金时代"></a>4. 氪金时代</h1><h2 id="4-1-氪金时代的目标"><a href="#4-1-氪金时代的目标" class="headerlink" title="4.1 氪金时代的目标"></a>4.1 氪金时代的目标</h2><ul>
-<li>让氪金的人有更高的优先级</li>
-</ul>
-<h2 id="4-2-调度策略"><a href="#4-2-调度策略" class="headerlink" title="4.2 调度策略"></a>4.2 调度策略</h2><h3 id="非抢占式调度"><a href="#非抢占式调度" class="headerlink" title="非抢占式调度"></a>非抢占式调度</h3><p>非抢占式规定一旦将CPU分配给某一个进程, 那么在此期间他的CPU执行权不会被剥夺, 直到时间片用完.</p>
-<h3 id="抢占式调度"><a href="#抢占式调度" class="headerlink" title="抢占式调度"></a>抢占式调度</h3><p>不言而喻的调度策略, 直接剥夺时间片</p>
-<h3 id="优先级的类型"><a href="#优先级的类型" class="headerlink" title="优先级的类型"></a>优先级的类型</h3><p>静态优先级, 是一种优先级一旦确定就不会改变的策略</p>
-<p>动态优先级, 是一种优先级会在运行过程中动态改变的策略</p>
-<h2 id="4-3-终极调度策略-多级队列反馈"><a href="#4-3-终极调度策略-多级队列反馈" class="headerlink" title="4.3 终极调度策略 - 多级队列反馈"></a>4.3 终极调度策略 - 多级队列反馈</h2><ol>
-<li>设置多个就绪队列, 每个队列的优先级依次递减, 第一个最高, 第二个次之</li>
-<li>VIP的席位不是那么容易获得的, 优先级越高, 时间片越小, 第二个时间片是第一个的一倍, 以此类推</li>
-<li>每个就绪队列按照先进先出的方式进行调度, 如果当前队列分配的时间片不能完成任务, 那么在执行完时间片之后, 将此队列放入下一个队列的末尾</li>
-<li>按队列优先级进行调度, 只有高优先级的队列任务执行完毕, 才会轮到低优先级队列. 如果在本任务运行期间, 优先级较高的任务来了, 那么必须要放弃CPU, 回到本队列末尾重新排队</li>
-</ol>
-<h1 id="5-其他七七八八的策略"><a href="#5-其他七七八八的策略" class="headerlink" title="5. 其他七七八八的策略"></a>5. 其他七七八八的策略</h1><h2 id="5-1-最早时间截止的策略"><a href="#5-1-最早时间截止的策略" class="headerlink" title="5.1 最早时间截止的策略"></a>5.1 最早时间截止的策略</h2><p>很好理解, 谁迅速谁优先</p>
-<h2 id="5-2-最低松弛度优先"><a href="#5-2-最低松弛度优先" class="headerlink" title="5.2 最低松弛度优先"></a>5.2 最低松弛度优先</h2><p>谁时间紧迫, 谁优先</p>
-<blockquote>
-<p>举例: 一个需要100ms运行时间的任务最晚截止时间是200ms, 那么他必须要最晚在100ms时刻开始运行.</p>
-<p>那么他的松弛度就是 currentTime - 100ms</p>
-</blockquote>
-<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h1><p>本篇文章从系统发展的时间线介绍了不同的调度策略在不同时代是如何被考虑和发展起来的.</p>
-<p>在此进行一个总结:</p>
-<ol>
-<li><p>原始的调度策略:</p>
-<ul>
-<li><p>先来先服务</p>
-</li>
-<li><p>优先级抢占调度</p>
-</li>
-</ul>
-</li>
-<li><p>批处理系统:</p>
-<ul>
-<li>短作业优先</li>
-<li>HRRN</li>
-</ul>
-</li>
-<li><p>分时系统:</p>
-<ul>
-<li>时间片轮转</li>
-</ul>
-</li>
-<li><p>氪金时代</p>
-<ul>
-<li>多级优先队列反馈</li>
-</ul>
-</li>
-<li><p>其他</p>
-<ul>
-<li>最早截止时间优先</li>
-<li>最低松弛度优先</li>
-</ul>
-</li>
-</ol>
-<hr>
-<p><strong>文章推荐</strong></p>
-<ul>
-<li><a href="https://marxistzgwl.github.io./2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">内存调度策略</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hadoop读书报告</title>
-    <url>/2023/11/20/Hadoop%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
-    <content><![CDATA[<h1 id="Hadoop读书报告"><a href="#Hadoop读书报告" class="headerlink" title="Hadoop读书报告"></a>Hadoop读书报告</h1><h1 id="1-初识Hadoop"><a href="#1-初识Hadoop" class="headerlink" title="1. 初识Hadoop"></a>1. 初识Hadoop</h1><p>数据正在以爆炸的速度进行增长。</p>
-<p>磁盘读取的速度相对网络传输的速度来说很慢。</p>
-<p>为了解决磁盘读取速度慢的问题，我们提出一种构想，将大量的数据分割为小的数据块，放在不同的机器上同时进行读取。</p>
-<p>但是分布式的存储也会带来问题：</p>
-<ul>
-<li>如何解决硬件故障问题？多个硬件之间很可能会出现部分机器的故障，那么为了解决这种问题，我们最经常使用的办法就是使用副本</li>
-<li>分布式数据如何进行整合和分析？MapReduce</li>
-</ul>
-<p>关系型数据库和MapReduce的对比</p>
-<p>关系型数据库通过建立索引来进行查询的优化，而MapReduce的思路则是通过流式读取的方式减少磁头寻址。所以，关系型数据库更在乎数据写操作性能，而MapReduce更在乎数据的读操作性能。</p>
-<p><img src="image-20231120210453220.png" alt="image-20231120210453220"></p>
-<p>Hadoop在分布式计算中，通常使用数据本地化处理的方式进行性能的提升。</p>
-<h1 id="2-关于MapReduce"><a href="#2-关于MapReduce" class="headerlink" title="2. 关于MapReduce"></a>2. 关于MapReduce</h1><p><strong>持续更新中~~</strong></p>
-]]></content>
-      <categories>
-        <category>BigData</category>
-        <category>Hadoop</category>
-      </categories>
   </entry>
   <entry>
     <title>Docker</title>
@@ -428,270 +524,40 @@
 ]]></content>
   </entry>
   <entry>
-    <title>LC-Week-372</title>
-    <url>/2023/11/20/LC-Week-372/</url>
-    <content><![CDATA[<h1 id="第-372-场周赛-力扣（LeetCode）"><a href="#第-372-场周赛-力扣（LeetCode）" class="headerlink" title="第 372 场周赛 - 力扣（LeetCode）"></a><a href="https://leetcode.cn/contest/weekly-contest-372/">第 372 场周赛 - 力扣（LeetCode）</a></h1><p>首先放出本次周赛的结果，水过了前俩道题目😭</p>
-<h2 id="1-使三个字符串相等"><a href="#1-使三个字符串相等" class="headerlink" title="1. 使三个字符串相等"></a>1. <a href="https://leetcode.cn/problems/make-three-strings-equal/">使三个字符串相等</a></h2><p><strong>思路</strong></p>
-<p>本题乍一看好像要用DP，脑海中想起来了那个做<a href="https://leetcode.cn/problems/edit-distance/description/">字符串DP</a>的下午，我疯狂的抓自己的头发😋…</p>
-<p>但是仔细一看，我靠，这个题不就是求三个字符串的最长公共前缀的长度吗？</p>
-<p>也就是说首先求出三个字符串的公共前缀的长度，然后使用三个字符串长度之和减去这个公共前缀长度的三倍，就是最终我们需要的答案了。</p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findMinimumOperations</span><span class="params">(String s1, String s2, String s3)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (; end &lt; s1.length() &amp;&amp; end &lt; s2.length() &amp;&amp; s1.charAt(end) == s2.charAt(end); end++) ;</span><br><span class="line">        <span class="type">String</span> <span class="variable">prefix</span> <span class="operator">=</span> s1.substring(<span class="number">0</span>, end);</span><br><span class="line">        <span class="keyword">for</span> (end = <span class="number">0</span>; end &lt; prefix.length() &amp;&amp; end &lt; s3.length() &amp;&amp; prefix.charAt(end) == s3.charAt(end); end++);</span><br><span class="line">        <span class="keyword">if</span> (end == <span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">s</span> <span class="operator">=</span> s1.length() + s2.length() + s3.length();</span><br><span class="line">        s = s - <span class="number">3</span> * end;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-区分黑球与白球"><a href="#2-区分黑球与白球" class="headerlink" title="2. 区分黑球与白球"></a>2. <a href="https://leetcode.cn/problems/separate-black-and-white-balls/">区分黑球与白球</a></h2><p><strong>思路</strong></p>
-<p>我们可以使用<code>dp</code>来做这个题目。</p>
-<p>设置<code>dp[i]</code>是当前位置，白球在前面，黑球在后面的最小步数。</p>
-<p>如果第<code>i</code>个位置是白球，那么为了让本次符合条件，那么需要移动已知黑球有几个</p>
-<p><code>dp[i] = dp[i - 1] + blank</code></p>
-<p>如果第<code>i</code>个位置是黑球，那么我们不用动，</p>
-<p><code>dp[i] = dp[i - 1]</code></p>
-<p>我们只用到了<code>dp[i], dp[i - 1]</code>,所以可以连这个一维数组都不用开了，直接使用常量就能满足了</p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">minimumSteps</span><span class="params">(String ss)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] s = ss.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length;</span><br><span class="line">        <span class="type">long</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">blank</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">white</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                blank++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ans += blank;</span><br><span class="line">                white++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-最大异或乘积"><a href="#3-最大异或乘积" class="headerlink" title="3. 最大异或乘积"></a>3. <a href="https://leetcode.cn/problems/maximum-xor-product/">最大异或乘积</a></h2><p><strong>思路</strong></p>
-<p>对于a &#x3D; 14， b &#x3D; 7的例子而言</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">a</span> : <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="attribute">b</span> : <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
+    <title>提问的智慧</title>
+    <url>/2023/11/29/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文摘抄自公众号<strong>我们都是小青蛙</strong>, 这个作者是我很喜欢的一本书的作者 - <strong>MySQL是怎么运行的 - 小孩子4919</strong></p>
+<p>原文地址:</p>
 <ul>
-<li>如果<code>a, b 的某一位都是1</code>，那么保持不变</li>
-<li>如果<code>a, b的某一位都是0</code>，那么都要反转为1</li>
-<li>如果<code>a, b的某一位不同</code>，尽可能让大的变小，小的变大</li>
+<li><p><a href="https://mp.weixin.qq.com/s/ZbazlP6EVfvDDmBGCrqNJQ">提问的智慧</a></p>
+</li>
+<li><p><a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></p>
+</li>
+</ul>
+<p>看原文作者的吐槽, 让人有一种莫名其妙的喜感, 彷佛看到了作者愤怒的样子, 贴出原文的一句话:</p>
+<blockquote>
+<p>If you’re reading this document because you need help, and you walk away with the impression you can get it directly from the authors of this document, <em>you</em> are one of the idiots we are talking about. </p>
+</blockquote>
+<h1 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧"></a>提问的智慧</h1><blockquote>
+<p>People like that are time sinks — they take without giving back, and they waste time we could have spent on another question more interesting and another person more worthy of an answer. We call people like this “losers” (and for historical reasons we sometimes spell it “lusers”).</p>
+</blockquote>
+<p>不要成为一个像<code>lusers</code>的提问者.</p>
+<p><code>lusers</code>的典型特征:</p>
+<ul>
+<li>没有搞清楚问题就发言</li>
+<li>固执己见, 听不到别人的意见</li>
+<li>有问题就发言, 没有自己做过调研</li>
+<li>愚昧的经验主义者, 从其他方面说服你, 不能直面问题的本质, 还说你钻牛角尖</li>
 </ul>
 <blockquote>
-<p>如果a，b某一位不同，例如a &#x3D; 14， b &#x3D; 7的例子，对于最后的一位，那么我们可以看作是一个盈余的数字，如何进行分配才能让这俩个数字的乘积最大</p>
-<p>根据基本不等式、拉格朗日定理、费马定理… 不管怎么样，我们知道让俩个数字尽可能的接近就好</p>
-<p>如果最后的1分配给b，那么就是a &#x3D; 14, b &#x3D; 7,  a * b &#x3D; 98</p>
-<p>如果最后的1分配给a，那么就是a &#x3D; 15, b &#x3D; 6, a * b &#x3D; 90</p>
+<p>一个英国年轻人对着一个苹果钻牛角尖, 这个苹果为什么会掉在地上呢? 这家伙叫做牛顿, 也就是牛*他哥</p>
 </blockquote>
-<p><strong>代码</strong></p>
-<p>我使用java总是报错，可能是大整数溢出的问题，所以使用python代码</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maximumXorProduct</span>(<span class="params">self, a: <span class="built_in">int</span>, b: <span class="built_in">int</span>, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (n - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            x = <span class="number">1</span> &lt;&lt; i</span><br><span class="line">            <span class="keyword">if</span> x &amp; a &amp; b != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> (a &amp; x) == <span class="number">0</span> <span class="keyword">and</span> (b &amp; x) == <span class="number">0</span> <span class="keyword">or</span> a &gt; b <span class="keyword">and</span> (a &amp; x) != <span class="number">0</span> <span class="keyword">or</span> b &gt; a <span class="keyword">and</span> (b &amp; x) != <span class="number">0</span>:</span><br><span class="line">                a ^= x</span><br><span class="line">                b ^= x</span><br><span class="line">        mod = <span class="built_in">int</span>(<span class="number">1e9</span> + <span class="number">7</span>)</span><br><span class="line">        <span class="keyword">return</span> a * b % mod</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-2940-找到-Alice-和-Bob-可以相遇的建筑"><a href="#4-2940-找到-Alice-和-Bob-可以相遇的建筑" class="headerlink" title="4. 2940. 找到 Alice 和 Bob 可以相遇的建筑"></a>4. <a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/">2940. 找到 Alice 和 Bob 可以相遇的建筑</a></h2><p><strong>思路</strong></p>
-<p><del>完全没有思路哇</del>😵， 直接给出<a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/solutions/2533058/chi-xian-zui-xiao-dui-pythonjavacgo-by-e-9ewj/">灵神的思路</a>, 我再详细转述一下他的思路</p>
-<p>数据结构的设计：</p>
-<p><img src="image-20231121230659531.png" alt="image-20231121230659531"></p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] leftmostBuildingQueries(<span class="type">int</span>[] heights, <span class="type">int</span>[][] queries) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> heights.length;</span><br><span class="line">        List&lt;<span class="type">int</span>[]&gt;[] left = <span class="keyword">new</span> <span class="title class_">ArrayList</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            left[i] = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;<span class="type">int</span>[]&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[] ans = <span class="keyword">new</span> <span class="title class_">int</span>[queries.length];</span><br><span class="line">        Arrays.fill(ans, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; queries.length; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> queries[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> queries[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> x; x = y; y = t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (x == y || heights[x] &lt; heights[y]) &#123;</span><br><span class="line">                ans[i] = y;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left[y].add(<span class="keyword">new</span> <span class="title class_">int</span>[] &#123;heights[x], i&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        PriorityQueue&lt;<span class="type">int</span>[]&gt; pq = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;((a, b) -&gt; a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// 如果过往位置还有没有处理的询问，那么看看本次的高度是否满足</span></span><br><span class="line">            <span class="keyword">while</span> (!pq.isEmpty() &amp;&amp; pq.peek()[<span class="number">0</span>] &lt; heights[i]) &#123;</span><br><span class="line">                ans[pq.poll()[<span class="number">1</span>]] = i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将本位置没有处理完的询问放入pq，以便于后续的处理</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] arr : left[i]) &#123;</span><br><span class="line">                pq.add(arr);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>LeetCode周赛</category>
-      </categories>
-      <tags>
-        <tag>LeetCode周赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LC-Double-Week-118</title>
-    <url>/2023/11/26/LC-Double-Week-118/</url>
-    <content><![CDATA[<h1 id="第-118-场双周赛-力扣（LeetCode）"><a href="#第-118-场双周赛-力扣（LeetCode）" class="headerlink" title="第 118 场双周赛 - 力扣（LeetCode）"></a><a href="https://leetcode.cn/contest/biweekly-contest-118/">第 118 场双周赛 - 力扣（LeetCode）</a></h1><h2 id="1-查找包含给定字符的单词"><a href="#1-查找包含给定字符的单词" class="headerlink" title="1. 查找包含给定字符的单词"></a>1. <a href="https://leetcode.cn/problems/find-words-containing-character/">查找包含给定字符的单词</a></h2><p><strong>思路</strong></p>
-<p>简单的模拟题，依次对每一个字符串进行判断就可以了</p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findWordsContaining</span><span class="params">(String[] words, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> words.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (has(words[i], x)) &#123;</span><br><span class="line">                ans.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">has</span><span class="params">(String s, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == s.charAt(i)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-最大化网格图中正方形空洞的面积"><a href="#2-最大化网格图中正方形空洞的面积" class="headerlink" title="2. 最大化网格图中正方形空洞的面积"></a>2. <a href="https://leetcode.cn/problems/maximize-area-of-square-hole-in-grid/">最大化网格图中正方形空洞的面积</a></h2><p><strong>思路</strong></p>
-<p>刚开始小格子的面积都是1表示每一条线都是有左右为1的相邻线段的，抽走一部分线段，导致间隙慢慢变大了。那么我们只需要找到最大间隙就可以了。</p>
-<p><strong>这个题目和<a href="https://leetcode.cn/problems/longest-consecutive-sequence/">128. 最长连续序列</a>很像</strong></p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maximizeSquareHoleArea</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m, <span class="type">int</span>[] hBars, <span class="type">int</span>[] vBars)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(hBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(vBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> Math.min(rMax, cMax);</span><br><span class="line">        <span class="keyword">return</span> t * t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            map.put(num, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(arr[i] - <span class="number">1</span>)) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="keyword">while</span> (map.containsKey(cur)) &#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans = Math.max(ans, cnt);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-购买水果需要的最少金币数"><a href="#3-购买水果需要的最少金币数" class="headerlink" title="3. 购买水果需要的最少金币数"></a>3. <a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">购买水果需要的最少金币数</a></h2><p><strong>思路</strong></p>
-<p>经典的背包问题，由于我的dp没有dfs学的好，所以使用记忆化搜索实现</p>
-<p>对于每一个水果，你都可以选择直接买或者通过买其他水果进行白嫖。</p>
-<p><strong>代码</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] cache = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumCoins</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        Arrays.fill(cache, -<span class="number">1</span>);</span><br><span class="line">        cache[<span class="number">0</span>] = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(prices, prices.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] prices, <span class="type">int</span> cur)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cache[cur] != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cache[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 直接购买这个水果</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> prices[cur] + dfs(prices, cur - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 尝试通过买其他水果进行白嫖</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cur; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> i + i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (cur &lt;= r) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[<span class="number">0</span>]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[i] + dfs(prices, i - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cache[cur] = ans;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-找到最大非递减数组的长度"><a href="#4-找到最大非递减数组的长度" class="headerlink" title="4. 找到最大非递减数组的长度"></a>4. <a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">找到最大非递减数组的长度</a></h2><p><strong>思路</strong></p>
-<p>没有什么思路，想用后缀和但是时间复杂度不能到o(logn)</p>
-<p>这里复述灵神的思路，原文在这里：<a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/solutions/2542102/dan-diao-dui-lie-you-hua-dp-by-endlessch-j5qd/">100135. 找到最大非递减数组的长度 - 力扣（LeetCode）</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>MyGril</title>
-    <url>/2023/11/17/MyGril/</url>
-    <content><![CDATA[<p><img src="gril.jpg" alt="gril"></p>
-]]></content>
-      <categories>
-        <category>Beautiful Photos</category>
-        <category>Gril</category>
-      </categories>
-      <tags>
-        <tag>2D</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二分查找</title>
-    <url>/2024/01/17/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
-    <content><![CDATA[<h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0. 简介"></a>0. 简介</h1><p>二分查找算法，也叫做折半查找算法。二分查找的思想非常简单，针对一个有序的数组集合，每次都通过和区间中间的元素进行对比，将带查找的区间缩小为之前的一半，直到找到要查找的元素，或者区间被缩小为 0。</p>
-<p>二分查找算法的前提是有序，这个有序不一定指的是大小顺序，也可能是乱序，但是可以根据某种规则将元素分割为俩个子区间，通过元素中间的值可以快速的确定某一个区间是不符合要求的，进而很快的对答案区间进行范围的缩小。</p>
-<p>二分查找的时间复杂度是 O(logn), 但是很多时候，二分查找可以使用双指针进行优化。</p>
-<h1 id="1-算法思想和实现"><a href="#1-算法思想和实现" class="headerlink" title="1. 算法思想和实现"></a>1. 算法思想和实现</h1><p>二分查找的要点在于，确定当前的搜索区间和判断之后的下一个子区间。</p>
-<p>二分查找的模板有很多个，但是很多模块容易将初学者绕进去，就是出现某种情况循环不能正常退出的问题，这种情况往往是因为没有确定好搜索区间而出现的问题。</p>
-<p>下面给出模板：</p>
-<figure class="highlight aspectj"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> <span class="keyword">target</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">		<span class="keyword">int</span> mid = (l + r) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> (arr[mid] &gt; <span class="keyword">target</span>) &#123;</span><br><span class="line">			ans = mid;</span><br><span class="line">			r = mid - <span class="number">1</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			l = mid + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在上面的模板中，我们搜索区间一直是 [l, r], 注意是左闭右闭的区间。如果当前搜索区间没有元素，就需要退出循环。</p>
-<p>上述模板的功能是找到最后一个大于 target 的元素下标。</p>
-<p>如果找不到这样的元素，那么返回 -1</p>
-<blockquote>
-<p>搜索区间的确定主要需要看 mid 的取值范围，mid &#x3D; (l + r) &#x2F; 2; 这样由于向下取整的性质，如果l和r不能相等的话，相当于r这个点是不能够取到的。</p>
-</blockquote>
-<h1 id="2-经典例题"><a href="#2-经典例题" class="headerlink" title="2. 经典例题"></a>2. 经典例题</h1><ul>
-<li><a href="https://leetcode.cn/problems/binary-search/">704. 二分查找</a></li>
-<li><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">34. 在排序数组中查找元素的第一个和最后一个位置</a></li>
-<li><a href="https://leetcode.cn/problems/search-in-rotated-sorted-array">33. 搜索旋转排序数组</a></li>
-<li><a href="https://leetcode.cn/problems/sqrtx">69. x 的平方根</a></li>
-<li><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
-</ul>
-<p>第一个数组以i为分割线，分割线左侧的元素是被选中的，</p>
-<p>第二个数组以j为分割线，分割线左侧的元素是被选中的，</p>
-<p>那么需要有 i + j &#x3D; (m + n + 1) &#x2F; 2, 因为我们要求分割线在右侧，所以需要进行 +1 操作</p>
-<p>如果有 nums[i - 1] &lt; nums[j] , 那么说明成功，否则说明需要向左侧进行移动</p>
-<p>核心代码：</p>
-<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">	int i = (l + r + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">	int j = <span class="built_in">mid</span> - i;</span><br><span class="line">	<span class="keyword">if</span> (nums1[i - <span class="number">1</span>] &gt; nums[j]) &#123;</span><br><span class="line">		r = <span class="built_in">mid</span> - <span class="number">1</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		l = <span class="built_in">mid</span>; <span class="comment">// 因为 l + r + 1 自动让 i 右移动</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><a href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-size-subarray-sum">209. 长度最小的子数组</a></li>
-<li><a href="https://leetcode.cn/problems/kth-smallest-element-in-a-bst"> 230. 二叉搜索树中第K小的元素</a></li>
-<li><a href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
-<li><a href="https://leetcode.cn/problems/search-a-2d-matrix-ii/">240. 搜索二维矩阵 II</a></li>
-</ul>
-<h1 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h1><p>二分查找总是在尽力的缩小搜索的区间。</p>
-<p>以下几个题目真的是常做常新</p>
-<ul>
-<li><a href="https://leetcode.cn/problems/find-peak-element"> 162. 寻找峰值</a></li>
-<li><a href="https://leetcode.cn/problems/search-a-2d-matrix/">74. 搜索二维矩阵</a></li>
-<li><a href="https://leetcode.cn/problems/median-of-two-sorted-arrays"> 4. 寻找两个正序数组的中位数</a></li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>不要问业余的人, 不要和idiot说话!!!</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>先学会生活</title>
-    <url>/2023/11/19/%E5%85%88%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<h1 id="学会生活"><a href="#学会生活" class="headerlink" title="学会生活"></a>学会生活</h1><p>“学习是首要的任务”可能是我这一代大多数学生从小到大被灌输的思想。</p>
-<p>从小学到高中，我们已经习惯了由别人安排我们的时间。</p>
-<p>早读、数学、英语…</p>
-<p>学校可能教会了我很多东西，但也许忘记了告诉我怎么生活。</p>
-<p>我已经习惯了学习、生活、娱乐融为一体的日子。</p>
-<p>直到最近，因为找实习的需要做的事情有点多（<del>算法、项目和八股三座大山有木有，大学啊，你都教了我什么啊</del>），舌头上又张了一个泡。这是我人生中第二次舌头上长泡，也是今年第二次舌头上长泡（<del>我宣布舌头上长泡是最让人难受的病，因为现在我没有感冒^ _ ^</del>）</p>
-<p>我才意识到，我要认真规划一下我的时间安排了</p>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>任务</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>12:00 - 7:30</td>
-<td>睡觉</td>
-</tr>
-<tr>
-<td>7:30 - 8:00</td>
-<td>吃早饭</td>
-</tr>
-<tr>
-<td>8:00 - 10:00</td>
-<td>第一节（做做算法）</td>
-</tr>
-<tr>
-<td>10:00 - 10:30</td>
-<td>休息</td>
-</tr>
-<tr>
-<td>10:30 - 12:00</td>
-<td>第二节（看项目）</td>
-</tr>
-<tr>
-<td>12:00 - 13:00</td>
-<td>吃午饭</td>
-</tr>
-<tr>
-<td>13:00 - 13:30</td>
-<td>睡觉</td>
-</tr>
-<tr>
-<td>13:30 - 14:00</td>
-<td>阅读一下（看看八股文）</td>
-</tr>
-<tr>
-<td>14:00 - 15:30</td>
-<td>第三节（看看课程）</td>
-</tr>
-<tr>
-<td>15:30 - 16:00</td>
-<td>休息</td>
-</tr>
-<tr>
-<td>16:00 - 17:30</td>
-<td>第四节（做项目）</td>
-</tr>
-<tr>
-<td>17:30 - 18:00</td>
-<td>吃饭</td>
-</tr>
-<tr>
-<td>18:00 - 19:00</td>
-<td>休息 + 洗澡</td>
-</tr>
-<tr>
-<td>19:00 - 21:00</td>
-<td>第五节（做项目）</td>
-</tr>
-<tr>
-<td>21:00 - 23:00</td>
-<td>第六节（做项目&#x2F;写一下笔记）</td>
-</tr>
-<tr>
-<td>23:30 - 0:00</td>
-<td>总结一下一天，计划下一天（打游戏）</td>
-</tr>
-</tbody></table>
-<p>暂时就这样子安排，坚持一周看看效果，然后根据效果进行修正好了…</p>
-<p>这样的话，每天有11个小时在学习，8个小时在睡觉，还是挺不错的哈…</p>
-<h1 id="道阻且长"><a href="#道阻且长" class="headerlink" title="道阻且长"></a>道阻且长</h1><blockquote>
-<p>经常这样心血来潮的去做一件事情，一般坚持不久就失去了最初的激情……</p>
-</blockquote>
-<p>竺可桢校长的话时长在我耳边萦绕</p>
-<ul>
-<li>来浙大做什么</li>
-<li>将来要成为什么样的人</li>
-</ul>
-<p>那么，既然你诚心诚意的发问了，我就义正言辞的回答了（<del>开开玩笑而已，我是哪块小饼干，敢这么放肆</del>）😜</p>
-<ul>
-<li>来浙大交朋友（<del>话说，什么时候分配一个女朋友给我啊</del>）😭</li>
-<li>目标是结业的时候能拿到宇宙厂、鹅厂、福报厂等一众大厂的SSR Offer，最终拿到Google、Amazon的Offer，^ _ ^</li>
-</ul>
-<p>好吧，既然牛皮都吹到Github上了，那么先制定一个小目标吧。</p>
-<ul>
-<li><p>每天刷LeetCode5个，到本年底结束，刷够200题目。</p>
-</li>
-<li><p>到毕业结束之前，刷题量在4000题左右，LeetCode竞赛分数拿到3000分。</p>
-</li>
-<li><p>在2024年3月份之前找到一份实习</p>
-</li>
-<li><p>在毕业结束之前，拿到俩段以上的大厂实习经历</p>
-</li>
-<li><p>一个月读一本技术类书籍，在毕业结束之前，读20本技术类书籍</p>
-</li>
-<li><p>记诵英语单词，练习口语，听力，写作等，在学业结束之前，达到托福100分的水平</p>
-</li>
-<li><p>争取能在学业结束之前，找到一个志同道合的女朋友 😭</p>
-</li>
-</ul>
-<p>我的前途啊，它光明又曲折，我只能学阿Q那样告诉自己：做时间的朋友😊…</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>排序</title>
-    <url>/2023/11/24/%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="十大排序"><a href="#十大排序" class="headerlink" title="十大排序"></a>十大排序</h1><h2 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1. 快速排序"></a>1. 快速排序</h2><h2 id="2-堆排序"><a href="#2-堆排序" class="headerlink" title="2. 堆排序"></a>2. 堆排序</h2><h2 id="3-归并排序"><a href="#3-归并排序" class="headerlink" title="3. 归并排序"></a>3. 归并排序</h2><h2 id="4-冒泡排序"><a href="#4-冒泡排序" class="headerlink" title="4. 冒泡排序"></a>4. 冒泡排序</h2><h2 id="5-插入排序"><a href="#5-插入排序" class="headerlink" title="5. 插入排序"></a>5. 插入排序</h2><h2 id="6-选择排序"><a href="#6-选择排序" class="headerlink" title="6. 选择排序"></a>6. 选择排序</h2><h2 id="7-希尔排序"><a href="#7-希尔排序" class="headerlink" title="7. 希尔排序"></a>7. 希尔排序</h2><h2 id="8-基数排序"><a href="#8-基数排序" class="headerlink" title="8. 基数排序"></a>8. 基数排序</h2><h2 id="9-桶排序"><a href="#9-桶排序" class="headerlink" title="9. 桶排序"></a>9. 桶排序</h2><h2 id="10-计数排序"><a href="#10-计数排序" class="headerlink" title="10. 计数排序"></a>10. 计数排序</h2><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1>]]></content>
   </entry>
   <entry>
     <title>搜索</title>
@@ -748,108 +614,169 @@
 ]]></content>
   </entry>
   <entry>
-    <title>提问的智慧</title>
-    <url>/2023/11/29/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文摘抄自公众号<strong>我们都是小青蛙</strong>, 这个作者是我很喜欢的一本书的作者 - <strong>MySQL是怎么运行的 - 小孩子4919</strong></p>
-<p>原文地址:</p>
+    <title>CPU调度策略</title>
+    <url>/2023/11/26/CPU%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/</url>
+    <content><![CDATA[<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h1><p>CPU调度策略是面试题目中经常考察的知识点，但是网上的面试题答案都是知其然而不知其所以然。但这不妨碍他们回答得很好，但是我觉得理解一个知识要从根上理解，<del>于是我拿起来桌腿下用来垫桌腿的操作系统</del>, 准备写一篇属于自己的CPU调度策略。</p>
+<p>同时给出部分我认为写的比较好的博文：</p>
 <ul>
-<li><p><a href="https://mp.weixin.qq.com/s/ZbazlP6EVfvDDmBGCrqNJQ">提问的智慧</a></p>
+<li><a href="https://www.cnblogs.com/xiaolincoding/p/13631224.html">大厂面试爱问的CPU调度算法</a></li>
+</ul>
+<h1 id="1-单机系统的调度策略"><a href="#1-单机系统的调度策略" class="headerlink" title="1. 单机系统的调度策略"></a>1. 单机系统的调度策略</h1><h2 id="1-1-单机调度策略的目标"><a href="#1-1-单机调度策略的目标" class="headerlink" title="1.1 单机调度策略的目标"></a>1.1 单机调度策略的目标</h2><ul>
+<li><p>提高资源利用率</p>
 </li>
-<li><p><a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></p>
+<li><p>公平性</p>
+</li>
+<li><p>策略强制执行</p>
 </li>
 </ul>
-<p>看原文作者的吐槽, 让人有一种莫名其妙的喜感, 彷佛看到了作者愤怒的样子, 贴出原文的一句话:</p>
+<h2 id="1-2-我们的策略"><a href="#1-2-我们的策略" class="headerlink" title="1.2 我们的策略"></a>1.2 我们的策略</h2><h3 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h3><p>既然基于公平性, 大家排序, 谁先来先给谁用</p>
 <blockquote>
-<p>If you’re reading this document because you need help, and you walk away with the impression you can get it directly from the authors of this document, <em>you</em> are one of the idiots we are talking about. </p>
+<p>先来先服务是一种考虑了等待时间的调度策略, 先来排队的人等的时间已经比后来的长了, 后来的也要等着</p>
 </blockquote>
-<h1 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧"></a>提问的智慧</h1><blockquote>
-<p>People like that are time sinks — they take without giving back, and they waste time we could have spent on another question more interesting and another person more worthy of an answer. We call people like this “losers” (and for historical reasons we sometimes spell it “lusers”).</p>
+<h3 id="基于优先级的抢占式调度策略"><a href="#基于优先级的抢占式调度策略" class="headerlink" title="基于优先级的抢占式调度策略"></a>基于优先级的抢占式调度策略</h3><p>既然有些任务很紧急, 那么他来了, 其他人必须让开, 所以每个任务都可以设置一个优先级, 优先级高的会抢占优先级低的任务的CPU</p>
+<blockquote>
+<p>当然, 优先级高的任务可以绅士的不抢占等待别人用完CPU之后他再用, 这就是基于优先级的非抢占式调度策略</p>
 </blockquote>
-<p>不要成为一个像<code>lusers</code>的提问者.</p>
-<p><code>lusers</code>的典型特征:</p>
-<ul>
-<li>没有搞清楚问题就发言</li>
-<li>固执己见, 听不到别人的意见</li>
-<li>有问题就发言, 没有自己做过调研</li>
-<li>愚昧的经验主义者, 从其他方面说服你, 不能直面问题的本质, 还说你钻牛角尖</li>
+<h1 id="2-批处理系统"><a href="#2-批处理系统" class="headerlink" title="2. 批处理系统"></a>2. 批处理系统</h1><h2 id="2-1-批处理系统的目标"><a href="#2-1-批处理系统的目标" class="headerlink" title="2.1 批处理系统的目标"></a>2.1 批处理系统的目标</h2><ul>
+<li>平均周转时间短</li>
 </ul>
 <blockquote>
-<p>一个英国年轻人对着一个苹果钻牛角尖, 这个苹果为什么会掉在地上呢? 这家伙叫做牛顿, 也就是牛*他哥</p>
+<p>周转时间 &#x3D; 作业完成时间 - 作业提交时间</p>
 </blockquote>
 <ul>
-<li>不要问业余的人, 不要和idiot说话!!!</li>
-<li>不要问业余的人, 不要和idiot说话!!!</li>
-<li>不要问业余的人, 不要和idiot说话!!!</li>
+<li>系统吞吐量高</li>
+<li>处理机利用率高</li>
+</ul>
+<h2 id="2-2-调度策略"><a href="#2-2-调度策略" class="headerlink" title="2.2 调度策略"></a>2.2 调度策略</h2><h3 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h3><p>为了最大可能减少周转时间, 我们可以让短作业优先调度. </p>
+<blockquote>
+<p>短作业优先是一种考虑了运行时间的策略, 谁能最快用完谁用CPU</p>
+</blockquote>
+<p><strong>缺点:</strong></p>
+<ul>
+<li>作业的运行时间是不确定的. 只能通过以往经验来确定当前作业的运行时间</li>
+<li>对于长作业不利</li>
+</ul>
+<h3 id="HRRN-高相应比优先的调度策略"><a href="#HRRN-高相应比优先的调度策略" class="headerlink" title="HRRN 高相应比优先的调度策略"></a>HRRN 高相应比优先的调度策略</h3><blockquote>
+<p>先来先服务和短作业优先分别考虑了等待时间和运行时间, HRRN综合考虑了等待时间和运行时间</p>
+<p><img src="image-20231126174334465.png" alt="image-20231126174334465"></p>
+</blockquote>
+<p>我们为每一个作业引入一个优先级的概念, 这个优先级都是动态进行变化的. 这个调度策略很好的平衡了短作业优先和先进先出的策略.</p>
+<h1 id="3-分时处理系统"><a href="#3-分时处理系统" class="headerlink" title="3. 分时处理系统"></a>3. 分时处理系统</h1><h2 id="3-1-分时处理系统的目标"><a href="#3-1-分时处理系统的目标" class="headerlink" title="3.1 分时处理系统的目标"></a>3.1 分时处理系统的目标</h2><ul>
+<li>响应时间快</li>
+</ul>
+<h2 id="3-2-调度策略"><a href="#3-2-调度策略" class="headerlink" title="3.2 调度策略"></a>3.2 调度策略</h2><h3 id="时间片轮转算法"><a href="#时间片轮转算法" class="headerlink" title="时间片轮转算法"></a>时间片轮转算法</h3><p>每个任务分配到一定的时间片, 但是一旦时间片用完, 就必须放弃CPU的执行权.</p>
+<p><strong>缺点:</strong> CPU需要频繁的进行上下文的切换, 会有一定的额外开销</p>
+<h1 id="4-氪金时代"><a href="#4-氪金时代" class="headerlink" title="4. 氪金时代"></a>4. 氪金时代</h1><h2 id="4-1-氪金时代的目标"><a href="#4-1-氪金时代的目标" class="headerlink" title="4.1 氪金时代的目标"></a>4.1 氪金时代的目标</h2><ul>
+<li>让氪金的人有更高的优先级</li>
+</ul>
+<h2 id="4-2-调度策略"><a href="#4-2-调度策略" class="headerlink" title="4.2 调度策略"></a>4.2 调度策略</h2><h3 id="非抢占式调度"><a href="#非抢占式调度" class="headerlink" title="非抢占式调度"></a>非抢占式调度</h3><p>非抢占式规定一旦将CPU分配给某一个进程, 那么在此期间他的CPU执行权不会被剥夺, 直到时间片用完.</p>
+<h3 id="抢占式调度"><a href="#抢占式调度" class="headerlink" title="抢占式调度"></a>抢占式调度</h3><p>不言而喻的调度策略, 直接剥夺时间片</p>
+<h3 id="优先级的类型"><a href="#优先级的类型" class="headerlink" title="优先级的类型"></a>优先级的类型</h3><p>静态优先级, 是一种优先级一旦确定就不会改变的策略</p>
+<p>动态优先级, 是一种优先级会在运行过程中动态改变的策略</p>
+<h2 id="4-3-终极调度策略-多级队列反馈"><a href="#4-3-终极调度策略-多级队列反馈" class="headerlink" title="4.3 终极调度策略 - 多级队列反馈"></a>4.3 终极调度策略 - 多级队列反馈</h2><ol>
+<li>设置多个就绪队列, 每个队列的优先级依次递减, 第一个最高, 第二个次之</li>
+<li>VIP的席位不是那么容易获得的, 优先级越高, 时间片越小, 第二个时间片是第一个的一倍, 以此类推</li>
+<li>每个就绪队列按照先进先出的方式进行调度, 如果当前队列分配的时间片不能完成任务, 那么在执行完时间片之后, 将此队列放入下一个队列的末尾</li>
+<li>按队列优先级进行调度, 只有高优先级的队列任务执行完毕, 才会轮到低优先级队列. 如果在本任务运行期间, 优先级较高的任务来了, 那么必须要放弃CPU, 回到本队列末尾重新排队</li>
+</ol>
+<h1 id="5-其他七七八八的策略"><a href="#5-其他七七八八的策略" class="headerlink" title="5. 其他七七八八的策略"></a>5. 其他七七八八的策略</h1><h2 id="5-1-最早时间截止的策略"><a href="#5-1-最早时间截止的策略" class="headerlink" title="5.1 最早时间截止的策略"></a>5.1 最早时间截止的策略</h2><p>很好理解, 谁迅速谁优先</p>
+<h2 id="5-2-最低松弛度优先"><a href="#5-2-最低松弛度优先" class="headerlink" title="5.2 最低松弛度优先"></a>5.2 最低松弛度优先</h2><p>谁时间紧迫, 谁优先</p>
+<blockquote>
+<p>举例: 一个需要100ms运行时间的任务最晚截止时间是200ms, 那么他必须要最晚在100ms时刻开始运行.</p>
+<p>那么他的松弛度就是 currentTime - 100ms</p>
+</blockquote>
+<h1 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h1><p>本篇文章从系统发展的时间线介绍了不同的调度策略在不同时代是如何被考虑和发展起来的.</p>
+<p>在此进行一个总结:</p>
+<ol>
+<li><p>原始的调度策略:</p>
+<ul>
+<li><p>先来先服务</p>
+</li>
+<li><p>优先级抢占调度</p>
+</li>
+</ul>
+</li>
+<li><p>批处理系统:</p>
+<ul>
+<li>短作业优先</li>
+<li>HRRN</li>
+</ul>
+</li>
+<li><p>分时系统:</p>
+<ul>
+<li>时间片轮转</li>
+</ul>
+</li>
+<li><p>氪金时代</p>
+<ul>
+<li>多级优先队列反馈</li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>最早截止时间优先</li>
+<li>最低松弛度优先</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a href="https://marxistzgwl.github.io./2023/11/26/%E5%86%85%E5%AD%98%E8%B0%83%E5%BA%A6%E7%AD%96%E7%95%A5/">内存调度策略</a></li>
 </ul>
 ]]></content>
   </entry>
   <entry>
-    <title>路径规划</title>
-    <url>/2023/11/19/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇文章所面向的对象：</p>
+    <title>LC-Double-Week-118</title>
+    <url>/2023/11/26/LC-Double-Week-118/</url>
+    <content><![CDATA[<h1 id="第-118-场双周赛-力扣（LeetCode）"><a href="#第-118-场双周赛-力扣（LeetCode）" class="headerlink" title="第 118 场双周赛 - 力扣（LeetCode）"></a><a href="https://leetcode.cn/contest/biweekly-contest-118/">第 118 场双周赛 - 力扣（LeetCode）</a></h1><h2 id="1-查找包含给定字符的单词"><a href="#1-查找包含给定字符的单词" class="headerlink" title="1. 查找包含给定字符的单词"></a>1. <a href="https://leetcode.cn/problems/find-words-containing-character/">查找包含给定字符的单词</a></h2><p><strong>思路</strong></p>
+<p>简单的模拟题，依次对每一个字符串进行判断就可以了</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findWordsContaining</span><span class="params">(String[] words, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> words.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (has(words[i], x)) &#123;</span><br><span class="line">                ans.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">has</span><span class="params">(String s, <span class="type">char</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == s.charAt(i)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-最大化网格图中正方形空洞的面积"><a href="#2-最大化网格图中正方形空洞的面积" class="headerlink" title="2. 最大化网格图中正方形空洞的面积"></a>2. <a href="https://leetcode.cn/problems/maximize-area-of-square-hole-in-grid/">最大化网格图中正方形空洞的面积</a></h2><p><strong>思路</strong></p>
+<p>刚开始小格子的面积都是1表示每一条线都是有左右为1的相邻线段的，抽走一部分线段，导致间隙慢慢变大了。那么我们只需要找到最大间隙就可以了。</p>
+<p><strong>这个题目和<a href="https://leetcode.cn/problems/longest-consecutive-sequence/">128. 最长连续序列</a>很像</strong></p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maximizeSquareHoleArea</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m, <span class="type">int</span>[] hBars, <span class="type">int</span>[] vBars)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">rMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(hBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">cMax</span> <span class="operator">=</span> <span class="number">1</span> + getMax(vBars);</span><br><span class="line">        <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> Math.min(rMax, cMax);</span><br><span class="line">        <span class="keyword">return</span> t * t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : arr) &#123;</span><br><span class="line">            map.put(num, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(arr[i] - <span class="number">1</span>)) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="keyword">while</span> (map.containsKey(cur)) &#123;</span><br><span class="line">                cnt++;</span><br><span class="line">                cur++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans = Math.max(ans, cnt);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-购买水果需要的最少金币数"><a href="#3-购买水果需要的最少金币数" class="headerlink" title="3. 购买水果需要的最少金币数"></a>3. <a href="https://leetcode.cn/problems/minimum-number-of-coins-for-fruits/">购买水果需要的最少金币数</a></h2><p><strong>思路</strong></p>
+<p>经典的背包问题，由于我的dp没有dfs学的好，所以使用记忆化搜索实现</p>
+<p>对于每一个水果，你都可以选择直接买或者通过买其他水果进行白嫖。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] cache = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumCoins</span><span class="params">(<span class="type">int</span>[] prices)</span> &#123;</span><br><span class="line">        Arrays.fill(cache, -<span class="number">1</span>);</span><br><span class="line">        cache[<span class="number">0</span>] = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(prices, prices.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] prices, <span class="type">int</span> cur)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cache[cur] != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cache[cur];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 直接购买这个水果</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> prices[cur] + dfs(prices, cur - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 尝试通过买其他水果进行白嫖</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cur; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> i + i + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (cur &lt;= r) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[<span class="number">0</span>]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    ans = Math.min(ans, prices[i] + dfs(prices, i - <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cache[cur] = ans;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-找到最大非递减数组的长度"><a href="#4-找到最大非递减数组的长度" class="headerlink" title="4. 找到最大非递减数组的长度"></a>4. <a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/">找到最大非递减数组的长度</a></h2><p><strong>思路</strong></p>
+<p>没有什么思路，想用后缀和但是时间复杂度不能到o(logn)</p>
+<p>这里复述灵神的思路，原文在这里：<a href="https://leetcode.cn/problems/find-maximum-non-decreasing-array-length/solutions/2542102/dan-diao-dui-lie-you-hua-dp-by-endlessch-j5qd/">100135. 找到最大非递减数组的长度 - 力扣（LeetCode）</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>排序</title>
+    <url>/2023/11/24/%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="十大排序"><a href="#十大排序" class="headerlink" title="十大排序"></a>十大排序</h1><h2 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1. 快速排序"></a>1. 快速排序</h2><h2 id="2-堆排序"><a href="#2-堆排序" class="headerlink" title="2. 堆排序"></a>2. 堆排序</h2><h2 id="3-归并排序"><a href="#3-归并排序" class="headerlink" title="3. 归并排序"></a>3. 归并排序</h2><h2 id="4-冒泡排序"><a href="#4-冒泡排序" class="headerlink" title="4. 冒泡排序"></a>4. 冒泡排序</h2><h2 id="5-插入排序"><a href="#5-插入排序" class="headerlink" title="5. 插入排序"></a>5. 插入排序</h2><h2 id="6-选择排序"><a href="#6-选择排序" class="headerlink" title="6. 选择排序"></a>6. 选择排序</h2><h2 id="7-希尔排序"><a href="#7-希尔排序" class="headerlink" title="7. 希尔排序"></a>7. 希尔排序</h2><h2 id="8-基数排序"><a href="#8-基数排序" class="headerlink" title="8. 基数排序"></a>8. 基数排序</h2><h2 id="9-桶排序"><a href="#9-桶排序" class="headerlink" title="9. 桶排序"></a>9. 桶排序</h2><h2 id="10-计数排序"><a href="#10-计数排序" class="headerlink" title="10. 计数排序"></a>10. 计数排序</h2><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1>]]></content>
+  </entry>
+  <entry>
+    <title>Hadoop读书报告</title>
+    <url>/2023/11/20/Hadoop%E8%AF%BB%E4%B9%A6%E6%8A%A5%E5%91%8A/</url>
+    <content><![CDATA[<h1 id="Hadoop读书报告"><a href="#Hadoop读书报告" class="headerlink" title="Hadoop读书报告"></a>Hadoop读书报告</h1><h1 id="1-初识Hadoop"><a href="#1-初识Hadoop" class="headerlink" title="1. 初识Hadoop"></a>1. 初识Hadoop</h1><p>数据正在以爆炸的速度进行增长。</p>
+<p>磁盘读取的速度相对网络传输的速度来说很慢。</p>
+<p>为了解决磁盘读取速度慢的问题，我们提出一种构想，将大量的数据分割为小的数据块，放在不同的机器上同时进行读取。</p>
+<p>但是分布式的存储也会带来问题：</p>
 <ul>
-<li>掌握了某一门语言的数组和函数式编程基础之后，希望学的DP算法的同学</li>
-<li>有一定的算法基础，知道状态转移的意义</li>
+<li>如何解决硬件故障问题？多个硬件之间很可能会出现部分机器的故障，那么为了解决这种问题，我们最经常使用的办法就是使用副本</li>
+<li>分布式数据如何进行整合和分析？MapReduce</li>
 </ul>
-<p>本篇文章的内容：</p>
-<ul>
-<li>宫水三叶大佬的文章</li>
-<li>LeetCode题目链接</li>
-</ul>
-<h1 id="路径规划的DP"><a href="#路径规划的DP" class="headerlink" title="路径规划的DP"></a>路径规划的DP</h1><p>路径规划DP问题是一种从一个位置到另一个位置，求走路的方案数目或者代价的最大最小值的DP问题。</p>
-<p>由于宫水三叶大佬写的已经很好了，所以我不再进行转述。在此放上他的文章的链接和题目链接。</p>
-<p>文章链接：</p>
-<ul>
-<li><p><strong>「第一讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485037&idx=1&sn=d6d52c48600e655161e84f25d3402514&scene=21#wechat_redirect">62.不同路径（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第二讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485089&idx=1&sn=fd52fd088a5778c9ee101741d458605d&scene=21#wechat_redirect">63.不同路径 II（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第三讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485106&idx=1&sn=39adbde98707dc02a99e71f58cad5e7c&scene=21#wechat_redirect">64.最小路径和（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第四讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485123&idx=1&sn=8a427e56d472d1517b0983d8cdc5c629&scene=21#wechat_redirect">120.三角形最小路径和（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第五讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485163&idx=1&sn=ffe456777bcda52c036e6eb2181d1932&chksm=fd9cadf4caeb24e21a57ce47295a54ee9d591dfbb857549a57c145cdeeabf8c4324b007fc18b&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">931.下降路径最小和（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第六讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485187&idx=1&sn=a07f67501aa696a79b1e85bb2860c0b2&chksm=fd9cac1ccaeb250a777f9334c0cd3bb0135dafa0007d6d0bbb5cf38e484773d3539fd776b2ea&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">1289.下降路径最小和 II（困难）</a>」</strong></p>
-</li>
-<li><p><strong>「第七讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485297&idx=1&sn=5ee4ce31c42d368af0653f60aa263c82&chksm=fd9cac6ecaeb25787e6da90423c5467e1679da0a8aaf1a3445475199a8f148d8629e851fea57&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">1575.统计所有可行路径（困难）【记忆化搜索】</a>」</strong></p>
-</li>
-<li><p><strong>「第八讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485319&idx=1&sn=95a3dc9c97ca57185de792ca70924afe&chksm=fd9cac98caeb258ebea466f59378670a90af1cb3015ae70922e1d04ac711a5b8d8d853ac5e7d&token=677741617&lang=zh_CN&scene=21#wechat_redirect">1575.统计所有可行路径（困难）【动态规划】</a>」</strong></p>
-</li>
-<li><p><strong>「第九讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485426&idx=1&sn=071aec0bf5bc2e20c58f4cbb3dcb0fbc&chksm=fd9cacedcaeb25fb895cb99963dcfcde6b10268893a085eed4000b48bf070cecbdf7c81bf991&token=1934509949&lang=zh_CN&scene=21#wechat_redirect">576.出界的路径数（中等）</a>」</strong></p>
-</li>
-<li><p><strong>「第十讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485565&idx=1&sn=9d307e3ef239d9ba509624736408fc3c&scene=21#wechat_redirect">1301.最大得分的路径数目（困难）</a>」</strong></p>
-</li>
-</ul>
-<p>题目链接：</p>
-<ul>
-<li><a href="https://leetcode.cn/problems/unique-paths">62. 不同路径</a></li>
-<li><a href="https://leetcode.cn/problems/unique-paths-ii">63. 不同路径 II</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-path-sum">64. 最小路径和</a></li>
-<li><a href="https://leetcode.cn/problems/triangle">120. 三角形最小路径和</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-falling-path-sum">931. 下降路径最小和</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-falling-path-sum-ii">1289. 下降路径最小和 II</a></li>
-<li><a href="https://leetcode.cn/problems/count-all-possible-routes">1575. 统计所有可行路径</a></li>
-<li><a href="https://leetcode.cn/problems/out-of-boundary-paths">576. 出界的路径数</a></li>
-<li><a href="https://leetcode.cn/problems/number-of-paths-with-max-score">1301. 最大得分的路径数目</a></li>
-</ul>
-<hr>
-<p><strong>文章推荐</strong></p>
-<ul>
-<li><a href="https://marxistzgwl.github.io./2023/11/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">DP问题 - 背包问题</a></li>
-</ul>
+<p>关系型数据库和MapReduce的对比</p>
+<p>关系型数据库通过建立索引来进行查询的优化，而MapReduce的思路则是通过流式读取的方式减少磁头寻址。所以，关系型数据库更在乎数据写操作性能，而MapReduce更在乎数据的读操作性能。</p>
+<p><img src="image-20231120210453220.png" alt="image-20231120210453220"></p>
+<p>Hadoop在分布式计算中，通常使用数据本地化处理的方式进行性能的提升。</p>
+<h1 id="2-关于MapReduce"><a href="#2-关于MapReduce" class="headerlink" title="2. 关于MapReduce"></a>2. 关于MapReduce</h1><p><strong>持续更新中~~</strong></p>
 ]]></content>
       <categories>
-        <category>Algorithm</category>
-        <category>基础</category>
-        <category>DP</category>
+        <category>BigData</category>
+        <category>Hadoop</category>
       </categories>
-      <tags>
-        <tag>Algorithm</tag>
-        <tag>基础</tag>
-        <tag>DP</tag>
-        <tag>路径规划</tag>
-      </tags>
   </entry>
   <entry>
     <title>背包问题</title>
@@ -963,54 +890,127 @@
       </tags>
   </entry>
   <entry>
-    <title>差分和前缀和</title>
-    <url>/2024/01/21/%E5%B7%AE%E5%88%86%E5%92%8C%E5%89%8D%E7%BC%80%E5%92%8C/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>前缀和和差分是互逆的运算</p>
-<p>前缀和用于求解快速求解区间和，也就是用 prefix[i] - prefix[j] 就可以得到 (j, i] 区间的和</p>
-<p>差分数组可以用于快速将某个区间内的所有值进行加减操作</p>
-<h1 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h1><ol>
-<li>一维差分和前缀和</li>
-</ol>
-<p>前缀和: </p>
-<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">int<span class="comment">[]</span> prefix = new int<span class="comment">[n]</span>;</span><br><span class="line">prefix<span class="comment">[0]</span> = nums<span class="comment">[0]</span>;</span><br><span class="line">for (int i = 1; i &lt; n; i++) &#123;</span><br><span class="line"> 	prefix<span class="comment">[i]</span> = prefix<span class="comment">[i - 1]</span> + nums<span class="comment">[i]</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 用于快速得到 nums<span class="comment">[j]</span> ~ nums<span class="comment">[i]</span> 的和</span><br><span class="line">int get(int i, int j) &#123;</span><br><span class="line">	return prefix<span class="comment">[i]</span> - prefix<span class="comment">[j]</span> + nums<span class="comment">[j]</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>LC-Week-372</title>
+    <url>/2023/11/20/LC-Week-372/</url>
+    <content><![CDATA[<h1 id="第-372-场周赛-力扣（LeetCode）"><a href="#第-372-场周赛-力扣（LeetCode）" class="headerlink" title="第 372 场周赛 - 力扣（LeetCode）"></a><a href="https://leetcode.cn/contest/weekly-contest-372/">第 372 场周赛 - 力扣（LeetCode）</a></h1><p>首先放出本次周赛的结果，水过了前俩道题目😭</p>
+<h2 id="1-使三个字符串相等"><a href="#1-使三个字符串相等" class="headerlink" title="1. 使三个字符串相等"></a>1. <a href="https://leetcode.cn/problems/make-three-strings-equal/">使三个字符串相等</a></h2><p><strong>思路</strong></p>
+<p>本题乍一看好像要用DP，脑海中想起来了那个做<a href="https://leetcode.cn/problems/edit-distance/description/">字符串DP</a>的下午，我疯狂的抓自己的头发😋…</p>
+<p>但是仔细一看，我靠，这个题不就是求三个字符串的最长公共前缀的长度吗？</p>
+<p>也就是说首先求出三个字符串的公共前缀的长度，然后使用三个字符串长度之和减去这个公共前缀长度的三倍，就是最终我们需要的答案了。</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findMinimumOperations</span><span class="params">(String s1, String s2, String s3)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">end</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (; end &lt; s1.length() &amp;&amp; end &lt; s2.length() &amp;&amp; s1.charAt(end) == s2.charAt(end); end++) ;</span><br><span class="line">        <span class="type">String</span> <span class="variable">prefix</span> <span class="operator">=</span> s1.substring(<span class="number">0</span>, end);</span><br><span class="line">        <span class="keyword">for</span> (end = <span class="number">0</span>; end &lt; prefix.length() &amp;&amp; end &lt; s3.length() &amp;&amp; prefix.charAt(end) == s3.charAt(end); end++);</span><br><span class="line">        <span class="keyword">if</span> (end == <span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">s</span> <span class="operator">=</span> s1.length() + s2.length() + s3.length();</span><br><span class="line">        s = s - <span class="number">3</span> * end;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>差分：</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] b = <span class="keyword">new</span> <span class="type">int</span>[n];</span><br><span class="line">b[<span class="number">0</span>] = s[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">	b[i] = s[i] - s[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> v)</span> </span>&#123;</span><br><span class="line">	b[l] += v;</span><br><span class="line">	b[r + <span class="number">1</span>] -= v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-区分黑球与白球"><a href="#2-区分黑球与白球" class="headerlink" title="2. 区分黑球与白球"></a>2. <a href="https://leetcode.cn/problems/separate-black-and-white-balls/">区分黑球与白球</a></h2><p><strong>思路</strong></p>
+<p>我们可以使用<code>dp</code>来做这个题目。</p>
+<p>设置<code>dp[i]</code>是当前位置，白球在前面，黑球在后面的最小步数。</p>
+<p>如果第<code>i</code>个位置是白球，那么为了让本次符合条件，那么需要移动已知黑球有几个</p>
+<p><code>dp[i] = dp[i - 1] + blank</code></p>
+<p>如果第<code>i</code>个位置是黑球，那么我们不用动，</p>
+<p><code>dp[i] = dp[i - 1]</code></p>
+<p>我们只用到了<code>dp[i], dp[i - 1]</code>,所以可以连这个一维数组都不用开了，直接使用常量就能满足了</p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">minimumSteps</span><span class="params">(String ss)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] s = ss.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> s.length;</span><br><span class="line">        <span class="type">long</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">blank</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">white</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] == <span class="string">&#x27;1&#x27;</span>) &#123;</span><br><span class="line">                blank++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                ans += blank;</span><br><span class="line">                white++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>二分差分和前缀和</li>
-</ol>
-<p>二维前缀和，也就是矩阵区域和的问题</p>
-<p>二分差分也是同理</p>
-<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
-<li><a href="https://leetcode.cn/problems/product-of-array-except-self/">238. 除自身以外数组的乘积</a></li>
-<li><a href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></li>
-<li><a href="https://leetcode.cn/problems/split-array-largest-sum/">410. 分割数组的最大值</a></li>
+<h2 id="3-最大异或乘积"><a href="#3-最大异或乘积" class="headerlink" title="3. 最大异或乘积"></a>3. <a href="https://leetcode.cn/problems/maximum-xor-product/">最大异或乘积</a></h2><p><strong>思路</strong></p>
+<p>对于a &#x3D; 14， b &#x3D; 7的例子而言</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">a</span> : <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="attribute">b</span> : <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果<code>a, b 的某一位都是1</code>，那么保持不变</li>
+<li>如果<code>a, b的某一位都是0</code>，那么都要反转为1</li>
+<li>如果<code>a, b的某一位不同</code>，尽可能让大的变小，小的变大</li>
 </ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+<blockquote>
+<p>如果a，b某一位不同，例如a &#x3D; 14， b &#x3D; 7的例子，对于最后的一位，那么我们可以看作是一个盈余的数字，如何进行分配才能让这俩个数字的乘积最大</p>
+<p>根据基本不等式、拉格朗日定理、费马定理… 不管怎么样，我们知道让俩个数字尽可能的接近就好</p>
+<p>如果最后的1分配给b，那么就是a &#x3D; 14, b &#x3D; 7,  a * b &#x3D; 98</p>
+<p>如果最后的1分配给a，那么就是a &#x3D; 15, b &#x3D; 6, a * b &#x3D; 90</p>
+</blockquote>
+<p><strong>代码</strong></p>
+<p>我使用java总是报错，可能是大整数溢出的问题，所以使用python代码</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maximumXorProduct</span>(<span class="params">self, a: <span class="built_in">int</span>, b: <span class="built_in">int</span>, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span> (n - <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">            x = <span class="number">1</span> &lt;&lt; i</span><br><span class="line">            <span class="keyword">if</span> x &amp; a &amp; b != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> (a &amp; x) == <span class="number">0</span> <span class="keyword">and</span> (b &amp; x) == <span class="number">0</span> <span class="keyword">or</span> a &gt; b <span class="keyword">and</span> (a &amp; x) != <span class="number">0</span> <span class="keyword">or</span> b &gt; a <span class="keyword">and</span> (b &amp; x) != <span class="number">0</span>:</span><br><span class="line">                a ^= x</span><br><span class="line">                b ^= x</span><br><span class="line">        mod = <span class="built_in">int</span>(<span class="number">1e9</span> + <span class="number">7</span>)</span><br><span class="line">        <span class="keyword">return</span> a * b % mod</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2940-找到-Alice-和-Bob-可以相遇的建筑"><a href="#4-2940-找到-Alice-和-Bob-可以相遇的建筑" class="headerlink" title="4. 2940. 找到 Alice 和 Bob 可以相遇的建筑"></a>4. <a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/">2940. 找到 Alice 和 Bob 可以相遇的建筑</a></h2><p><strong>思路</strong></p>
+<p><del>完全没有思路哇</del>😵， 直接给出<a href="https://leetcode.cn/problems/find-building-where-alice-and-bob-can-meet/solutions/2533058/chi-xian-zui-xiao-dui-pythonjavacgo-by-e-9ewj/">灵神的思路</a>, 我再详细转述一下他的思路</p>
+<p>数据结构的设计：</p>
+<p><img src="image-20231121230659531.png" alt="image-20231121230659531"></p>
+<p><strong>代码</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] leftmostBuildingQueries(<span class="type">int</span>[] heights, <span class="type">int</span>[][] queries) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> heights.length;</span><br><span class="line">        List&lt;<span class="type">int</span>[]&gt;[] left = <span class="keyword">new</span> <span class="title class_">ArrayList</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            left[i] = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;<span class="type">int</span>[]&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span>[] ans = <span class="keyword">new</span> <span class="title class_">int</span>[queries.length];</span><br><span class="line">        Arrays.fill(ans, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; queries.length; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> queries[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> queries[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> x; x = y; y = t;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (x == y || heights[x] &lt; heights[y]) &#123;</span><br><span class="line">                ans[i] = y;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left[y].add(<span class="keyword">new</span> <span class="title class_">int</span>[] &#123;heights[x], i&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        PriorityQueue&lt;<span class="type">int</span>[]&gt; pq = <span class="keyword">new</span> <span class="title class_">PriorityQueue</span>&lt;&gt;((a, b) -&gt; a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// 如果过往位置还有没有处理的询问，那么看看本次的高度是否满足</span></span><br><span class="line">            <span class="keyword">while</span> (!pq.isEmpty() &amp;&amp; pq.peek()[<span class="number">0</span>] &lt; heights[i]) &#123;</span><br><span class="line">                ans[pq.poll()[<span class="number">1</span>]] = i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将本位置没有处理完的询问放入pq，以便于后续的处理</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span>[] arr : left[i]) &#123;</span><br><span class="line">                pq.add(arr);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LeetCode周赛</category>
+      </categories>
+      <tags>
+        <tag>LeetCode周赛</tag>
+      </tags>
   </entry>
   <entry>
-    <title>滑动窗口</title>
-    <url>/2024/01/18/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>滑动窗口法，，可以用来解决一些查找满足一定条件的连续区间的性质（长度等）的问题。由于区间连续，因此当区间发生变化时，可以通过旧有的计算结果对搜索空间进行剪枝，这样便减少了重复计算，降低了时间复杂度。</p>
-<h1 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h1><figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> r = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="comment">// 1. 左侧指针增加的同时，删除旧的元素</span></span><br><span class="line">	<span class="keyword">if</span> (i != <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="comment">// 对 i - 1 进行删除状态的操作</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 2. 右侧指针扩大</span></span><br><span class="line">	<span class="keyword">while</span> (r &lt; n &amp;&amp; condi) &#123;</span><br><span class="line">		<span class="comment">// 将 r 进入当前区间</span></span><br><span class="line">		r++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 3. 进行当前区间的结果统计</span></span><br><span class="line">	<span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="经典例题"><a href="#经典例题" class="headerlink" title="经典例题"></a>经典例题</h1><ul>
-<li><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">3. 无重复字符的最长子串</a></li>
-<li><a href="https://leetcode.cn/problems/sliding-window-maximum">239. 滑动窗口最大值</a></li>
-<li><a href="https://leetcode.cn/problems/minimum-window-substring">76. 最小覆盖子串</a></li>
-<li><a href="https://leetcode.cn/problems/max-consecutive-ones-iii">1004. 最大连续1的个数 III</a></li>
-<li><a href="https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters">395. 至少有K个重复字符</a></li>
-<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
-<li><a href="https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/">LCR 167. 招式拆解 I</a></li>
-<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a></li>
-</ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>滑动窗口题目分为动态窗口和静态窗口，多做题才能找到感觉。</p>
+    <title>路径规划</title>
+    <url>/2023/11/19/%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇文章所面向的对象：</p>
 <ul>
-<li><a href="https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit">1438. 绝对差不超过限制的最长连续子数组</a></li>
-<li><a href="https://leetcode.cn/problems/permutation-in-string">567. 字符串的排列</a> （使用diff进行优化的思路）</li>
-<li><a href="https://leetcode.cn/problems/shortest-supersequence-lcci/">面试题 17.18. 最短超串</a></li>
+<li>掌握了某一门语言的数组和函数式编程基础之后，希望学的DP算法的同学</li>
+<li>有一定的算法基础，知道状态转移的意义</li>
+</ul>
+<p>本篇文章的内容：</p>
+<ul>
+<li>宫水三叶大佬的文章</li>
+<li>LeetCode题目链接</li>
+</ul>
+<h1 id="路径规划的DP"><a href="#路径规划的DP" class="headerlink" title="路径规划的DP"></a>路径规划的DP</h1><p>路径规划DP问题是一种从一个位置到另一个位置，求走路的方案数目或者代价的最大最小值的DP问题。</p>
+<p>由于宫水三叶大佬写的已经很好了，所以我不再进行转述。在此放上他的文章的链接和题目链接。</p>
+<p>文章链接：</p>
+<ul>
+<li><p><strong>「第一讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485037&idx=1&sn=d6d52c48600e655161e84f25d3402514&scene=21#wechat_redirect">62.不同路径（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第二讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485089&idx=1&sn=fd52fd088a5778c9ee101741d458605d&scene=21#wechat_redirect">63.不同路径 II（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第三讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485106&idx=1&sn=39adbde98707dc02a99e71f58cad5e7c&scene=21#wechat_redirect">64.最小路径和（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第四讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485123&idx=1&sn=8a427e56d472d1517b0983d8cdc5c629&scene=21#wechat_redirect">120.三角形最小路径和（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第五讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485163&idx=1&sn=ffe456777bcda52c036e6eb2181d1932&chksm=fd9cadf4caeb24e21a57ce47295a54ee9d591dfbb857549a57c145cdeeabf8c4324b007fc18b&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">931.下降路径最小和（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第六讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485187&idx=1&sn=a07f67501aa696a79b1e85bb2860c0b2&chksm=fd9cac1ccaeb250a777f9334c0cd3bb0135dafa0007d6d0bbb5cf38e484773d3539fd776b2ea&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">1289.下降路径最小和 II（困难）</a>」</strong></p>
+</li>
+<li><p><strong>「第七讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485297&idx=1&sn=5ee4ce31c42d368af0653f60aa263c82&chksm=fd9cac6ecaeb25787e6da90423c5467e1679da0a8aaf1a3445475199a8f148d8629e851fea57&token=1459317048&lang=zh_CN&scene=21#wechat_redirect">1575.统计所有可行路径（困难）【记忆化搜索】</a>」</strong></p>
+</li>
+<li><p><strong>「第八讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485319&idx=1&sn=95a3dc9c97ca57185de792ca70924afe&chksm=fd9cac98caeb258ebea466f59378670a90af1cb3015ae70922e1d04ac711a5b8d8d853ac5e7d&token=677741617&lang=zh_CN&scene=21#wechat_redirect">1575.统计所有可行路径（困难）【动态规划】</a>」</strong></p>
+</li>
+<li><p><strong>「第九讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485426&idx=1&sn=071aec0bf5bc2e20c58f4cbb3dcb0fbc&chksm=fd9cacedcaeb25fb895cb99963dcfcde6b10268893a085eed4000b48bf070cecbdf7c81bf991&token=1934509949&lang=zh_CN&scene=21#wechat_redirect">576.出界的路径数（中等）</a>」</strong></p>
+</li>
+<li><p><strong>「第十讲：<a href="https://mp.weixin.qq.com/s?__biz=MzU4NDE3MTEyMA==&mid=2247485565&idx=1&sn=9d307e3ef239d9ba509624736408fc3c&scene=21#wechat_redirect">1301.最大得分的路径数目（困难）</a>」</strong></p>
+</li>
+</ul>
+<p>题目链接：</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/unique-paths">62. 不同路径</a></li>
+<li><a href="https://leetcode.cn/problems/unique-paths-ii">63. 不同路径 II</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-path-sum">64. 最小路径和</a></li>
+<li><a href="https://leetcode.cn/problems/triangle">120. 三角形最小路径和</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-falling-path-sum">931. 下降路径最小和</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-falling-path-sum-ii">1289. 下降路径最小和 II</a></li>
+<li><a href="https://leetcode.cn/problems/count-all-possible-routes">1575. 统计所有可行路径</a></li>
+<li><a href="https://leetcode.cn/problems/out-of-boundary-paths">576. 出界的路径数</a></li>
+<li><a href="https://leetcode.cn/problems/number-of-paths-with-max-score">1301. 最大得分的路径数目</a></li>
+</ul>
+<hr>
+<p><strong>文章推荐</strong></p>
+<ul>
+<li><a href="https://marxistzgwl.github.io./2023/11/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">DP问题 - 背包问题</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>基础</category>
+        <category>DP</category>
+      </categories>
+      <tags>
+        <tag>Algorithm</tag>
+        <tag>基础</tag>
+        <tag>DP</tag>
+        <tag>路径规划</tag>
+      </tags>
   </entry>
 </search>
