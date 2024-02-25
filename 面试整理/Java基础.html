@@ -17,13 +17,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="Java基础对象相等和对象引用相等的区别对象的相等比较的是存放内容是否相等。 引用的相等比较的是指向的地址是否相等。 深拷贝和浅拷贝的区别深拷贝和浅拷贝主要在一个对象内部的属性是引用对象时有区别。浅拷贝的拷贝对象和原对象公用一个内部对象，而深拷贝会复制整个对象，包括内部对象。 抽象类和接口共同点：  都不能被实例化 都可以有抽象方法 都可以由默认实现  区别：  接口是一种约定，一个类实现了一个接">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Gopher">
 <meta property="og:url" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/Java%E5%9F%BA%E7%A1%80.html">
 <meta property="og:site_name" content="Gopher">
+<meta property="og:description" content="Java基础对象相等和对象引用相等的区别对象的相等比较的是存放内容是否相等。 引用的相等比较的是指向的地址是否相等。 深拷贝和浅拷贝的区别深拷贝和浅拷贝主要在一个对象内部的属性是引用对象时有区别。浅拷贝的拷贝对象和原对象公用一个内部对象，而深拷贝会复制整个对象，包括内部对象。 抽象类和接口共同点：  都不能被实例化 都可以有抽象方法 都可以由默认实现  区别：  接口是一种约定，一个类实现了一个接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-05T08:08:24.989Z">
-<meta property="article:modified_time" content="2023-12-05T08:08:11.237Z">
+<meta property="article:published_time" content="2024-02-07T07:42:32.077Z">
+<meta property="article:modified_time" content="2024-02-07T07:42:32.077Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
 
@@ -215,7 +217,39 @@
       
       
       <div class="post-body">
-          
+          <h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="对象相等和对象引用相等的区别"><a href="#对象相等和对象引用相等的区别" class="headerlink" title="对象相等和对象引用相等的区别"></a>对象相等和对象引用相等的区别</h2><p>对象的相等比较的是存放内容是否相等。</p>
+<p>引用的相等比较的是指向的地址是否相等。</p>
+<h2 id="深拷贝和浅拷贝的区别"><a href="#深拷贝和浅拷贝的区别" class="headerlink" title="深拷贝和浅拷贝的区别"></a>深拷贝和浅拷贝的区别</h2><p>深拷贝和浅拷贝主要在一个对象内部的属性是引用对象时有区别。浅拷贝的拷贝对象和原对象公用一个内部对象，而深拷贝会复制整个对象，包括内部对象。</p>
+<h2 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h2><p>共同点：</p>
+<ul>
+<li>都不能被实例化</li>
+<li>都可以有抽象方法</li>
+<li>都可以由默认实现</li>
+</ul>
+<p>区别：</p>
+<ul>
+<li>接口是一种约定，一个类实现了一个接口，就表明这个类实现了相关接口的方法。抽象类主要用于复用代码。</li>
+<li>接口中的属性访问权限是public static final 的。抽象类的属性访问权限默认是default的。</li>
+<li>一个类只能继承一个父类，但是可以实现多个接口。</li>
+</ul>
+<h2 id="重载和重写区别"><a href="#重载和重写区别" class="headerlink" title="重载和重写区别"></a>重载和重写区别</h2><p>重写和重载都是方法名字相同的函数，不过重写发生在父子类中，重载发生在同一个类中。</p>
+<p>方法名：必须相同</p>
+<p>参数列表：重载必须不同，重写必须相同</p>
+<p>访问权限：重载可以不同，重写只能更大</p>
+<p>抛出的异常：重载可以不同，重写只能更小</p>
+<p>返回类型：重载可以不同，重写只能更小</p>
+<p>发生阶段：重载在编译器，重写的运行期</p>
+<h2 id="包装类型和基本类型的区别"><a href="#包装类型和基本类型的区别" class="headerlink" title="包装类型和基本类型的区别"></a>包装类型和基本类型的区别</h2><p>空间占用上：包装类型需要的空间比基本类型大</p>
+<p>默认值上：包装类型没有默认值，没有复制的包装类型是null，基本类型有默认值</p>
+<p>比较方式上：包装类型使用&#x3D;&#x3D;进行比较的时候，是比较引用相等，所以比较包装类型的时候，需要使用 equals 方法进行比较</p>
+<p>用途：包装类型可以用于泛型，但是基本类型不可以，基本类型常常会用于局部变量和常量，包装类型常常用于方法参数和成员变量</p>
+<h2 id="包装类型的缓存机制"><a href="#包装类型的缓存机制" class="headerlink" title="包装类型的缓存机制"></a>包装类型的缓存机制</h2><p>包装类型的缓存机制是用于在自动装箱的时候，尽可能提高创建对象的效率而做出的缓存行为。</p>
+<p>Byte、Short、Integer、Long 四种类型默认缓存了 [-128, 127] 相应的对象，而 Character 类型默认缓存了 [0, 127] 范围的对象。</p>
+<h2 id="语法糖"><a href="#语法糖" class="headerlink" title="语法糖"></a>语法糖</h2><p>语法糖是为了方便程序员开发而进行设计的一种特殊语法，常见的语法糖有：泛型，自动拆装箱，变长参数，增强for循环等。JVM并不能识别语法糖，所以语法糖需要在编译阶段进行解糖操作。</p>
+<h1 id="Java集合"><a href="#Java集合" class="headerlink" title="Java集合"></a>Java集合</h1><h2 id="ArrayList和LinkedList的区别"><a href="#ArrayList和LinkedList的区别" class="headerlink" title="ArrayList和LinkedList的区别"></a>ArrayList和LinkedList的区别</h2><h2 id="ArrayList的底层扩容机制"><a href="#ArrayList的底层扩容机制" class="headerlink" title="ArrayList的底层扩容机制"></a>ArrayList的底层扩容机制</h2><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>hashmap的主要作用是以平均时间复杂度为O(1)来进行元素的高效存取，在jdk1.8中，hashmap的底层是由hash桶加链表和红黑树来进行实现的。</p>
+<p>当hash桶长度大于等于阈值并且链表长度大于等于阈值的时候，会将链表转为红黑树，但是只有当链表长度退化到退化阈值的时候，才会进行树转化为链表的操作。</p>
+<p>hash桶的长度总是2的幂次方数。也就是说，如果你初始化的时候传入的容量是30，那么在hashmap第一次添加元素的时候，会将hash桶的长度设置为32。</p>
+<h1 id="Java并发"><a href="#Java并发" class="headerlink" title="Java并发"></a>Java并发</h1><h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><h1 id="Java-IO"><a href="#Java-IO" class="headerlink" title="Java IO"></a>Java IO</h1><h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1>
       </div>
       
       
@@ -276,6 +310,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E7%9B%B8%E7%AD%89%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E7%9B%B8%E7%AD%89%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.</span> <span class="nav-text">对象相等和对象引用相等的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.2.</span> <span class="nav-text">深拷贝和浅拷贝的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.3.</span> <span class="nav-text">抽象类和接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E5%8C%BA%E5%88%AB"><span class="nav-number">1.4.</span> <span class="nav-text">重载和重写区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.5.</span> <span class="nav-text">包装类型和基本类型的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6"><span class="nav-number">1.6.</span> <span class="nav-text">包装类型的缓存机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">1.7.</span> <span class="nav-text">语法糖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E9%9B%86%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">Java集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList%E5%92%8CLinkedList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">2.1.</span> <span class="nav-text">ArrayList和LinkedList的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArrayList%E7%9A%84%E5%BA%95%E5%B1%82%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">ArrayList的底层扩容机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap"><span class="nav-number">2.3.</span> <span class="nav-text">HashMap</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E5%B9%B6%E5%8F%91"><span class="nav-number">3.</span> <span class="nav-text">Java并发</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number">4.</span> <span class="nav-text">JVM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-IO"><span class="nav-number">5.</span> <span class="nav-text">Java IO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="nav-number">6.</span> <span class="nav-text">计算机网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">7.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis"><span class="nav-number">8.</span> <span class="nav-text">Redis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL"><span class="nav-number">9.</span> <span class="nav-text">MySQL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring"><span class="nav-number">10.</span> <span class="nav-text">Spring</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -290,18 +325,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

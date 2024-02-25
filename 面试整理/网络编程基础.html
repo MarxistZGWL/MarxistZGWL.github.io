@@ -24,20 +24,20 @@
 <meta property="og:site_name" content="Gopher">
 <meta property="og:description" content="[toc] 基础1. TCP&#x2F;IP网络模型 应用层: 专注于为用户提供应用功能, 常见的应用层协议: HTTP, FTP, DNS等 传输层: 常见的协议: TCP和UDP 网络层: IP协议 网络接口层: ARP协议  2. 从键入网址到网页显示的过程 http讲应用的请求数据封装为Http请求报文 DNS将域名解析为IP地址 查询浏览器DNS缓存 查询操作系统DNS缓存 查询host">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/20131107150723906.jpeg">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/20131107163544468.jpeg">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/6-%E4%BA%94%E5%A4%A7%E7%B1%BBHTTP%E7%8A%B6%E6%80%81%E7%A0%81.png">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/image-20231205173429819.png">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/format,png-20230309230534096.png">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/5.jpg">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/6.jpg">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/15-17018670637345.jpg">
-<meta property="og:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/16.jpg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/20131107150723906.jpeg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/20131107163544468.jpeg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/6-%E4%BA%94%E5%A4%A7%E7%B1%BBHTTP%E7%8A%B6%E6%80%81%E7%A0%81.png">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/image-20231205173429819.png">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/format,png-20230309230534096.png">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/5.jpg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/6.jpg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/15-17018670637345.jpg">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/16.jpg">
 <meta property="article:published_time" content="2023-12-08T06:24:53.827Z">
 <meta property="article:modified_time" content="2023-12-08T06:24:53.827Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/20131107150723906.jpeg">
+<meta name="twitter:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/20131107150723906.jpeg">
 
 <link rel="canonical" href="http://example.com/%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80">
 
@@ -254,12 +254,12 @@
 </ol>
 <h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="1-HTTP是什么"><a href="#1-HTTP是什么" class="headerlink" title="1. HTTP是什么"></a>1. HTTP是什么</h2><p>超文本传输协议, 是俩点之间进行数据传输的一种规范</p>
 <p>请求格式:</p>
-<p><img src="20131107150723906.jpeg" alt="img"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/20131107150723906.jpeg" alt="img"></p>
 <blockquote>
 <p>主要包含: 请求行, 请求头, 空行, 请求正文</p>
 </blockquote>
 <p>响应格式:</p>
-<p><img src="20131107163544468.jpeg" alt="img"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/20131107163544468.jpeg" alt="img"></p>
 <blockquote>
 <p>主要包含: 状态行, 响应头, 空行, 响应体</p>
 </blockquote>
@@ -287,7 +287,7 @@
 <ul>
 <li>状态码:</li>
 </ul>
-<p><img src="6-%E4%BA%94%E5%A4%A7%E7%B1%BBHTTP%E7%8A%B6%E6%80%81%E7%A0%81.png" alt=" 五大类 HTTP 状态码 "></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/6-%E4%BA%94%E5%A4%A7%E7%B1%BBHTTP%E7%8A%B6%E6%80%81%E7%A0%81.png" alt=" 五大类 HTTP 状态码 "></p>
 <ul>
 <li>请求方法<ul>
 <li>GET: 用于从浏览器中获取资源</li>
@@ -345,7 +345,7 @@
 </ul>
 <p>非对称加密原理:</p>
 <p>利用的数学难题: 大素数分解困难</p>
-<p><img src="image-20231205173429819.png" alt="image-20231205173429819"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/image-20231205173429819.png" alt="image-20231205173429819"></p>
 <p>公钥和私钥都可以用于加密和解密</p>
 </blockquote>
 <h2 id="3-Http2"><a href="#3-Http2" class="headerlink" title="3. Http2"></a>3. Http2</h2><p>Http2相对于http1.1优化部分</p>
@@ -375,7 +375,7 @@
 <li>传输格式: RPC是自定义协议, 一般不同的公司会有不同的RPC协议, RPC的数据格式进行了压缩</li>
 </ul>
 <h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><h2 id="1-TCP协议"><a href="#1-TCP协议" class="headerlink" title="1. TCP协议"></a>1. TCP协议</h2><p>TCP协议的主要作用是提供面向连接的可靠性交付</p>
-<p><img src="format,png-20230309230534096.png" alt="TCP 头格式"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/format,png-20230309230534096.png" alt="TCP 头格式"></p>
 <h2 id="2-TCP和UDP的区别"><a href="#2-TCP和UDP的区别" class="headerlink" title="2. TCP和UDP的区别"></a>2. TCP和UDP的区别</h2><ul>
 <li>TCP面向连接, UDP面向无连接</li>
 <li>TCP支持点对点, UDP支持多对多</li>
@@ -429,13 +429,13 @@
 <li>报告发送过程中IP包被废弃的原因</li>
 </ul>
 <p>协议格式: (前一段是IP头, 后一段才是ICMP头)</p>
-<p><img src="5.jpg" alt="ICMP 报文"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/5.jpg" alt="ICMP 报文"></p>
 <p>类型有几种:</p>
-<p><img src="6.jpg" alt="常见的 ICMP 类型"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/6.jpg" alt="常见的 ICMP 类型"></p>
 <h2 id="2-ping的工作原理"><a href="#2-ping的工作原理" class="headerlink" title="2. ping的工作原理"></a>2. ping的工作原理</h2><p>主机发送:</p>
-<p><img src="15-17018670637345.jpg" alt="主机 A 的 MAC 层数据包"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/15-17018670637345.jpg" alt="主机 A 的 MAC 层数据包"></p>
 <p>服务器回复:</p>
-<p><img src="16.jpg" alt="主机 B 的 ICMP 回送响应报文"></p>
+<p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/16.jpg" alt="主机 B 的 ICMP 回送响应报文"></p>
 <p>使用当前时间减去发送时间, 就能够得到发送时延.</p>
 <h2 id="3-traceroute的工作原理"><a href="#3-traceroute的工作原理" class="headerlink" title="3. traceroute的工作原理"></a>3. traceroute的工作原理</h2><p>故意将TTL从1开始慢慢增大, 这样就能够让ICMP返回差错网络包, 类型是时间超时.</p>
 <p>这样就能追踪到经过的路由器.</p>
@@ -515,18 +515,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

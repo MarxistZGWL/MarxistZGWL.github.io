@@ -24,20 +24,20 @@
 <meta property="og:site_name" content="Gopher">
 <meta property="og:description" content="1. 装作自己是个小白MySQL采用TCP作为服务器和客户端之间的通信协议。默认端口号是3306。 服务器处理客户端请求流程  连接管理  可以使用连接池进行资源的复用  解析和优化   查询缓存：个人认为是一个没什么用的东西 语法解析 查询优化：外连接转为内连接，表达式简化，子查询转化为连接等，可以使用EXPLAIN命令来查看执行计划   存储引擎  存储引擎有很多，需要了解的就三种：InnoD">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125000557864.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125001029445.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125001740190.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125001853892.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125002149557.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125002857327.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125003539738.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125003608703.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231125144352982.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125000557864.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001029445.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001740190.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001853892.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125002149557.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125002857327.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125003539738.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125003608703.png">
+<meta property="og:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125144352982.png">
 <meta property="article:published_time" content="2023-12-24T10:08:37.289Z">
 <meta property="article:modified_time" content="2023-12-24T10:08:37.289Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/MySQL/image-20231125000557864.png">
+<meta name="twitter:image" content="http://example.com/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125000557864.png">
 
 <link rel="canonical" href="http://example.com/MySQL/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84">
 
@@ -259,23 +259,23 @@
 <p><strong>面试中可能会提问到<code>utf8mb3</code>和<code>uftmb4</code>的区别</strong></p>
 <p>字符集是基于列的</p>
 <p>相同的字符集也有不同的比较规则，每种字符集都有一个默认的比较规则。</p>
-<p><img src="image-20231125000557864.png" alt="image-20231125000557864"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125000557864.png" alt="image-20231125000557864"></p>
 <h1 id="4-从一条记录说起"><a href="#4-从一条记录说起" class="headerlink" title="4. 从一条记录说起"></a>4. 从一条记录说起</h1><p><code>InnoDB</code>将数据划分为若干个页，作为磁盘和内存的最小交互单位。</p>
 <p>4种类型的行格式：COMPACT，REDUNDANT，DYNAMIC，COMPRESSED</p>
 <p><strong>COMPACT</strong></p>
-<p><img src="image-20231125001029445.png" alt="image-20231125001029445"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001029445.png" alt="image-20231125001029445"></p>
 <p>变长字段列表按照列的顺序逆序进行排放，最多使用俩个字节表示一个变长字段的长度，如果这个字段过长，那么只能存储16KB（2^16 ，这是俩个字节能表示的最大长度）。</p>
 <p>NULL值列表使用每一位表示每一列是否为NULL，1代表NULL，0代表非NULL</p>
 <p>记录头信息由5字节组成。</p>
-<p><img src="image-20231125001740190.png" alt="image-20231125001740190"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001740190.png" alt="image-20231125001740190"></p>
 <p><code>MySQL</code>会默认添加一些隐藏的列：</p>
-<p><img src="image-20231125001853892.png" alt="image-20231125001853892"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125001853892.png" alt="image-20231125001853892"></p>
 <p>当没有主键却没有UNIQUE的键的时候，就会自动添加row_id</p>
 <blockquote>
 <p>CHAR(10)也有可能会在变长字段列表中存储一个长度，这是因为字符集的编码格式可能是变长的，例如utf8mb4</p>
 </blockquote>
 <p><strong>REDUNDANT</strong></p>
-<p><img src="image-20231125002149557.png" alt="image-20231125002149557"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125002149557.png" alt="image-20231125002149557"></p>
 <p>使用字段长度偏移列表来代替COMPACT种的变长字段和NULL，使用偏移位的第一个bit作为是否是NULL的依据。</p>
 <blockquote>
 <p>这种格式下，CHAR(10)使用utf8mb4进行编码的字段占用的长度就是40，所以说是REDUNDANT格式</p>
@@ -285,17 +285,17 @@
 <p>和COMPACT的区别是处理溢出列的时候，会把溢出列的所有数据都放在一个溢出页中</p>
 <p><strong>COMPRESSED</strong></p>
 <p>和DYNAMIC的区别是，会使用压缩算法对页面进行压缩</p>
-<h1 id="5-盛放记录的大盒子"><a href="#5-盛放记录的大盒子" class="headerlink" title="5. 盛放记录的大盒子"></a>5. 盛放记录的大盒子</h1><p><img src="image-20231125002857327.png" alt="image-20231125002857327"></p>
+<h1 id="5-盛放记录的大盒子"><a href="#5-盛放记录的大盒子" class="headerlink" title="5. 盛放记录的大盒子"></a>5. 盛放记录的大盒子</h1><p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125002857327.png" alt="image-20231125002857327"></p>
 <p>一个组中的记录数目是4~8条</p>
-<p><img src="image-20231125003539738.png" alt="image-20231125003539738"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125003539738.png" alt="image-20231125003539738"></p>
 <p>查找过程：</p>
 <ol>
 <li>二分法找出属于哪一个组</li>
 <li>遍历这个组</li>
 </ol>
-<p><img src="image-20231125003608703.png" alt="image-20231125003608703"></p>
+<p><img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125003608703.png" alt="image-20231125003608703"></p>
 <p>将页从内存中刷入到磁盘的时候，为了保证页面的完整性，会在页尾设置校验机制</p>
-<h1 id="6-快速查询的秘籍"><a href="#6-快速查询的秘籍" class="headerlink" title="6. 快速查询的秘籍"></a>6. 快速查询的秘籍</h1><p> <img src="image-20231125144352982.png" alt="image-20231125144352982"></p>
+<h1 id="6-快速查询的秘籍"><a href="#6-快速查询的秘籍" class="headerlink" title="6. 快速查询的秘籍"></a>6. 快速查询的秘籍</h1><p> <img src="/MySQL%E6%98%AF%E6%80%8E%E6%A0%B7%E8%BF%90%E8%A1%8C%E7%9A%84/image-20231125144352982.png" alt="image-20231125144352982"></p>
 <p>使用主键作为索引的成为聚簇索引，聚簇索引是默认创建的，不需要进行显式的创建。</p>
 <p>联合索引<code>c1,c2</code>,首先按照<code>c1</code>的大小进行排序，如果<code>c1</code>一样，那么按照<code>c2</code>的大小进行排序，如果<code>c2</code>一样，那么按照主键的大小进行排序。</p>
 <p>二级索引目录项的构成：索引项 + 主键 + 页号</p>
@@ -460,18 +460,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

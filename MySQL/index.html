@@ -17,21 +17,24 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="持续更新中~ 未完成:  IN子查询优化部分 数据存储部分 事务部分  前言以下是吐槽，可以跳过~~ 在本科大二阶段学完数据库之后，大概有俩年的时间都没有再认真的深入的学习。再次看到数据库的知识都已经是面试题了，虽然写过了无数次的增删查改和各种连接，但是看到面试问的这些内容我是一个不会啊😭 我不禁又把责任抛给别人，我的本科教育都TM教了什么啊😣 想起了暑假看的上交大生存指南，为什么08年写的小">
+  <meta name="description" content="前言以下是吐槽，可以跳过~~ 在本科大二阶段学完数据库之后，大概有俩年的时间都没有再认真的深入的学习。再次看到数据库的知识都已经是面试题了，虽然写过了无数次的增删查改和各种连接，但是看到面试问的这些内容我是一个不会啊😭 我不禁又把责任抛给别人，我的本科教育都TM教了什么啊😣 想起了暑假看的上交大生存指南，为什么08年写的小册子，我23年才看到。果然人与人的差距比人与狗都大…  吐槽完毕，我首先">
 <meta property="og:type" content="website">
 <meta property="og:title" content="MySQL">
 <meta property="og:url" content="http://example.com/MySQL/index.html">
 <meta property="og:site_name" content="Gopher">
-<meta property="og:description" content="持续更新中~ 未完成:  IN子查询优化部分 数据存储部分 事务部分  前言以下是吐槽，可以跳过~~ 在本科大二阶段学完数据库之后，大概有俩年的时间都没有再认真的深入的学习。再次看到数据库的知识都已经是面试题了，虽然写过了无数次的增删查改和各种连接，但是看到面试问的这些内容我是一个不会啊😭 我不禁又把责任抛给别人，我的本科教育都TM教了什么啊😣 想起了暑假看的上交大生存指南，为什么08年写的小">
+<meta property="og:description" content="前言以下是吐槽，可以跳过~~ 在本科大二阶段学完数据库之后，大概有俩年的时间都没有再认真的深入的学习。再次看到数据库的知识都已经是面试题了，虽然写过了无数次的增删查改和各种连接，但是看到面试问的这些内容我是一个不会啊😭 我不禁又把责任抛给别人，我的本科教育都TM教了什么啊😣 想起了暑假看的上交大生存指南，为什么08年写的小册子，我23年才看到。果然人与人的差距比人与狗都大…  吐槽完毕，我首先">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/MySQL/image-20231130013917497.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231130014841736.png">
-<meta property="og:image" content="http://example.com/MySQL/image-20231202153132356.png">
+<meta property="og:image" content="http://example.com/index/image-20231130013917497.png">
+<meta property="og:image" content="http://example.com/index/image-20231130014841736.png">
+<meta property="og:image" content="http://example.com/index/image-20240128112004300.png">
+<meta property="og:image" content="http://example.com/index/image-20240128111915949.png">
+<meta property="og:image" content="http://example.com/index/image-20240128112417646.png">
+<meta property="og:image" content="http://example.com/index/image-20231202153132356.png">
 <meta property="article:published_time" content="2023-11-24T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-24T09:24:02.841Z">
+<meta property="article:modified_time" content="2024-01-28T06:14:15.760Z">
 <meta property="article:author" content="诸葛王朗">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/MySQL/image-20231130013917497.png">
+<meta name="twitter:image" content="http://example.com/index/image-20231130013917497.png">
 
 <link rel="canonical" href="http://example.com/MySQL/">
 
@@ -221,14 +224,7 @@
       
       
       <div class="post-body">
-          <p>持续更新中~</p>
-<p>未完成:</p>
-<ul>
-<li>IN子查询优化部分</li>
-<li>数据存储部分</li>
-<li>事务部分</li>
-</ul>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下是吐槽，可以跳过~~</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>以下是吐槽，可以跳过~~</p>
 <p>在本科大二阶段学完数据库之后，大概有俩年的时间都没有再认真的深入的学习。再次看到数据库的知识都已经是面试题了，虽然写过了无数次的增删查改和各种连接，但是看到面试问的这些内容我是一个不会啊😭</p>
 <p>我不禁又把责任抛给别人，我的本科教育都TM教了什么啊😣</p>
 <p>想起了暑假看的<a target="_blank" rel="noopener" href="https://survivesjtu.gitbook.io/survivesjtumanual/">上交大生存指南</a>，为什么08年写的小册子，我23年才看到。果然人与人的差距比人与狗都大…</p>
@@ -255,7 +251,7 @@
 <p>好了, 我们开始了!</p>
 <h1 id="1-存储"><a href="#1-存储" class="headerlink" title="1. 存储"></a>1. 存储</h1><h2 id="1-1-从一行记录开始"><a href="#1-1-从一行记录开始" class="headerlink" title="1.1 从一行记录开始"></a>1.1 从一行记录开始</h2><p>我们在搞清楚<code>MySQL</code>是怎么做到查询, 事务等等一系列事情的时候, 我们不得不先从他的物理存储说起. 所谓的先有数据结构的设计, 然后才有各种操作和算法.</p>
 <h3 id="Compact"><a href="#Compact" class="headerlink" title="Compact"></a>Compact</h3><p>我们直接观察<code>MySQL</code>如何进行一行数据的存储:</p>
-<p><img src="image-20231130013917497.png" alt="image-20231130013917497"></p>
+<p><img src="/index/image-20231130013917497.png" alt="image-20231130013917497"></p>
 <ul>
 <li><p>使用变长字段列表来存储那些会进行动态变化的字段, 而不是为这些变长字段预分配空间, 这是<code>MySQL</code>大叔为了节省空间的做法.</p>
 </li>
@@ -271,7 +267,7 @@
 <p>辟谣: 有许多的博客都是正气凛然的告诉你, CHAR类型是定长数组, 所以不会造成页面分裂, 但是在MySQL的设计中, 如果字符集是变长字符集, 那么CHAR类型会被存储到变长字段列表中, 所以有可能造成页面分裂</p>
 </blockquote>
 <h3 id="Redundant"><a href="#Redundant" class="headerlink" title="Redundant"></a>Redundant</h3><p>其实MySQL大叔不仅仅设计了这一种格式, 还有其他的三种, 不过和这个格式大同小异</p>
-<p><img src="image-20231130014841736.png" alt="image-20231130014841736"></p>
+<p><img src="/index/image-20231130014841736.png" alt="image-20231130014841736"></p>
 <p>这种格式和COMPACT行格式的区别:</p>
 <ul>
 <li>没有变长字段长度列表, 使用字段长度偏移列表进行代替</li>
@@ -284,7 +280,28 @@
 <li>DYNAMIC在处理溢出的时候, 直接将所有的数据放入溢出页</li>
 <li>COMPRESSED基于DYNAMIC增加了压缩处理</li>
 </ul>
-<h2 id="1-2-页结构"><a href="#1-2-页结构" class="headerlink" title="1.2 页结构"></a>1.2 页结构</h2><h2 id="1-3-数据目录"><a href="#1-3-数据目录" class="headerlink" title="1.3 数据目录"></a>1.3 数据目录</h2><h2 id="1-4-表空间"><a href="#1-4-表空间" class="headerlink" title="1.4 表空间"></a>1.4 表空间</h2><h2 id="1-5-InnoDB统计数据的收集"><a href="#1-5-InnoDB统计数据的收集" class="headerlink" title="1.5 InnoDB统计数据的收集"></a>1.5 InnoDB统计数据的收集</h2><h2 id="1-6-Buffer-Pool"><a href="#1-6-Buffer-Pool" class="headerlink" title="1.6 Buffer Pool"></a>1.6 Buffer Pool</h2><p>buffer pool的组成:</p>
+<h2 id="1-2-页结构"><a href="#1-2-页结构" class="headerlink" title="1.2 页结构"></a>1.2 页结构</h2><p>一个页面结构大致可以划分为7个部分：</p>
+<p><img src="/index/image-20240128112004300.png" alt="image-20240128112004300"></p>
+<p>记录在页面中的存放如图所示，有一个页目录用于二分查找，每个记录使用单链表的方式进行由主键从小到大的方式进行连接。因此在一个页中通过主键查找一条记录是非常快的。</p>
+<ol>
+<li>通过二分查找法，确定一个记录所在的组</li>
+<li>通过单链表，遍历这个组的各个记录</li>
+</ol>
+<p><img src="/index/image-20240128111915949.png" alt="image-20240128111915949"></p>
+<p>各个页面之间使用双向链表进行连接，将页从内存刷新到磁盘的时候，为了保证页面的完整性，在页面首部和页面尾部会存储页面的校验和以及页面最后修改的LSN。</p>
+<p>页面的存储示意图如下：</p>
+<p><img src="/index/image-20240128112417646.png" alt="image-20240128112417646"></p>
+<h2 id="1-3-数据目录"><a href="#1-3-数据目录" class="headerlink" title="1.3 数据目录"></a>1.3 数据目录</h2><p>表在文件系统中使用下面方式进行表示：</p>
+<ul>
+<li>表结构的定义</li>
+<li>表中的数据</li>
+</ul>
+<h2 id="1-4-表空间"><a href="#1-4-表空间" class="headerlink" title="1.4 表空间"></a>1.4 表空间</h2><p>区：64个连续的页就是一个区，一个区就是1MB大小，引入区的目的就是尽量消除随机IO，使用顺序IO</p>
+<p>组：256个连续的区就是一个组，一个组就是256MB大小</p>
+<p>段：段是一个逻辑概念，一个索引会生成俩个段：叶子节点段和非叶子节点段</p>
+<p>独立表空间和系统表空间的区别：系统表空间多了一些控制信息</p>
+<h2 id="1-5-InnoDB统计数据的收集"><a href="#1-5-InnoDB统计数据的收集" class="headerlink" title="1.5 InnoDB统计数据的收集"></a>1.5 InnoDB统计数据的收集</h2><p>这一章过于底层，记住收集的数据可以永久的存储的磁盘上，也可以只存储在内存中就可以了。</p>
+<h2 id="1-6-Buffer-Pool"><a href="#1-6-Buffer-Pool" class="headerlink" title="1.6 Buffer Pool"></a>1.6 Buffer Pool</h2><p>buffer pool的组成:</p>
 <p>控制块 + 缓冲页</p>
 <p>free链表: 存储着空闲的页面</p>
 <p>flush链表: 存储着脏页</p>
@@ -458,9 +475,10 @@
 <li><p>IN子查询</p>
 </li>
 </ol>
+<p>将子查询进行物化，将表和物化表进行连接，（准确来讲是半连接，因为这个连接只关心是否存在由记录满足条件，根本不关心有多少条记录复合条件），<strong>为什么要费劲巴拉的转化为连接，主要想用索引！</strong></p>
 <h2 id="3-3-EXPLAIN"><a href="#3-3-EXPLAIN" class="headerlink" title="3.3 EXPLAIN"></a>3.3 EXPLAIN</h2><p>终于说完了优化的模块, 下面来说一下EXPLAIN</p>
 <p>EXPLAIN输出有很多列, 我们详细解释一下这些列的作用之后, 就算完成了EXPLAIN的解释.</p>
-<p><img src="image-20231202153132356.png" alt="image-20231202153132356"></p>
+<p><img src="/index/image-20231202153132356.png" alt="image-20231202153132356"></p>
 <p>重要属性解释:</p>
 <p><strong>select_type</strong></p>
 <p>表明了这个SELECT在一个查询中的角色.</p>
@@ -510,7 +528,53 @@
 <li>optimizer阶段</li>
 <li>execute阶段</li>
 </ul>
-<h1 id="4-事务"><a href="#4-事务" class="headerlink" title="4. 事务"></a>4. 事务</h1>
+<h1 id="4-事务"><a href="#4-事务" class="headerlink" title="4. 事务"></a>4. 事务</h1><p>事务的四个原则：</p>
+<ul>
+<li>原子性</li>
+<li>隔离性</li>
+<li>持久性</li>
+<li>一致性</li>
+</ul>
+<p>原子性，隔离性和持久性都是为了保证一致性</p>
+<p>事务的语法：</p>
+<ol>
+<li>开启事务</li>
+</ol>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">begin</span>&gt;/&lt;<span class="keyword">start</span> <span class="keyword">transaction</span>&gt; [ready <span class="keyword">only</span>]/[<span class="keyword">read</span> <span class="keyword">write</span>] [<span class="keyword">with</span> consistent <span class="keyword">snapshot</span>]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>提交事务</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">commit</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>中止事务</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">rollback</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>隐式提交事务的情况</li>
+</ol>
+<ul>
+<li>使用DDL语言</li>
+<li>隐式使用或者修改mysql数据库中的表</li>
+<li>使用事务控制的语句，比如新开了一个事务，会自动提交上一个事务</li>
+</ul>
+<p>事务的几种状态：</p>
+<ul>
+<li>活动的</li>
+<li>部分提交的</li>
+<li>失败的</li>
+<li>中止的</li>
+<li>提交的</li>
+</ul>
+<h2 id="持久性的实现"><a href="#持久性的实现" class="headerlink" title="持久性的实现"></a>持久性的实现</h2><p>要想实现持久性，就要保证说过的话一定能做到，没说完的话可以后悔</p>
+<ol>
+<li>redo log 用来实现说过的话一定做到</li>
+</ol>
+<h2 id="隔离性"><a href="#隔离性" class="headerlink" title="隔离性"></a>隔离性</h2><p>多个不同的事务并发执行可能会导致不一致性的出现。</p>
+<p>那么如果串行化执行</p>
+
       </div>
       
       
@@ -571,7 +635,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%AD%98%E5%82%A8"><span class="nav-number">2.</span> <span class="nav-text">1. 存储</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BB%8E%E4%B8%80%E8%A1%8C%E8%AE%B0%E5%BD%95%E5%BC%80%E5%A7%8B"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 从一行记录开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compact"><span class="nav-number">2.1.1.</span> <span class="nav-text">Compact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redundant"><span class="nav-number">2.1.2.</span> <span class="nav-text">Redundant</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DYNAMIC%E5%92%8CCOMPRESSED%E8%A1%8C%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">DYNAMIC和COMPRESSED行格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E9%A1%B5%E7%BB%93%E6%9E%84"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 页结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 数据目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E8%A1%A8%E7%A9%BA%E9%97%B4"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 表空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-InnoDB%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%B6%E9%9B%86"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 InnoDB统计数据的收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Buffer-Pool"><span class="nav-number">2.6.</span> <span class="nav-text">1.6 Buffer Pool</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.</span> <span class="nav-text">2. 查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 单表查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 多表查询</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">3. 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9F%BA%E4%BA%8E%E6%88%90%E6%9C%AC%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 基于成本的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E5%8D%95%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.1.</span> <span class="nav-text">3.1.1 单表优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E5%A4%9A%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.2.</span> <span class="nav-text">3.1.2 多表优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%9F%BA%E4%BA%8E%E8%A7%84%E5%88%99%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 基于规则的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E5%8D%95%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.2.1 单表优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E5%A4%9A%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.2.2 多表优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-EXPLAIN"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 EXPLAIN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%9B%B4%E8%AF%A6%E7%BB%86%E7%9A%84%E4%BC%98%E5%8C%96%E5%92%8C%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92-optimizer-trace"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 更详细的优化和执行计划 - optimizer trace</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%BA%8B%E5%8A%A1"><span class="nav-number">5.</span> <span class="nav-text">4. 事务</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%AD%98%E5%82%A8"><span class="nav-number">2.</span> <span class="nav-text">1. 存储</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BB%8E%E4%B8%80%E8%A1%8C%E8%AE%B0%E5%BD%95%E5%BC%80%E5%A7%8B"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 从一行记录开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compact"><span class="nav-number">2.1.1.</span> <span class="nav-text">Compact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redundant"><span class="nav-number">2.1.2.</span> <span class="nav-text">Redundant</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DYNAMIC%E5%92%8CCOMPRESSED%E8%A1%8C%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.3.</span> <span class="nav-text">DYNAMIC和COMPRESSED行格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E9%A1%B5%E7%BB%93%E6%9E%84"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 页结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 数据目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E8%A1%A8%E7%A9%BA%E9%97%B4"><span class="nav-number">2.4.</span> <span class="nav-text">1.4 表空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-InnoDB%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E6%94%B6%E9%9B%86"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 InnoDB统计数据的收集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Buffer-Pool"><span class="nav-number">2.6.</span> <span class="nav-text">1.6 Buffer Pool</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.</span> <span class="nav-text">2. 查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 单表查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 多表查询</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">3. 优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%9F%BA%E4%BA%8E%E6%88%90%E6%9C%AC%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 基于成本的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E5%8D%95%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.1.</span> <span class="nav-text">3.1.1 单表优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E5%A4%9A%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.1.2.</span> <span class="nav-text">3.1.2 多表优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%9F%BA%E4%BA%8E%E8%A7%84%E5%88%99%E7%9A%84%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 基于规则的优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E5%8D%95%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.1.</span> <span class="nav-text">3.2.1 单表优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E5%A4%9A%E8%A1%A8%E4%BC%98%E5%8C%96"><span class="nav-number">4.2.2.</span> <span class="nav-text">3.2.2 多表优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-EXPLAIN"><span class="nav-number">4.3.</span> <span class="nav-text">3.3 EXPLAIN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%9B%B4%E8%AF%A6%E7%BB%86%E7%9A%84%E4%BC%98%E5%8C%96%E5%92%8C%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92-optimizer-trace"><span class="nav-number">4.4.</span> <span class="nav-text">3.4 更详细的优化和执行计划 - optimizer trace</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%BA%8B%E5%8A%A1"><span class="nav-number">5.</span> <span class="nav-text">4. 事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%81%E4%B9%85%E6%80%A7%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">5.1.</span> <span class="nav-text">持久性的实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%94%E7%A6%BB%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">隔离性</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -586,18 +650,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
